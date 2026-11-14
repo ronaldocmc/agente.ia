@@ -1,0 +1,18 @@
+{
+  "direto": {
+    "n": 50,
+    "accuracy": 1.0,
+    "median_latency_ms": 0.00037,
+    "llm_requests": 0,
+    "financial_cost": "nao_medido",
+    "repeatable": true
+  },
+  "skill": {
+    "n": 50,
+    "accuracy": 1.0,
+    "median_latency_ms": 0.00036,
+    "llm_requests": 0,
+    "financial_cost": "nao_medido",
+    "repeatable": true
+  }
+}

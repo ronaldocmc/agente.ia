@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Agente.IA: fundamentos, tecnologias, engenharia, governança e aplicações de agentes de IA" name="description"/><title>8. Como implementar agentes: laboratórios progressivos · Agente.IA</title><link href="../assets/style.css" rel="stylesheet"/></head><body><header class="top"><button aria-controls="site-navigation" aria-expanded="true" aria-label="Recolher menu lateral" class="menu-btn" type="button">☰ <span class="menu-label">Recolher menu</span></button><a class="brand" href="../index.html">unesp<span>.IA</span> / Agente.IA</a><small>Aprender. Experimentar. Aplicar.</small><div class="header-actions"><a href="../conceitos.html">Conceitos A–Z</a><a href="../estudos/assistente-pessoal.html">Assistente pessoal</a></div></header><div class="container"><aside class="nav" data-nav="integrada" id="site-navigation"><input aria-label="Buscar páginas" autocomplete="off" class="search" id="search" placeholder="Buscar no Agente.IA... Ctrl+K"/><div class="search-results" id="search-results"></div><h4>COMECE AQUI</h4><a href="../minha-aprendizagem.html">Minha Aprendizagem</a><a href="../guia-de-navegacao.html">Como usar o Agente.IA</a><a href="../primeiro-agente.html">Meu primeiro agente</a><a href="../percurso.html">Trilhas de aprendizagem</a><a href="../adaptativo.html">Roadmap adaptativo</a><h4>ESCOLHA TECNOLÓGICA</h4><a href="../ecossistema-tecnologias.html">Ecossistema: quem faz o quê?</a><a href="../decisao-orientada-a-problemas.html">Decidir pelo problema</a><a href="../matriz.html">Matriz interativa</a><a href="../grafo.html">Grafo tecnológico</a><a href="../catalogo-integral.html">Catálogo integral</a><h4>CONSTRUIR E AVALIAR</h4><a href="../percursos-tecnologia.html">Percursos por tecnologia</a><a href="../laboratorios-completos.html">Laboratórios guiados</a><a href="../formacao-individual.html">Laboratórios por tecnologia</a><a href="../aplicacoes-setoriais.html">Aplicações por setor</a><a href="../formacao-individual.html">Laboratórios por tecnologia</a><a href="../automacao-agentes.html">Automação: workflow × agente</a><a href="../lab-n8n-detalhado.html">n8n + Ollama</a><a href="../lab-agents-sdk.html">Agents SDK Python</a><a href="../lab-langgraph-detalhado.html">LangGraph</a><a href="../laboratorios-comparativos.html">Hermes / OpenClaw / Grok Bot</a><a href="../skills.html">Skills e segurança</a><h4>APLICAÇÕES</h4><a href="../escritorio-virtual-decisao.html">Escritório Virtual</a><a href="../casos-integrados.html">Estudos de caso completos</a><a href="../aplicacoes-automacao.html">Exemplos de automação</a><a href="../segundo-cerebro.html">Segundo Cérebro</a><h4>REFERÊNCIAS</h4><a href="../conceitos.html">Conceitos A–Z</a><a href="../formacao-aprofundada.html">Formação aprofundada</a><a href="../seguranca.html">Segurança e guardrails</a><a href="../integracao-modulos.html">Integração curricular</a></aside><main><div class="breadcrumbs"><a href="../index.html">Início</a> / Capítulo</div><div class="eyebrow">Agente.IA · Guia de referência</div><h1>8. Como implementar agentes: laboratórios progressivos</h1><article class="body"><p>Nesta seção, vamos transformar os conceitos em experiências práticas.</p>
+<p>O objetivo não é utilizar todas as tecnologias ao mesmo tempo, mas compreender o que cada recurso acrescenta à arquitetura.</p>
+<h3 id="8-1-laboratorio-1-automacao-deterministica-sem-llm">8.1 Laboratório 1 — Automação determinística sem LLM<a aria-label="Link para esta seção" class="anchor" href="#8-1-laboratorio-1-automacao-deterministica-sem-llm"> #</a></h3>
+<p>Problema: identificar produtos que precisam de reposição.</p>
+<p>Tecnologias: Python e dados fictícios.</p>
+<p>O agente recebe estoque atual, venda média diária, prazo de entrega e estoque de segurança.</p>
+<p>O ponto de pedido simplificado é:</p>
+<p>\[ PP=(D\times LT)+ES \]</p>
+<p>Em que:</p>
+<ul>
+<li>\(PP\): ponto de pedido;</li>
+<li>\(D\): demanda média diária;</li>
+<li>\(LT\): prazo de reposição em dias;</li>
+<li>\(ES\): estoque de segurança.</li>
+</ul>
+<p>Exemplo:</p>
+<pre><code class="language-python">def avaliar_reposicao(estoque_atual, venda_media_dia, prazo_entrega, estoque_seguranca):
+    ponto_pedido = venda_media_dia * prazo_entrega + estoque_seguranca
+    return {
+        "ponto_pedido": ponto_pedido,
+        "estoque_atual": estoque_atual,
+        "repor": estoque_atual &lt;= ponto_pedido,
+    }
+
+resultado = avaliar_reposicao(21, 4, 5, 6)
+print(resultado)
+</code></pre>
+<p>Nesse caso, o ponto de pedido é 26 unidades, portanto o sistema recomenda avaliar uma reposição.</p>
+<p>Não foi utilizado um <a class="concept-link" href="../conceitos.html#llm" title="Abrir referência: LLM">LLM</a>.</p>
+<p>A decisão é baseada em uma regra explícita, adequada como solução inicial e baseline.</p>
+<h3 id="8-2-laboratorio-2-orquestracao-deterministica">8.2 Laboratório 2 — Orquestração determinística<a aria-label="Link para esta seção" class="anchor" href="#8-2-laboratorio-2-orquestracao-deterministica"> #</a></h3>
+<p>Problema: consolidar análises de estoque e finanças antes de recomendar uma compra.</p>
+<p>Podemos criar funções especializadas e um coordenador.</p>
+<pre><code class="language-python">def agente_estoque():
+    return {"produto": "Produto A", "necessita_reposicao": True, "custo_estimado": 1200}
+
+
+def agente_financeiro():
+    return {"saldo_disponivel": 3000}
+
+
+def orquestrar():
+    estoque = agente_estoque()
+    financeiro = agente_financeiro()
+    pode_comprar = (estoque["necessita_reposicao"] and
+                   financeiro["saldo_disponivel"] &gt;= estoque["custo_estimado"])
+    return {
+        "estoque": estoque,
+        "financeiro": financeiro,
+        "compra_financeiramente_viavel": pode_comprar,
+        "aprovacao_humana_necessaria": True,
+    }
+
+print(orquestrar())
+</code></pre>
+<p>Esse exemplo demonstra que a <a class="concept-link" href="../conceitos.html#orquestracao" title="Abrir referência: Orquestração">orquestração</a> pode acontecer inteiramente em Python, sem LLM.</p>
+<p>A viabilidade financeira não representa autorização para efetuar a compra.</p>
+<h3 id="8-3-laboratorio-3-classificacao-de-mensagens-de-crm">8.3 Laboratório 3 — Classificação de mensagens de CRM<a aria-label="Link para esta seção" class="anchor" href="#8-3-laboratorio-3-classificacao-de-mensagens-de-crm"> #</a></h3>
+<p>Problema: identificar o assunto principal de uma solicitação recebida.</p>
+<p>Uma primeira implementação pode utilizar regras.</p>
+<pre><code class="language-python">def classificar_mensagem(mensagem):
+    texto = mensagem.lower()
+    if "devolução" in texto or "troca" in texto:
+        return "pos_venda"
+    if "boleto" in texto or "pagamento" in texto:
+        return "financeiro"
+    if "preço" in texto or "comprar" in texto:
+        return "vendas"
+    return "revisao_humana"
+
+mensagem = "Gostaria de saber o preço do produto"
+print(classificar_mensagem(mensagem))
+</code></pre>
+<p>Essa solução é limitada por sua dependência de palavras-chave.</p>
+<p>Um experimento posterior pode comparar regras, TF-IDF, classificadores tradicionais e LLMs.</p>
+<p>O importante é medir se a inclusão do modelo melhora efetivamente os resultados.</p>
+<h3 id="8-4-laboratorio-4-introducao-ao-rag">8.4 Laboratório 4 — Introdução ao RAG<a aria-label="Link para esta seção" class="anchor" href="#8-4-laboratorio-4-introducao-ao-rag"> #</a></h3>
+<p>Problema: recuperar informações sobre políticas institucionais.</p>
+<p>Antes de implementar <a class="concept-link" href="../conceitos.html#embeddings" title="Abrir referência: Embeddings">embeddings</a>, podemos construir uma recuperação lexical simples.</p>
+<pre><code class="language-python">documentos = [
+    {"id": 1, "texto": "A publicação exige revisão editorial."},
+    {"id": 2, "texto": "Registros duplicados devem ser identificados."},
+    {"id": 3, "texto": "Notícias precisam possuir fonte verificável."},
+]
+
+
+def recuperar(termo):
+    termo = termo.lower()
+    return [doc for doc in documentos if termo in doc["texto"].lower()]
+
+print(recuperar("fonte"))
+</code></pre>
+<p>Esse exemplo demonstra apenas recuperação lexical. Não constitui um sistema <a class="concept-link" href="../conceitos.html#rag" title="Abrir referência: RAG">RAG</a> completo, pois não contém geração fundamentada por um modelo.</p>
+<p>O próximo passo seria implementar embeddings, indexação vetorial, recuperação híbrida e geração com citações.</p>
+<h3 id="8-5-laboratorio-5-registro-de-ferramentas">8.5 Laboratório 5 — Registro de ferramentas<a aria-label="Link para esta seção" class="anchor" href="#8-5-laboratorio-5-registro-de-ferramentas"> #</a></h3>
+<p>Problema: oferecer operações específicas para utilização por agentes.</p>
+<pre><code class="language-python">def consultar_estoque(produto_id):
+    estoques = {1: 20, 2: 5, 3: 42}
+    return estoques.get(produto_id)
+
+ferramentas = {"consultar_estoque": consultar_estoque}
+
+
+def executar_ferramenta(nome, argumentos):
+    if nome not in ferramentas:
+        raise ValueError("Ferramenta não autorizada")
+    return ferramentas[nome](**argumentos)
+
+resultado = executar_ferramenta("consultar_estoque", {"produto_id": 2})
+print(resultado)
+</code></pre>
+<p>Esse exemplo demonstra um registro simples de ferramentas.</p>
+<p>Em sistemas reais, devemos incluir validação de parâmetros, autenticação, controle de <a class="concept-link" href="../conceitos.html#permissoes" title="Abrir referência: Permissões">permissões</a>, tratamento de exceções e auditoria.</p>
+<h3 id="8-6-laboratorio-6-disponibilizar-ferramentas-por-api">8.6 Laboratório 6 — Disponibilizar ferramentas por API<a aria-label="Link para esta seção" class="anchor" href="#8-6-laboratorio-6-disponibilizar-ferramentas-por-api"> #</a></h3>
+<p>Tecnologia: <a class="concept-link" href="../fichas/fastapi.html" title="Abrir referência: FastAPI">FastAPI</a>.</p>
+<p>Uma ferramenta pode ser exposta por meio de uma API REST.</p>
+<pre><code class="language-python">from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/estoque/{produto_id}")
+def consultar_estoque(produto_id: int):
+    estoques = {1: 20, 2: 5, 3: 42}
+    return {"produto_id": produto_id, "estoque": estoques.get(produto_id)}
+</code></pre>
+<p>Após salvar o arquivo como <code>api.py</code>, instalar as dependências e executar:</p>
+<pre><code>pip install fastapi uvicorn
+uvicorn api:app --reload
+</code></pre>
+<p>A documentação interativa ficará disponível localmente em:</p>
+<p><code>http://127.0.0.1:8000/docs</code></p>
+<p>Essa API pode ser utilizada por <a class="concept-link" href="../fichas/n8n.html" title="Abrir referência: n8n">n8n</a>, agentes ou aplicações externas autorizadas.</p>
+<p>O exemplo não possui autenticação e não deve ser publicado diretamente em produção.</p>
+<h3 id="8-7-laboratorio-7-integracao-com-n8n">8.7 Laboratório 7 — Integração com n8n<a aria-label="Link para esta seção" class="anchor" href="#8-7-laboratorio-7-integracao-com-n8n"> #</a></h3>
+<p>Agora podemos construir um <a class="concept-link" href="../conceitos.html#workflow" title="Abrir referência: Workflow">workflow</a> que consome a API criada.</p>
+<p>O fluxo didático será:</p>
+<p>Manual Trigger → HTTP Request → If → Formatar Resultado → Notificação Simulada</p>
+<p>O primeiro nó inicia o processo. O segundo consulta a API. O nó condicional verifica o resultado e encaminha a execução.</p>
+<p>Depois, podemos substituir o início manual por um agendamento.</p>
+<p>O experimento deve comparar duas versões: uma puramente determinística e outra com um <a class="concept-link" href="../conceitos.html#agente-de-ia" title="Abrir referência: Agente de IA">agente de IA</a> responsável por uma subtarefa que exija interpretação ou seleção dinâmica de ferramentas.</p>
+<h3 id="8-8-laboratorio-8-agente-utilizando-openai-agents-sdk">8.8 Laboratório 8 — Agente utilizando OpenAI Agents SDK<a aria-label="Link para esta seção" class="anchor" href="#8-8-laboratorio-8-agente-utilizando-openai-agents-sdk"> #</a></h3>
+<p>O SDK permite definir agentes, instruções e ferramentas.</p>
+<p>Exemplo conceitual, sujeito à API da versão instalada:</p>
+<pre><code class="language-python">from agents import Agent, Runner, function_tool
+
+
+@function_tool
+def consultar_estoque(produto_id: int) -&gt; dict:
+    """Consulta estoque fictício de um produto."""
+    return {"produto_id": produto_id, "estoque": 12}
+
+
+agente = Agent(
+    name="Analista de Estoque",
+    instructions="Consulte ferramentas quando necessário. Não realize compras.",
+    tools=[consultar_estoque],
+)
+# Execução exige SDK instalado, credenciais e modelo configurados.
+# Ex.: resultado = Runner.run_sync(agente, "Verifique o estoque do produto 1")
+</code></pre>
+<p>Depois, utilizando um ambiente devidamente configurado, podemos solicitar que o agente consulte um produto.</p>
+<p>O aspecto fundamental é observar o ciclo:</p>
+<p>Solicitação → decisão de ferramenta → validação → execução → resultado → resposta.</p>
+<p>Os alunos também devem estudar os exemplos oficiais de handoff e agentes como ferramentas.</p>
+<h3 id="8-9-laboratorio-9-google-adk">8.9 Laboratório 9 — Google ADK<a aria-label="Link para esta seção" class="anchor" href="#8-9-laboratorio-9-google-adk"> #</a></h3>
+<p>Utilizar uma receita oficial simples como ponto de partida.</p>
+<p>O objetivo é desenvolver um agente coordenador que recebe uma solicitação e seleciona especialistas.</p>
+<p>Exemplo aplicado ao CRM:</p>
+<p>Coordenador → Agente de Vendas / Agente Financeiro / Agente de Suporte → Consolidação</p>
+<p>É importante documentar como ocorre o roteamento, quais informações são compartilhadas e como erros são tratados.</p>
+<h3 id="8-10-laboratorio-10-claude-agent-sdk">8.10 Laboratório 10 — Claude Agent SDK<a aria-label="Link para esta seção" class="anchor" href="#8-10-laboratorio-10-claude-agent-sdk"> #</a></h3>
+<p>O experimento inicial deve utilizar um diretório isolado.</p>
+<p>O agente recebe a solicitação de analisar arquivos de teste e produzir um relatório.</p>
+<p>Na primeira execução, devem ser disponibilizadas apenas ferramentas de leitura.</p>
+<p>Posteriormente, pode-se permitir escrita em uma pasta temporária.</p>
+<p>O objetivo é estudar controle de permissões e segurança da execução.</p>
+<h3 id="8-11-laboratorio-11-langgraph">8.11 Laboratório 11 — LangGraph<a aria-label="Link para esta seção" class="anchor" href="#8-11-laboratorio-11-langgraph"> #</a></h3>
+<p>O problema será implementar uma análise comercial com controle explícito de <a class="concept-link" href="../conceitos.html#estado" title="Abrir referência: Estado">estado</a>.</p>
+<p>O grafo poderá conter os nós:</p>
+<p><code>coletar_dados → validar → analisar → autorizar → registrar</code></p>
+<p>Cada nó possui uma responsabilidade.</p>
+<p>O experimento deve incluir interrupção, falha simulada e retomada.</p>
+<p>Na versão agêntica, um modelo poderá selecionar análises complementares, sem contornar as etapas obrigatórias de validação e autorização.</p>
+<h3 id="8-12-laboratorio-12-crewai">8.12 Laboratório 12 — CrewAI<a aria-label="Link para esta seção" class="anchor" href="#8-12-laboratorio-12-crewai"> #</a></h3>
+<p>Primeiro devemos desenvolver uma solução de agente único.</p>
+<p>Depois, implementar uma equipe especializada:</p>
+<ul>
+<li>Agente de estoque;</li>
+<li>Agente de vendas;</li>
+<li>Agente financeiro.</li>
+</ul>
+<p>O problema, os dados e as ferramentas devem permanecer equivalentes.</p>
+<p>A avaliação deve verificar se a divisão entre agentes realmente melhora a qualidade da solução e quanto aumenta custo, latência e complexidade.</p>
+<h3 id="8-13-laboratorio-13-mcp-e-skills">8.13 Laboratório 13 — MCP e skills<a aria-label="Link para esta seção" class="anchor" href="#8-13-laboratorio-13-mcp-e-skills"> #</a></h3>
+<p>O objetivo é combinar interoperabilidade e conhecimento procedural.</p>
+<p>O experimento envolve criar uma função de consulta de estoque, disponibilizá-la por um servidor <a class="concept-link" href="../conceitos.html#mcp" title="Abrir referência: MCP">MCP</a> e construir uma skill que descreva como elaborar um relatório.</p>
+<p>Em seguida, comparar três abordagens:</p>
+<p>Ferramenta diretamente registrada no SDK, ferramenta exposta por MCP e skill que orienta a utilização das ferramentas.</p>
+<p>Devemos verificar como cada abordagem influencia reutilização, manutenção, segurança e interoperabilidade.</p>
+<h3 id="8-14-laboratorio-14-openclaw-e-hermes">8.14 Laboratório 14 — OpenClaw e Hermes<a aria-label="Link para esta seção" class="anchor" href="#8-14-laboratorio-14-openclaw-e-hermes"> #</a></h3>
+<p>O objetivo é experimentar ambientes agênticos com recursos prontos.</p>
+<p>O agente deve inicialmente trabalhar apenas com dados sintéticos e ferramentas limitadas.</p>
+<p>Uma atividade possível é consultar documentos locais, identificar informações e preparar um relatório.</p>
+<p>É importante verificar quais recursos são utilizados, que permissões foram concedidas e quais ações foram efetivamente realizadas.</p>
+<p>Não se recomenda iniciar os testes com acesso irrestrito ao sistema operacional, e-mail real ou contas institucionais.</p>
+<div class="notice"><strong>Explore também:</strong> laboratórios práticos e estudos de caso alinhados ao M12. <a href="../laboratorio-comparativo.html">Experimento direto × skill</a> · <a href="../aplicacoes-automacao.html">Casos aplicados</a> · <a href="../integracao-modulos.html">Auditoria de ferramentas</a>.</div></article><footer class="footer">Agente.IA · Documentação integrada · Conteúdo técnico-didático em evolução · Informações de fornecedores e versões exigem revalidação.</footer></main><aside class="toc"><h4>Nesta página</h4><a class="sub" href="#8-1-laboratorio-1-automacao-deterministica-sem-llm">8.1 Laboratório 1 — Automação determinística sem LLM</a><a class="sub" href="#8-2-laboratorio-2-orquestracao-deterministica">8.2 Laboratório 2 — Orquestração determinística</a><a class="sub" href="#8-3-laboratorio-3-classificacao-de-mensagens-de-crm">8.3 Laboratório 3 — Classificação de mensagens de CRM</a><a class="sub" href="#8-4-laboratorio-4-introducao-ao-rag">8.4 Laboratório 4 — Introdução ao RAG</a><a class="sub" href="#8-5-laboratorio-5-registro-de-ferramentas">8.5 Laboratório 5 — Registro de ferramentas</a><a class="sub" href="#8-6-laboratorio-6-disponibilizar-ferramentas-por-api">8.6 Laboratório 6 — Disponibilizar ferramentas por API</a><a class="sub" href="#8-7-laboratorio-7-integracao-com-n8n">8.7 Laboratório 7 — Integração com n8n</a><a class="sub" href="#8-8-laboratorio-8-agente-utilizando-openai-agents-sdk">8.8 Laboratório 8 — Agente utilizando OpenAI Agents SDK</a><a class="sub" href="#8-9-laboratorio-9-google-adk">8.9 Laboratório 9 — Google ADK</a><a class="sub" href="#8-10-laboratorio-10-claude-agent-sdk">8.10 Laboratório 10 — Claude Agent SDK</a><a class="sub" href="#8-11-laboratorio-11-langgraph">8.11 Laboratório 11 — LangGraph</a><a class="sub" href="#8-12-laboratorio-12-crewai">8.12 Laboratório 12 — CrewAI</a><a class="sub" href="#8-13-laboratorio-13-mcp-e-skills">8.13 Laboratório 13 — MCP e skills</a><a class="sub" href="#8-14-laboratorio-14-openclaw-e-hermes">8.14 Laboratório 14 — OpenClaw e Hermes</a></aside></div><script defer="" src="../assets/site.js"></script></body></html>

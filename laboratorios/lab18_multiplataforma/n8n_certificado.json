@@ -1,0 +1,72 @@
+{
+  "name": "unesp.IA Lab18 — Consulta de certificado (dados sintéticos)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-lab18",
+      "name": "Iniciar (manual)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const p={email:'ana@exemplo.test',actor:'ana@exemplo.test',modulo:'M12',turma:'T1',mensagem:''}; return [{json:p}];"
+      },
+      "id": "input-lab18",
+      "name": "Pedido sintético",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        470,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const p=$input.first().json; const data={'ana@exemplo.test':[90,'regular'],'bruno@exemplo.test':[60,'regular'],'carla@exemplo.test':[80,'pendente']}; let s=''; if(p.actor!==p.email)s='acesso_negado';else if(!p.email.includes('@')||p.modulo!=='M12'||p.turma!=='T1')s='entrada_invalida';else if(!data[p.email])s='nao_localizado';else if(data[p.email][1]!=='regular')s='pendente';else s=data[p.email][0]>=75?'apto':'nao_apto'; return [{json:{status:s,cenario:'sintetico',policy:'certificado.v1'}}];"
+      },
+      "id": "decision-lab18",
+      "name": "Regra institucional (determinística)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        710,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Iniciar (manual)": {
+      "main": [
+        [
+          {
+            "node": "Pedido sintético",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pedido sintético": {
+      "main": [
+        [
+          {
+            "node": "Regra institucional (determinística)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}

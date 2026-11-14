@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Agente.IA: fundamentos, tecnologias, engenharia, governança e aplicações de agentes de IA" name="description"/><title>23. Guia de decisão e projetos integradores · Agente.IA</title><link href="../assets/style.css" rel="stylesheet"/></head><body><header class="top"><button aria-controls="site-navigation" aria-expanded="true" aria-label="Recolher menu lateral" class="menu-btn" type="button">☰ <span class="menu-label">Recolher menu</span></button><a class="brand" href="../index.html">unesp<span>.IA</span> / Agente.IA</a><small>Aprender. Experimentar. Aplicar.</small><div class="header-actions"><a href="../conceitos.html">Conceitos A–Z</a><a href="../estudos/assistente-pessoal.html">Assistente pessoal</a></div></header><div class="container"><aside class="nav" data-nav="integrada" id="site-navigation"><input aria-label="Buscar páginas" autocomplete="off" class="search" id="search" placeholder="Buscar no Agente.IA... Ctrl+K"/><div class="search-results" id="search-results"></div><h4>COMECE AQUI</h4><a href="../minha-aprendizagem.html">Minha Aprendizagem</a><a href="../guia-de-navegacao.html">Como usar o Agente.IA</a><a href="../primeiro-agente.html">Meu primeiro agente</a><a href="../percurso.html">Trilhas de aprendizagem</a><a href="../adaptativo.html">Roadmap adaptativo</a><h4>ESCOLHA TECNOLÓGICA</h4><a href="../ecossistema-tecnologias.html">Ecossistema: quem faz o quê?</a><a href="../decisao-orientada-a-problemas.html">Decidir pelo problema</a><a href="../matriz.html">Matriz interativa</a><a href="../grafo.html">Grafo tecnológico</a><a href="../catalogo-integral.html">Catálogo integral</a><h4>CONSTRUIR E AVALIAR</h4><a href="../percursos-tecnologia.html">Percursos por tecnologia</a><a href="../laboratorios-completos.html">Laboratórios guiados</a><a href="../formacao-individual.html">Laboratórios por tecnologia</a><a href="../aplicacoes-setoriais.html">Aplicações por setor</a><a href="../formacao-individual.html">Laboratórios por tecnologia</a><a href="../automacao-agentes.html">Automação: workflow × agente</a><a href="../lab-n8n-detalhado.html">n8n + Ollama</a><a href="../lab-agents-sdk.html">Agents SDK Python</a><a href="../lab-langgraph-detalhado.html">LangGraph</a><a href="../laboratorios-comparativos.html">Hermes / OpenClaw / Grok Bot</a><a href="../skills.html">Skills e segurança</a><h4>APLICAÇÕES</h4><a href="../escritorio-virtual-decisao.html">Escritório Virtual</a><a href="../casos-integrados.html">Estudos de caso completos</a><a href="../aplicacoes-automacao.html">Exemplos de automação</a><a href="../segundo-cerebro.html">Segundo Cérebro</a><h4>REFERÊNCIAS</h4><a href="../conceitos.html">Conceitos A–Z</a><a href="../formacao-aprofundada.html">Formação aprofundada</a><a href="../seguranca.html">Segurança e guardrails</a><a href="../integracao-modulos.html">Integração curricular</a></aside><main><div class="breadcrumbs"><a href="../index.html">Início</a> / Capítulo</div><div class="eyebrow">Agente.IA · Guia de referência</div><h1>23. Guia de decisão e projetos integradores</h1><article class="body"><h3 id="23-1-se-a-duvida-for-o-que-usar-para-construir-meu-primeiro-agente">23.1 Se a dúvida for «o que usar para construir meu primeiro agente?»<a aria-label="Link para esta seção" class="anchor" href="#23-1-se-a-duvida-for-o-que-usar-para-construir-meu-primeiro-agente"> #</a></h3>
+<ol>
+<li>Especificar o problema, ambiente, política de ação e dados.</li>
+<li>Implementar uma referência determinística em Python.</li>
+<li>Introduzir um modelo de linguagem <strong>somente</strong> para a parte que necessita interpretação aberta.</li>
+<li>Disponibilizar ferramentas com contratos explícitos.</li>
+<li>Adicionar <a class="concept-link" href="../conceitos.html#persistencia" title="Abrir referência: Persistência">persistência</a> se existir continuidade entre interações.</li>
+<li>Utilizar <a class="concept-link" href="../fichas/n8n.html" title="Abrir referência: n8n">n8n</a> se houver agendamentos e integrações recorrentes.</li>
+<li>Escolher Agents SDK, ADK, Strands ou PydanticAI para agentes programáveis simples; LangGraph ou <a class="concept-link" href="../fichas/microsoft-agent-framework.html" title="Abrir referência: Microsoft Agent Framework">Microsoft Agent Framework</a> para processos com estado, condições e coordenação mais complexa; CrewAI quando for pertinente investigar equipes especializadas.</li>
+<li>Acrescentar <a class="concept-link" href="../conceitos.html#mcp" title="Abrir referência: MCP">MCP</a> quando a reutilização padronizada de ferramentas entre clientes justificar a integração.</li>
+<li>Acrescentar <a class="concept-link" href="../conceitos.html#a2a" title="Abrir referência: A2A">A2A</a> quando houver agentes independentes e necessidade real de interoperabilidade.</li>
+<li>Validar qualidade, segurança, custos e autorização antes de conceder escrita ou execução externa.</li>
+</ol>
+<h3 id="23-2-arquitetura-minima-recomendada">23.2 Arquitetura mínima recomendada<a aria-label="Link para esta seção" class="anchor" href="#23-2-arquitetura-minima-recomendada"> #</a></h3>
+<p>Uma aplicação acadêmica pode começar com <strong>Python + FastAPI + PostgreSQL + um conjunto pequeno de funções de negócio</strong>. O orquestrador pode ser código tradicional. Um SDK ou LLM pode ser adicionado depois. O frontend pode ser Streamlit no laboratório ou React/Next.js em uma aplicação maior; n8n é complementar quando existem eventos e integrações. Evite introduzir simultaneamente n8n, <a class="concept-link" href="../fichas/langgraph.html" title="Abrir referência: LangGraph">LangGraph</a>, CrewAI, MCP, A2A e três modelos apenas porque estão disponíveis.</p>
+<h3 id="23-3-projeto-integrador-a-observatorio-de-ia">23.3 Projeto integrador A — Observatório de IA<a aria-label="Link para esta seção" class="anchor" href="#23-3-projeto-integrador-a-observatorio-de-ia"> #</a></h3>
+<p>Construir uma ingestão recorrente, verificar URLs e metadados, classificar notícias, manter rastreabilidade e encaminhar casos incertos. Comparar classificação por regras, classificador convencional e <a class="concept-link" href="../conceitos.html#llm" title="Abrir referência: LLM">LLM</a> com/sem recuperação. Se a fonte indicar informações conflitantes, o agente deverá produzir evidências e solicitar revisão editorial. Projeto de pesquisa: impacto de ferramentas, RAG e persistência sobre completude, custo e qualidade da triagem.</p>
+<h3 id="23-4-projeto-integrador-b-varejo">23.4 Projeto integrador B — Varejo<a aria-label="Link para esta seção" class="anchor" href="#23-4-projeto-integrador-b-varejo"> #</a></h3>
+<p>Construir um agente persistente de prevenção de rupturas, iniciado por eventos do PDV. Utilizar regras e previsão de demanda, registrar alertas com idempotência e preparar recomendações de compra. Evoluir para ferramentas de consulta a fornecedores e integração com orçamento, exigindo aprovação. Projeto de pesquisa: agente único versus orquestração determinística versus <a class="concept-link" href="../conceitos.html#sistema-multiagente" title="Abrir referência: Sistema multiagente">sistema multiagente</a>.</p>
+<h3 id="23-5-projeto-integrador-c-crm-e-comunicacao">23.5 Projeto integrador C — CRM e comunicação<a aria-label="Link para esta seção" class="anchor" href="#23-5-projeto-integrador-c-crm-e-comunicacao"> #</a></h3>
+<p>Construir um classificador de intenções, integrar dados sintéticos de pedidos, oferecer resposta baseada em evidência e encaminhar solicitações complexas. Comparar classificação por regras, ML e LLM; avaliar proteção de dados, tempo de resposta, escalonamento e taxa de mensagens indevidas. Contatos proativos exigem uma política de comunicação e verificações de autorização específicas do canal.</p>
+<h3 id="23-6-matriz-final-de-tecnologias">23.6 Matriz final de tecnologias<a aria-label="Link para esta seção" class="anchor" href="#23-6-matriz-final-de-tecnologias"> #</a></h3>
+<table>
+<thead>
+<tr>
+<th>Necessidade principal</th>
+<th>Escolha inicial razoável</th>
+<th>Quando evoluir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tarefas repetitivas e previsíveis</td>
+<td>Python/SQL/n8n</td>
+<td>Adicionar agente se existir decisão aberta</td>
+</tr>
+<tr>
+<td>Assistente com arquivos e aplicativos</td>
+<td>Plataforma agêntica pronta</td>
+<td>SDK próprio para controle e integrações específicas</td>
+</tr>
+<tr>
+<td>Agente Python com poucas ferramentas</td>
+<td>Agents SDK, ADK, PydanticAI ou Strands</td>
+<td>Grafo com estado para fluxos mais complexos</td>
+</tr>
+<tr>
+<td>Execução com ciclos, pausa e retomada</td>
+<td>LangGraph ou Microsoft Agent Framework</td>
+<td>Persistência distribuída e observabilidade</td>
+</tr>
+<tr>
+<td>Agentes independentes de diferentes sistemas</td>
+<td>APIs ou A2A</td>
+<td>A2A se houver contratos e tarefas interoperáveis</td>
+</tr>
+<tr>
+<td>Ferramentas reutilizáveis</td>
+<td>API → MCP quando necessário</td>
+<td>Catálogo autorizado e controle central</td>
+</tr>
+<tr>
+<td>Procedimentos e boas práticas reutilizáveis</td>
+<td>Skills</td>
+<td>Versionamento, testes, políticas e distribuição</td>
+</tr>
+<tr>
+<td>Conhecimento documental</td>
+<td>Recuperação lexical → RAG</td>
+<td>Vetores, reranking e avaliação de citações</td>
+</tr>
+<tr>
+<td>Interface de agente em tempo real</td>
+<td>Web/API; AG-UI quando necessário</td>
+<td>UI declarativa com A2UI e validação</td>
+</tr>
+<tr>
+<td>Execução corporativa gerenciada</td>
+<td>Plataforma cloud com identidade e runtime</td>
+<td>Escalar conforme SLO, segurança e custo</td>
+</tr>
+</tbody>
+</table>
+<p>A decisão deve sempre incluir a <strong>alternativa mais simples</strong> como baseline, e não apenas uma comparação entre frameworks.</p>
+<p><strong>Matriz revisada:</strong> <a href="../matriz.html">Necessidade × escolha × evolução</a>.</p>
+</article><footer class="footer">Agente.IA · Documentação integrada · Conteúdo técnico-didático em evolução · Informações de fornecedores e versões exigem revalidação.</footer></main><aside class="toc"><h4>Nesta página</h4><a class="sub" href="#23-1-se-a-duvida-for-o-que-usar-para-construir-meu-primeiro-agente">23.1 Se a dúvida for «o que usar para construir meu primeiro agente?»</a><a class="sub" href="#23-2-arquitetura-minima-recomendada">23.2 Arquitetura mínima recomendada</a><a class="sub" href="#23-3-projeto-integrador-a-observatorio-de-ia">23.3 Projeto integrador A — Observatório de IA</a><a class="sub" href="#23-4-projeto-integrador-b-varejo">23.4 Projeto integrador B — Varejo</a><a class="sub" href="#23-5-projeto-integrador-c-crm-e-comunicacao">23.5 Projeto integrador C — CRM e comunicação</a><a class="sub" href="#23-6-matriz-final-de-tecnologias">23.6 Matriz final de tecnologias</a></aside></div><script defer="" src="../assets/site.js"></script></body></html>

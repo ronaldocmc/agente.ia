@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ata-01",
+    "escopo": "gestao",
+    "titulo": "Ata de reunião",
+    "conteudo": "Aprovada preparação de relatório trimestral. Responsável: equipe de gestão. Prazo: dezembro.",
+    "versao": 1
+  },
+  {
+    "id": "privado-02",
+    "escopo": "restrito",
+    "titulo": "Registro interno",
+    "conteudo": "Documento reservado com informações não acessíveis ao público.",
+    "versao": 1
+  }
+]

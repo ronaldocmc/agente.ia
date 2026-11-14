@@ -1,0 +1,148 @@
+{
+  "purpose": "Classificação pedagógica; uma ferramenta pode pertencer a múltiplos grupos.",
+  "groups": [
+    {
+      "id": "grupo-1",
+      "name": "Plataformas prontas",
+      "role": "Experimente agentes já disponibilizados pelo fornecedor",
+      "examples": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "Grok Bot",
+        "dots"
+      ]
+    },
+    {
+      "id": "grupo-2",
+      "name": "Modelos e inferência",
+      "role": "Interpretação e geração; Ollama executa modelos",
+      "examples": [
+        "Ollama",
+        "Lumi-4B",
+        "Llama",
+        "GPT"
+      ]
+    },
+    {
+      "id": "grupo-3",
+      "name": "SDKs programáveis",
+      "role": "Agentes codificados e chamadas de ferramentas",
+      "examples": [
+        "OpenAI Agents SDK",
+        "Google ADK",
+        "PydanticAI",
+        "Claude Agent SDK"
+      ]
+    },
+    {
+      "id": "grupo-4",
+      "name": "Frameworks e coordenação",
+      "role": "Estados, papéis, delegação e múltiplos agentes",
+      "examples": [
+        "LangGraph",
+        "CrewAI",
+        "Microsoft Agent Framework",
+        "Agno"
+      ]
+    },
+    {
+      "id": "grupo-5",
+      "name": "Automação e workflows",
+      "role": "Eventos, integrações e processos repetíveis",
+      "examples": [
+        "n8n",
+        "Make",
+        "Zapier",
+        "Temporal"
+      ]
+    },
+    {
+      "id": "grupo-6",
+      "name": "Construção visual de IA",
+      "role": "Fluxos visuais de aplicações de IA",
+      "examples": [
+        "Langflow",
+        "Flowise",
+        "Dify",
+        "Botpress"
+      ]
+    },
+    {
+      "id": "grupo-7",
+      "name": "Runtimes agênticos",
+      "role": "Sessões, ferramentas e execução persistente",
+      "examples": [
+        "OpenClaw",
+        "Hermes Agent",
+        "Grok Bot",
+        "dots"
+      ]
+    },
+    {
+      "id": "grupo-8",
+      "name": "Protocolos e interoperabilidade",
+      "role": "Contratos e comunicação",
+      "examples": [
+        "MCP",
+        "A2A",
+        "Webhooks",
+        "OpenAPI"
+      ]
+    },
+    {
+      "id": "grupo-9",
+      "name": "Dados, RAG e memória",
+      "role": "Persistência, recuperação e conhecimento",
+      "examples": [
+        "PostgreSQL",
+        "pgvector",
+        "Qdrant",
+        "Neo4j"
+      ]
+    },
+    {
+      "id": "grupo-10",
+      "name": "Infraestrutura e governança",
+      "role": "Operação, identidade, avaliação e segurança",
+      "examples": [
+        "FastAPI",
+        "Docker",
+        "Langfuse",
+        "OpenTelemetry"
+      ]
+    }
+  ],
+  "labs": [
+    {
+      "technology": "n8n",
+      "page": "lab-n8n-detalhado.html",
+      "artifact": "laboratorios/n8n-ollama-agente/workflow-n8n-agente-ollama.json"
+    },
+    {
+      "technology": "Agents SDK",
+      "page": "lab-agents-sdk.html",
+      "artifact": "laboratorios/comparacao-seis-abordagens/agents_sdk.py"
+    },
+    {
+      "technology": "LangGraph",
+      "page": "lab-langgraph-detalhado.html",
+      "artifact": "laboratorios/comparacao-seis-abordagens/langgraph.py"
+    },
+    {
+      "technology": "Hermes Agent",
+      "page": "lab-hermes-detalhado.html",
+      "artifact": "laboratorios/lab18_multiplataforma/hermes/SKILL.md"
+    },
+    {
+      "technology": "OpenClaw",
+      "page": "lab-openclaw-detalhado.html",
+      "artifact": "laboratorios/lab18_multiplataforma/openclaw/SKILL.md"
+    },
+    {
+      "technology": "Grok Bot",
+      "page": "lab-grok-detalhado.html",
+      "artifact": "laboratorios/avancados/PROMPTS_GROK_BOT.md"
+    }
+  ]
+}

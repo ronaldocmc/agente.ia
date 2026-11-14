@@ -1,0 +1,14 @@
+{
+  "cursos": [
+    {
+      "nome": "Agentes de IA",
+      "vagas": 30,
+      "inscricoes": "abertas"
+    },
+    {
+      "nome": "Banco de Dados",
+      "vagas": 40,
+      "inscricoes": "encerradas"
+    }
+  ]
+}

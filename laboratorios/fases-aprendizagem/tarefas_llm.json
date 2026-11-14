@@ -1,0 +1,7 @@
+[
+ {"id":"CURSO01","entrada":"Extraia nome do curso e total de vagas da frase: O curso Introdução a Agentes possui 30 vagas.","esperado":{"curso":"Introdução a Agentes","vagas":30}},
+ {"id":"CURSO02","entrada":"Extraia nome do curso e vagas: O curso Banco de Dados II tem 25 vagas.","esperado":{"curso":"Banco de Dados II","vagas":25}},
+ {"id":"CURSO03","entrada":"Extraia nome do curso e vagas: O curso Ética em IA está com vagas não informadas.","esperado":{"curso":"Ética em IA","vagas":null}},
+ {"id":"CURSO04","entrada":"Extraia nome do curso e vagas: O curso Python para Iniciantes possui 40 vagas.","esperado":{"curso":"Python para Iniciantes","vagas":40}},
+ {"id":"CURSO05","entrada":"Extraia nome do curso e vagas: O curso Integração de APIs possui 18 vagas.","esperado":{"curso":"Integração de APIs","vagas":18}}
+]

@@ -1,0 +1,1236 @@
+[
+  {
+    "title": "Estudos de caso por problema",
+    "url": "casos-por-problema.html",
+    "type": "Aprenda a construir"
+  },
+  {
+    "title": "Laboratórios guiados",
+    "url": "laboratorios-guiados.html",
+    "type": "Aprenda a construir"
+  },
+  {
+    "title": "Qual tecnologia escolher?",
+    "url": "comparador-iniciantes.html",
+    "type": "Aprenda a construir"
+  },
+  {
+    "title": "Meu primeiro agente — passo a passo",
+    "url": "primeiro-agente.html",
+    "type": "Aprenda a construir"
+  },
+  {
+    "title": "1. Começar pelo problema, não pela plataforma",
+    "url": "capitulos/01.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "2. Conceitos essenciais: modelo, assistente, agente e orquestrador",
+    "url": "capitulos/02.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "3. Automação, orquestração e agentes de IA",
+    "url": "capitulos/03.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "4. Arquitetura de referência para sistemas agênticos",
+    "url": "capitulos/04.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "5. Ecossistema de tecnologias: quais ferramentas fazem o quê?",
+    "url": "capitulos/05.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "6. Capacidades fundamentais: ferramentas, MCP, skills, RAG e memória",
+    "url": "capitulos/06.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "7. Implementações reais e públicas no GitHub",
+    "url": "capitulos/07.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "8. Como implementar agentes: laboratórios progressivos",
+    "url": "capitulos/08.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "9. Três estudos de caso para acompanhar a evolução dos agentes",
+    "url": "capitulos/09.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "10. Segurança, governança e engenharia de produção",
+    "url": "capitulos/10.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "11. Avaliação científica de agentes e arquiteturas",
+    "url": "capitulos/11.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "12. Trilha de formação em sete níveis — unesp.IA",
+    "url": "capitulos/12.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "13. Perguntas frequentes",
+    "url": "capitulos/13.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "14. Glossário essencial",
+    "url": "capitulos/14.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "15. Referências científicas e tecnológicas",
+    "url": "capitulos/15.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "16. Classificação multidimensional dos agentes: finalidade, persistência, proatividade e autonomia",
+    "url": "capitulos/16.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "17. Agentes persistentes e ambientes de trabalho agêntico em 2026",
+    "url": "capitulos/17.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "18. Novos frameworks, serviços gerenciados e agentes de programação",
+    "url": "capitulos/18.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "19. Interoperabilidade: de MCP a A2A, AG-UI, A2UI e ACP",
+    "url": "capitulos/19.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "20. Persistência na prática: agente de estoque com SQLite e eventos",
+    "url": "capitulos/20.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "21. Implementações públicas para estudar as novidades",
+    "url": "capitulos/21.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "22. Articulação com os 14 módulos oficiais do unesp.IA",
+    "url": "capitulos/22.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "23. Guia de decisão e projetos integradores",
+    "url": "capitulos/23.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "24. Conclusão: como decidir o que utilizar?",
+    "url": "capitulos/24.html",
+    "type": "Capítulo"
+  },
+  {
+    "title": "LLMs por API",
+    "url": "tecnologias/llms-por-api.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Roteamento de modelos",
+    "url": "tecnologias/roteamento-de-modelos.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Modelos com pesos disponíveis",
+    "url": "tecnologias/modelos-com-pesos-disponiveis.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Modelos de decisão",
+    "url": "tecnologias/modelos-de-decisao.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "SDKs de agentes",
+    "url": "tecnologias/sdks-de-agentes.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Orquestração multiagente",
+    "url": "tecnologias/orquestracao-multiagente.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Runtimes e assistentes",
+    "url": "tecnologias/runtimes-e-assistentes.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Automação visual",
+    "url": "tecnologias/automacao-visual.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Protocolos e interoperabilidade",
+    "url": "tecnologias/protocolos-e-interoperabilidade.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Memória dados e RAG",
+    "url": "tecnologias/memoria-dados-e-rag.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Governança e proveniência",
+    "url": "tecnologias/governanca-e-proveniencia.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Observabilidade e avaliação",
+    "url": "tecnologias/observabilidade-e-avaliacao.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Segurança e governança de agentes",
+    "url": "tecnologias/seguranca-e-governanca-de-agentes.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Infraestrutura e serving",
+    "url": "tecnologias/infraestrutura-e-serving.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Interfaces e métricas",
+    "url": "tecnologias/interfaces-e-metricas.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "Multimodalidade e canais",
+    "url": "tecnologias/multimodalidade-e-canais.html",
+    "type": "Categoria tecnológica"
+  },
+  {
+    "title": "GPT-6 (OpenAI)",
+    "url": "fichas/gpt-6-openai.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "Claude (Anthropic)",
+    "url": "fichas/claude-anthropic.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "Gemini (Google)",
+    "url": "fichas/gemini-google.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "Grok (xAI)",
+    "url": "fichas/grok-xai.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "Mistral AI",
+    "url": "fichas/mistral-ai.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "DeepSeek API",
+    "url": "fichas/deepseek-api.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "Cohere",
+    "url": "fichas/cohere.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "AI21 Labs",
+    "url": "fichas/ai21-labs.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "Amazon Bedrock",
+    "url": "fichas/amazon-bedrock.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "Azure AI Foundry",
+    "url": "fichas/azure-ai-foundry.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "Vertex AI",
+    "url": "fichas/vertex-ai.html",
+    "type": "LLMs por API"
+  },
+  {
+    "title": "OpenRouter",
+    "url": "fichas/openrouter.html",
+    "type": "Roteamento de modelos"
+  },
+  {
+    "title": "LiteLLM",
+    "url": "fichas/litellm.html",
+    "type": "Roteamento de modelos"
+  },
+  {
+    "title": "Portkey",
+    "url": "fichas/portkey.html",
+    "type": "Roteamento de modelos"
+  },
+  {
+    "title": "Helicone",
+    "url": "fichas/helicone.html",
+    "type": "Roteamento de modelos"
+  },
+  {
+    "title": "Llama (Meta)",
+    "url": "fichas/llama-meta.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "Qwen",
+    "url": "fichas/qwen.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "DeepSeek (pesos)",
+    "url": "fichas/deepseek-pesos.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "Mistral Small (pesos)",
+    "url": "fichas/mistral-small-pesos.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "Gemma (Google)",
+    "url": "fichas/gemma-google.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "Phi (Microsoft)",
+    "url": "fichas/phi-microsoft.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "OLMo (AI2)",
+    "url": "fichas/olmo-ai2.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "BERTimbau",
+    "url": "fichas/bertimbau.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "Sentence Transformers",
+    "url": "fichas/sentence-transformers.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "BGE Embeddings",
+    "url": "fichas/bge-embeddings.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "Jina Embeddings",
+    "url": "fichas/jina-embeddings.html",
+    "type": "Modelos com pesos disponíveis"
+  },
+  {
+    "title": "Jev (TypeSafe AI)",
+    "url": "fichas/jev-typesafe-ai.html",
+    "type": "Modelos de decisão"
+  },
+  {
+    "title": "Kev (System One)",
+    "url": "fichas/kev-system-one.html",
+    "type": "Modelos de decisão"
+  },
+  {
+    "title": "OpenAI Agents SDK",
+    "url": "fichas/openai-agents-sdk.html",
+    "type": "SDKs de agentes"
+  },
+  {
+    "title": "Google ADK",
+    "url": "fichas/google-adk.html",
+    "type": "SDKs de agentes"
+  },
+  {
+    "title": "Claude Agent SDK",
+    "url": "fichas/claude-agent-sdk.html",
+    "type": "SDKs de agentes"
+  },
+  {
+    "title": "PydanticAI",
+    "url": "fichas/pydanticai.html",
+    "type": "SDKs de agentes"
+  },
+  {
+    "title": "LangGraph",
+    "url": "fichas/langgraph.html",
+    "type": "SDKs de agentes"
+  },
+  {
+    "title": "LangChain",
+    "url": "fichas/langchain.html",
+    "type": "SDKs de agentes"
+  },
+  {
+    "title": "CrewAI",
+    "url": "fichas/crewai.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "Microsoft Agent Framework",
+    "url": "fichas/microsoft-agent-framework.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "AutoGen",
+    "url": "fichas/autogen.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "Agno",
+    "url": "fichas/agno.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "LlamaIndex Workflows",
+    "url": "fichas/llamaindex-workflows.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "Haystack Agents",
+    "url": "fichas/haystack-agents.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "Semantic Kernel",
+    "url": "fichas/semantic-kernel.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "Mastra",
+    "url": "fichas/mastra.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "DSPy",
+    "url": "fichas/dspy.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "smolagents",
+    "url": "fichas/smolagents.html",
+    "type": "Orquestração multiagente"
+  },
+  {
+    "title": "OpenClaw",
+    "url": "fichas/openclaw.html",
+    "type": "Runtimes e assistentes"
+  },
+  {
+    "title": "Hermes Agent",
+    "url": "fichas/hermes-agent.html",
+    "type": "Runtimes e assistentes"
+  },
+  {
+    "title": "OpenHands",
+    "url": "fichas/openhands.html",
+    "type": "Runtimes e assistentes"
+  },
+  {
+    "title": "Codex",
+    "url": "fichas/codex.html",
+    "type": "Runtimes e assistentes"
+  },
+  {
+    "title": "Claude Code",
+    "url": "fichas/claude-code.html",
+    "type": "Runtimes e assistentes"
+  },
+  {
+    "title": "Gemini CLI",
+    "url": "fichas/gemini-cli.html",
+    "type": "Runtimes e assistentes"
+  },
+  {
+    "title": "GitHub Copilot",
+    "url": "fichas/github-copilot.html",
+    "type": "Runtimes e assistentes"
+  },
+  {
+    "title": "n8n",
+    "url": "fichas/n8n.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Flowise",
+    "url": "fichas/flowise.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Langflow",
+    "url": "fichas/langflow.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Dify",
+    "url": "fichas/dify.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Activepieces",
+    "url": "fichas/activepieces.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Node-RED",
+    "url": "fichas/node-red.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Apache NiFi",
+    "url": "fichas/apache-nifi.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Apache Airflow",
+    "url": "fichas/apache-airflow.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Kestra",
+    "url": "fichas/kestra.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Temporal",
+    "url": "fichas/temporal.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Prefect",
+    "url": "fichas/prefect.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "Dagster",
+    "url": "fichas/dagster.html",
+    "type": "Automação visual"
+  },
+  {
+    "title": "MCP",
+    "url": "fichas/mcp.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "A2A",
+    "url": "fichas/a2a.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "AG-UI",
+    "url": "fichas/ag-ui.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "A2UI",
+    "url": "fichas/a2ui.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "OpenAPI",
+    "url": "fichas/openapi.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "JSON Schema",
+    "url": "fichas/json-schema.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "AsyncAPI",
+    "url": "fichas/asyncapi.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "Webhooks",
+    "url": "fichas/webhooks.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "OAuth 2.1",
+    "url": "fichas/oauth-2-1.html",
+    "type": "Protocolos e interoperabilidade"
+  },
+  {
+    "title": "PostgreSQL",
+    "url": "fichas/postgresql.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "pgvector",
+    "url": "fichas/pgvector.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "Qdrant",
+    "url": "fichas/qdrant.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "Milvus",
+    "url": "fichas/milvus.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "Weaviate",
+    "url": "fichas/weaviate.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "Chroma",
+    "url": "fichas/chroma.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "FAISS",
+    "url": "fichas/faiss.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "Elasticsearch",
+    "url": "fichas/elasticsearch.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "OpenSearch",
+    "url": "fichas/opensearch.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "Neo4j",
+    "url": "fichas/neo4j.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "MongoDB",
+    "url": "fichas/mongodb.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "Redis",
+    "url": "fichas/redis.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "MinIO",
+    "url": "fichas/minio.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "Apache Kafka",
+    "url": "fichas/apache-kafka.html",
+    "type": "Memória dados e RAG"
+  },
+  {
+    "title": "OpenLineage",
+    "url": "fichas/openlineage.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "W3C PROV",
+    "url": "fichas/w3c-prov.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "RO-Crate",
+    "url": "fichas/ro-crate.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "MLflow",
+    "url": "fichas/mlflow.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "DVC",
+    "url": "fichas/dvc.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "lakeFS",
+    "url": "fichas/lakefs.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "DataHub",
+    "url": "fichas/datahub.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "OpenMetadata",
+    "url": "fichas/openmetadata.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "Great Expectations",
+    "url": "fichas/great-expectations.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "Evidently AI",
+    "url": "fichas/evidently-ai.html",
+    "type": "Governança e proveniência"
+  },
+  {
+    "title": "Langfuse",
+    "url": "fichas/langfuse.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "Arize Phoenix",
+    "url": "fichas/arize-phoenix.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "OpenTelemetry",
+    "url": "fichas/opentelemetry.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "Prometheus",
+    "url": "fichas/prometheus.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "Grafana",
+    "url": "fichas/grafana.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "Ragas",
+    "url": "fichas/ragas.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "DeepEval",
+    "url": "fichas/deepeval.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "Promptfoo",
+    "url": "fichas/promptfoo.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "Pydantic Evals",
+    "url": "fichas/pydantic-evals.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "TruLens",
+    "url": "fichas/trulens.html",
+    "type": "Observabilidade e avaliação"
+  },
+  {
+    "title": "NIST AI RMF",
+    "url": "fichas/nist-ai-rmf.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "OWASP GenAI Top 10 2026",
+    "url": "fichas/owasp-genai-top-10-2026.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "MITRE ATLAS",
+    "url": "fichas/mitre-atlas.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "OPA",
+    "url": "fichas/opa.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "Keycloak",
+    "url": "fichas/keycloak.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "Microsoft Presidio",
+    "url": "fichas/microsoft-presidio.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "NeMo Guardrails",
+    "url": "fichas/nemo-guardrails.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "Guardrails AI",
+    "url": "fichas/guardrails-ai.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "Lakera Guard",
+    "url": "fichas/lakera-guard.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "Garak",
+    "url": "fichas/garak.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "Trivy",
+    "url": "fichas/trivy.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "Vault (HashiCorp)",
+    "url": "fichas/vault-hashicorp.html",
+    "type": "Segurança e governança de agentes"
+  },
+  {
+    "title": "Ollama",
+    "url": "fichas/ollama.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "vLLM",
+    "url": "fichas/vllm.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "llama.cpp",
+    "url": "fichas/llama-cpp.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "Hugging Face Transformers",
+    "url": "fichas/hugging-face-transformers.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "Hugging Face TGI",
+    "url": "fichas/hugging-face-tgi.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "Docker",
+    "url": "fichas/docker.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "Kubernetes",
+    "url": "fichas/kubernetes.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "FastAPI",
+    "url": "fichas/fastapi.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "Pydantic",
+    "url": "fichas/pydantic.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "Celery",
+    "url": "fichas/celery.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "RabbitMQ",
+    "url": "fichas/rabbitmq.html",
+    "type": "Infraestrutura e serving"
+  },
+  {
+    "title": "PostHog",
+    "url": "fichas/posthog.html",
+    "type": "Interfaces e métricas"
+  },
+  {
+    "title": "Plausible Analytics",
+    "url": "fichas/plausible-analytics.html",
+    "type": "Interfaces e métricas"
+  },
+  {
+    "title": "Matomo",
+    "url": "fichas/matomo.html",
+    "type": "Interfaces e métricas"
+  },
+  {
+    "title": "CopilotKit",
+    "url": "fichas/copilotkit.html",
+    "type": "Interfaces e métricas"
+  },
+  {
+    "title": "React",
+    "url": "fichas/react.html",
+    "type": "Interfaces e métricas"
+  },
+  {
+    "title": "Next.js",
+    "url": "fichas/next-js.html",
+    "type": "Interfaces e métricas"
+  },
+  {
+    "title": "Streamlit",
+    "url": "fichas/streamlit.html",
+    "type": "Interfaces e métricas"
+  },
+  {
+    "title": "Gradio",
+    "url": "fichas/gradio.html",
+    "type": "Interfaces e métricas"
+  },
+  {
+    "title": "Whisper / faster-whisper",
+    "url": "fichas/whisper-faster-whisper.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "Piper TTS",
+    "url": "fichas/piper-tts.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "ElevenLabs",
+    "url": "fichas/elevenlabs.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "WhatsApp Business Platform",
+    "url": "fichas/whatsapp-business-platform.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "Z-API",
+    "url": "fichas/z-api.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "Telegram Bot API",
+    "url": "fichas/telegram-bot-api.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "Meta Graph API",
+    "url": "fichas/meta-graph-api.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "YouTube Data API",
+    "url": "fichas/youtube-data-api.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "Google News RSS",
+    "url": "fichas/google-news-rss.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "RSS/Atom",
+    "url": "fichas/rss-atom.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "Beautiful Soup",
+    "url": "fichas/beautiful-soup.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "Playwright",
+    "url": "fichas/playwright.html",
+    "type": "Multimodalidade e canais"
+  },
+  {
+    "title": "Conceitos A–Z — exemplos e tecnologias",
+    "url": "conceitos.html",
+    "type": "Referência"
+  },
+  {
+    "title": "Dimensões de classificação dos agentes",
+    "url": "dimensoes.html",
+    "type": "Fundamentos"
+  },
+  {
+    "title": "Arquitetura de referência",
+    "url": "arquitetura.html",
+    "type": "Engenharia"
+  },
+  {
+    "title": "Estudo de caso — Observar.IA",
+    "url": "estudos/observar.html",
+    "type": "Aplicações"
+  },
+  {
+    "title": "Estudo de caso — Varejo e CRM",
+    "url": "estudos/varejo.html",
+    "type": "Aplicações"
+  },
+  {
+    "title": "Estudo de caso — Escritório virtual FCT/UNESP",
+    "url": "estudos/escritorio.html",
+    "type": "Aplicações"
+  },
+  {
+    "title": "Matriz de decisão tecnológica atualizada",
+    "url": "matriz.html",
+    "type": "Decisão arquitetural"
+  },
+  {
+    "title": "Início",
+    "url": "index.html",
+    "type": "Página"
+  },
+  {
+    "title": "Cérebro do agente",
+    "url": "cerebro.html",
+    "type": "Engenharia"
+  },
+  {
+    "title": "Segurança e guardrails",
+    "url": "seguranca.html",
+    "type": "Segurança"
+  },
+  {
+    "title": "Assistente pessoal inteligente",
+    "url": "estudos/assistente-pessoal.html",
+    "type": "Aplicação"
+  },
+  {
+    "title": "CEIA Lumi-4B — modelo brasileiro do CEIA/UFG",
+    "url": "fichas/ceia-lumi-4b.html",
+    "text": "lumi modelo brasileiro ceia ufg pesos disponíveis linguagem português 4b"
+  },
+  {
+    "title": "Roadmap Adaptativo",
+    "url": "adaptativo.html",
+    "type": ""
+  },
+  {
+    "title": "Skills na Engenharia de Agentes",
+    "url": "skills.html",
+    "type": ""
+  },
+  {
+    "title": "Laboratório experimental: agente direto × skill",
+    "url": "laboratorio-comparativo.html",
+    "type": ""
+  },
+  {
+    "title": "Integração curricular M11 M12 ferramentas",
+    "url": "integracao-modulos.html",
+    "type": ""
+  },
+  {
+    "title": "Aplicações e automação inteligente 12 estudos de caso",
+    "url": "aplicacoes-automacao.html",
+    "type": ""
+  },
+  {
+    "title": "Catálogo ampliado: 17 ferramentas e critérios de escolha",
+    "url": "catalogo-v18.html",
+    "type": ""
+  },
+  {
+    "title": "Laboratórios multiplataforma: n8n Agents SDK Hermes OpenClaw",
+    "url": "laboratorio-v18.html",
+    "type": ""
+  },
+  {
+    "title": "ChatGPT",
+    "url": "fichas/chatgpt.html",
+    "type": ""
+  },
+  {
+    "title": "Make",
+    "url": "fichas/make.html",
+    "type": ""
+  },
+  {
+    "title": "Zapier",
+    "url": "fichas/zapier.html",
+    "type": ""
+  },
+  {
+    "title": "Power Automate",
+    "url": "fichas/power-automate.html",
+    "type": ""
+  },
+  {
+    "title": "Copilot Studio",
+    "url": "fichas/copilot-studio.html",
+    "type": ""
+  },
+  {
+    "title": "Botpress",
+    "url": "fichas/botpress.html",
+    "type": ""
+  },
+  {
+    "title": "Dialogflow CX",
+    "url": "fichas/dialogflow-cx.html",
+    "type": ""
+  },
+  {
+    "title": "ManyChat",
+    "url": "fichas/manychat.html",
+    "type": ""
+  },
+  {
+    "title": "Google Workspace",
+    "url": "fichas/google-workspace.html",
+    "type": ""
+  },
+  {
+    "title": "Google Forms",
+    "url": "fichas/google-forms.html",
+    "type": ""
+  },
+  {
+    "title": "Google Sheets",
+    "url": "fichas/google-sheets.html",
+    "type": ""
+  },
+  {
+    "title": "Gmail",
+    "url": "fichas/gmail.html",
+    "type": ""
+  },
+  {
+    "title": "Google Calendar",
+    "url": "fichas/google-calendar.html",
+    "type": ""
+  },
+  {
+    "title": "Apps Script",
+    "url": "fichas/apps-script.html",
+    "type": ""
+  },
+  {
+    "title": "Miro",
+    "url": "fichas/miro.html",
+    "type": ""
+  },
+  {
+    "title": "FigJam",
+    "url": "fichas/figjam.html",
+    "type": ""
+  },
+  {
+    "title": "Canva",
+    "url": "fichas/canva.html",
+    "type": ""
+  },
+  {
+    "title": "Laboratórios: agentes em ChatGPT, Gemini, Claude e Ollama",
+    "url": "laboratorios-plataformas.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Grok Bot — plataforma e escolhas",
+    "url": "grok-bot.html",
+    "text": "Grok Bot segundo cérebro agentes skills laboratórios persistentes"
+  },
+  {
+    "title": "Agentes que constroem aplicações",
+    "url": "agentes-construtores.html",
+    "text": "Grok Bot segundo cérebro agentes skills laboratórios persistentes"
+  },
+  {
+    "title": "Segundo Cérebro e memória",
+    "url": "segundo-cerebro.html",
+    "text": "Grok Bot segundo cérebro agentes skills laboratórios persistentes"
+  },
+  {
+    "title": "Laboratório de equipes e memória",
+    "url": "laboratorio-grok.html",
+    "text": "Grok Bot segundo cérebro agentes skills laboratórios persistentes"
+  },
+  {
+    "title": "Catálogo tecnológico — índice integral",
+    "url": "catalogo-integral.html"
+  },
+  {
+    "title": "Estudos de caso — índice integrado",
+    "url": "casos-integrados.html"
+  },
+  {
+    "title": "CRM com atendimento multicanal",
+    "url": "caso-crm-completo.html"
+  },
+  {
+    "title": "Plataforma Base com equipes e agentes",
+    "url": "caso-plataforma-base.html"
+  },
+  {
+    "title": "Fábrica de vídeos assistida por IA",
+    "url": "caso-fabrica-videos.html"
+  },
+  {
+    "title": "Dashboard financeiro e interpretação de dados",
+    "url": "caso-dashboard-financeiro.html"
+  },
+  {
+    "title": "N1 — Fundamentos",
+    "url": "niveis/fundamentos.html",
+    "text": "Diferenciar modelo, assistente, automação e agente Classificar tarefas do Observar.IA tecnologias laboratórios"
+  },
+  {
+    "title": "N2 — LLMs e prompting",
+    "url": "niveis/llms-prompting.html",
+    "text": "Modelos por API e locais, contexto, limites e custo Extrair informações de uma notícia e revisar tecnologias laboratórios"
+  },
+  {
+    "title": "N3 — Integração e automação",
+    "url": "niveis/integracao-automacao.html",
+    "text": "APIs, webhooks, n8n, eventos e tarefas Receber uma fonte via Web/WhatsApp em ambiente simulado tecnologias laboratórios"
+  },
+  {
+    "title": "N4 — Dados, RAG e memória",
+    "url": "niveis/dados-rag-memoria.html",
+    "text": "Documentos, PostgreSQL, pgvector, embeddings e memória Consultar fontes rastreáveis sem inventar citações tecnologias laboratórios"
+  },
+  {
+    "title": "N5 — Engenharia de agentes",
+    "url": "niveis/engenharia-agentes.html",
+    "text": "Ferramentas, skills, estados, validação e políticas Implementar um agente com ferramentas e logs tecnologias laboratórios"
+  },
+  {
+    "title": "N6 — Sistemas multiagentes",
+    "url": "niveis/multiagentes.html",
+    "text": "Coordenação, delegação, papéis e persistência Coordenar coleta, verificação e curadoria tecnologias laboratórios"
+  },
+  {
+    "title": "N7 — Pesquisa e avaliação",
+    "url": "niveis/pesquisa-avaliacao.html",
+    "text": "Baselines, experimentos, segurança e reprodutibilidade Comparar agente, pipeline e sistemas multiagentes tecnologias laboratórios"
+  },
+  {
+    "title": "Percurso pedagógico N1–N7",
+    "url": "percurso.html",
+    "text": "Sete níveis de formação em agentes de inteligência artificial"
+  }
+]

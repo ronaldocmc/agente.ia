@@ -1,0 +1,107 @@
+{
+  "data_utc": "2026-11-14T11:34:21.830907+00:00",
+  "python": "3.13.5",
+  "sistema": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "node": "v22.16.0",
+  "escopo": "Testes locais e interfaces simuladas; não valida n8n, Ollama ou outros runtimes externos.",
+  "resultados": [
+    {
+      "pasta": "atividades-progressivas",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider test_baseline.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 4,
+      "saida": "....                                                                     [100%]\n4 passed in 0.04s\n"
+    },
+    {
+      "pasta": "avancados",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider testes.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 6,
+      "saida": "......                                                                   [100%]\n6 passed in 0.04s\n"
+    },
+    {
+      "pasta": "fases-aprendizagem",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider testes_formacao.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 6,
+      "saida": "......                                                                   [100%]\n6 passed in 0.04s\n"
+    },
+    {
+      "pasta": "lab17_skill_vs_direto",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider test_experimento.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 3,
+      "saida": "...                                                               [100%]\n3 passed, 7 subtests passed in 0.04s\n"
+    },
+    {
+      "pasta": "lab18_multiplataforma",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider test_lab18.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 4,
+      "saida": "....                                                                     [100%]\n4 passed in 0.04s\n"
+    },
+    {
+      "pasta": "lab19_independente",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider test_baseline.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 5,
+      "saida": ".....                                                                    [100%]\n5 passed in 0.04s\n"
+    },
+    {
+      "pasta": "primeiro-agente",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider testes.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 6,
+      "saida": "......                                                                   [100%]\n6 passed in 0.04s\n"
+    },
+    {
+      "pasta": "segundo_cerebro_exemplo",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider test_cerebro.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 4,
+      "saida": "....                                                                     [100%]\n4 passed in 0.04s\n"
+    },
+    {
+      "pasta": "trilha-unificada",
+      "comando": "/opt/pyvenv/bin/python -m pytest -q -p no:cacheprovider test_core.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 4,
+      "saida": "....                                                                     [100%]\n4 passed in 0.04s\n"
+    },
+    {
+      "pasta": "comparacao-seis-abordagens",
+      "comando": "/opt/pyvenv/bin/python teste_baseline.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 3,
+      "saida": "3 testes sintéticos aprovados; não validam runtimes externos\n"
+    },
+    {
+      "pasta": "primeiro-agente",
+      "comando": "/opt/pyvenv/bin/python teste_integracao_simulada.py",
+      "status": "aprovado",
+      "verificacoes_previstas": 3,
+      "saida": "test_limit (__main__.Protocol.test_limit) ... ok\ntest_tool_roundtrip (__main__.Protocol.test_tool_roundtrip) ... ok\ntest_unauthorized (__main__.Protocol.test_unauthorized) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "pasta": "n8n-primeiro-workflow",
+      "comando": "node testar-workflow.js",
+      "status": "aprovado",
+      "verificacoes_previstas": 8,
+      "saida": "8 verificações da regra JavaScript do workflow aprovadas; interface $input simulada, n8n não executado.\n"
+    },
+    {
+      "pasta": "n8n-ollama-agente",
+      "comando": "node testar-ferramenta.js",
+      "status": "aprovado",
+      "verificacoes_previstas": 6,
+      "saida": "3 testes sintéticos da ferramenta aprovados; isto não testa o runtime n8n/Ollama.\n3 verificações adicionais de entradas inválidas aprovadas.\n"
+    },
+    {
+      "pasta": "fases-aprendizagem",
+      "comando": "/opt/pyvenv/bin/python comparar_llms.py --list",
+      "status": "aprovado",
+      "verificacoes_previstas": 0,
+      "saida": "CURSO01 Extraia nome do curso e total de vagas da frase: O curso Introdução a Agentes possui 30 vagas.\nCURSO02 Extraia nome do curso e vagas: O curso Banco de Dados II tem 25 vagas.\nCURSO03 Extraia nome do curso e vagas: O curso Ética em IA está com vagas não informadas.\nCURSO04 Extraia nome do curso e vagas: O curso Python para Iniciantes possui 40 vagas.\nCURSO05 Extraia nome do curso e vagas: O curso Integração de APIs possui 18 vagas.\n"
+    }
+  ]
+}

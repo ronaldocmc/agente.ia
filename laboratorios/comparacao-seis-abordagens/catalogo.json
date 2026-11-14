@@ -1,0 +1,14 @@
+{
+  "Agentes de IA": {
+    "vagas": 30,
+    "situacao": "abertas"
+  },
+  "Banco de Dados": {
+    "vagas": 25,
+    "situacao": "lista de espera"
+  },
+  "Python": {
+    "vagas": 20,
+    "situacao": "encerradas"
+  }
+}

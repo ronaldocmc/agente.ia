@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Agente.IA: fundamentos, tecnologias, engenharia, governança e aplicações de agentes de IA" name="description"/><title>Estudo de caso — Assistente pessoal inteligente · Agente.IA</title><link href="../assets/style.css" rel="stylesheet"/></head><body><header class="top"><button aria-controls="site-navigation" aria-expanded="true" aria-label="Recolher menu lateral" class="menu-btn" type="button">☰ <span class="menu-label">Recolher menu</span></button><a class="brand" href="../index.html">unesp<span>.IA</span> / Agente.IA</a><small>Aprender. Experimentar. Aplicar.</small><div class="header-actions"><a href="../conceitos.html">Conceitos A–Z</a><a href="../estudos/assistente-pessoal.html">Assistente pessoal</a></div></header><div class="container"><aside class="nav" data-nav="integrada" id="site-navigation"><input aria-label="Buscar páginas" autocomplete="off" class="search" id="search" placeholder="Buscar no Agente.IA... Ctrl+K"/><div class="search-results" id="search-results"></div><h4>COMECE AQUI</h4><a href="../minha-aprendizagem.html">Minha Aprendizagem</a><a href="../guia-de-navegacao.html">Como usar o Agente.IA</a><a href="../primeiro-agente.html">Meu primeiro agente</a><a href="../percurso.html">Trilhas de aprendizagem</a><a href="../adaptativo.html">Roadmap adaptativo</a><h4>ESCOLHA TECNOLÓGICA</h4><a href="../ecossistema-tecnologias.html">Ecossistema: quem faz o quê?</a><a href="../decisao-orientada-a-problemas.html">Decidir pelo problema</a><a href="../matriz.html">Matriz interativa</a><a href="../grafo.html">Grafo tecnológico</a><a href="../catalogo-integral.html">Catálogo integral</a><h4>CONSTRUIR E AVALIAR</h4><a href="../percursos-tecnologia.html">Percursos por tecnologia</a><a href="../laboratorios-completos.html">Laboratórios guiados</a><a href="../formacao-individual.html">Laboratórios por tecnologia</a><a href="../aplicacoes-setoriais.html">Aplicações por setor</a><a href="../formacao-individual.html">Laboratórios por tecnologia</a><a href="../automacao-agentes.html">Automação: workflow × agente</a><a href="../lab-n8n-detalhado.html">n8n + Ollama</a><a href="../lab-agents-sdk.html">Agents SDK Python</a><a href="../lab-langgraph-detalhado.html">LangGraph</a><a href="../laboratorios-comparativos.html">Hermes / OpenClaw / Grok Bot</a><a href="../skills.html">Skills e segurança</a><h4>APLICAÇÕES</h4><a href="../escritorio-virtual-decisao.html">Escritório Virtual</a><a href="../casos-integrados.html">Estudos de caso completos</a><a href="../aplicacoes-automacao.html">Exemplos de automação</a><a href="../segundo-cerebro.html">Segundo Cérebro</a><h4>REFERÊNCIAS</h4><a href="../conceitos.html">Conceitos A–Z</a><a href="../formacao-aprofundada.html">Formação aprofundada</a><a href="../seguranca.html">Segurança e guardrails</a><a href="../integracao-modulos.html">Integração curricular</a></aside><main><div class="breadcrumbs">Início / Engenharia e aplicações</div><div class="eyebrow">Agente.IA · Guia de referência</div><h1>Estudo de caso — Assistente pessoal inteligente</h1><article class="body"><h1 id="estudo-de-caso-completo-assistente-pessoal-inteligente">Estudo de caso completo — assistente pessoal inteligente<a aria-label="Link para esta seção" class="anchor" href="#estudo-de-caso-completo-assistente-pessoal-inteligente"> #</a></h1>
+<p>Este projeto exemplifica <strong>como construir</strong>, e não apenas utilizar, um assistente com múltiplos canais, memória e ferramentas. O nome do produto final ainda pode ser definido. Os exemplos são requisitos e experimentos propostos, <strong>não funcionalidades já implementadas</strong>.</p>
+<h2 id="1-referencias-de-produtos-e-analise-comparativa">1. Referências de produtos e análise comparativa<a aria-label="Link para esta seção" class="anchor" href="#1-referencias-de-produtos-e-analise-comparativa"> #</a></h2>
+<table>
+<thead>
+<tr>
+<th>Produto estudado</th>
+<th>Capacidades declaradas publicamente</th>
+<th>Ideia transferível ao projeto</th>
+<th>O que precisa ser verificado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://heyjarvis.com.br/">HeyJarvis</a></td>
+<td>WhatsApp, texto/áudio, lembretes, despesas e compromissos</td>
+<td>Conversa simples integrada à rotina</td>
+<td>Termos, tratamento de dados, API e limites reais</td>
+</tr>
+<tr>
+<td><a href="https://www.openjarvis.org/">OpenJarvis</a></td>
+<td>Segundo cérebro, memória, voz, computador, opção local</td>
+<td>Memória pessoal com controle e recuperação contextual</td>
+<td>Código, licenças, precisão e isolamento</td>
+</tr>
+<tr>
+<td><a href="https://www.jarvis4.com/">Jarvis4</a></td>
+<td>Calendários, e-mail, metas, agente local, automações programadas</td>
+<td>Integração de ferramentas e resumos proativos</td>
+<td>Permissões, disponibilidade e execução real</td>
+</tr>
+</tbody>
+</table>
+<p>São fontes de <strong>inspiração funcional</strong>, sem afirmar equivalência técnica, código livre, maturidade de segurança ou conformidade comprovada. Não copiar interface, identidade de marca ou textos promocionais.</p>
+<h2 id="2-problema-usuarios-e-objetivos">2. Problema, usuários e objetivos<a aria-label="Link para esta seção" class="anchor" href="#2-problema-usuarios-e-objetivos"> #</a></h2>
+<p><strong>Problema:</strong> uma pessoa lida com mensagens, compromissos, documentos e pendências em aplicativos desconectados. <strong>Objetivo:</strong> permitir interação por conversa e voz, recuperação de informações autorizadas, planejamento de atividades, automação limitada e acompanhamento de tarefas, sem perder controle do que é registrado ou executado.</p>
+<p><strong>Atores:</strong> usuário titular, convidados autorizados, administrador técnico, serviços de identidade, provedores de LLM, canais e ferramentas. Separar rigorosamente dados de cada usuário e de cada instituição.</p>
+<h2 id="3-requisitos-funcionais-candidatos">3. Requisitos funcionais candidatos<a aria-label="Link para esta seção" class="anchor" href="#3-requisitos-funcionais-candidatos"> #</a></h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Funcionalidade</th>
+<th>Exemplo de entrada</th>
+<th>Saída / comportamento esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AP01</td>
+<td>Criar lembrete</td>
+<td>“Me lembre de entregar o relatório na sexta às 16h”</td>
+<td>Confirmação com data, fuso e ID</td>
+</tr>
+<tr>
+<td>AP02</td>
+<td>Registrar ideia</td>
+<td>“Guarde uma ideia sobre meu projeto de agentes”</td>
+<td>Nota etiquetada e rastreável</td>
+</tr>
+<tr>
+<td>AP03</td>
+<td>Consultar memória</td>
+<td>“O que definimos na reunião anterior?”</td>
+<td>Resposta com origem, data e incertezas</td>
+</tr>
+<tr>
+<td>AP04</td>
+<td>Ler áudio</td>
+<td>Mensagem falada pelo canal</td>
+<td>Transcrição conferida antes de ação crítica</td>
+</tr>
+<tr>
+<td>AP05</td>
+<td>Analisar imagem</td>
+<td>Foto de recibo, documento ou quadro</td>
+<td>Extração estruturada com campo de confiança</td>
+</tr>
+<tr>
+<td>AP06</td>
+<td>Integrar agenda</td>
+<td>“Veja meus horários livres”</td>
+<td>Disponibilidade com escopo mínimo</td>
+</tr>
+<tr>
+<td>AP07</td>
+<td>Preparar comunicação</td>
+<td>“Redija um e-mail para a equipe”</td>
+<td>Rascunho, nunca envio automático sem política</td>
+</tr>
+<tr>
+<td>AP08</td>
+<td>Assistir tarefas recorrentes</td>
+<td>“Toda segunda prepare um resumo das pendências”</td>
+<td>Rotina versionada e cancelável</td>
+</tr>
+<tr>
+<td>AP09</td>
+<td>Consultar arquivos</td>
+<td>“Ache o material sobre RAG”</td>
+<td>Referências e links a arquivos autorizados</td>
+</tr>
+<tr>
+<td>AP10</td>
+<td>Gerenciar objetivos</td>
+<td>“Acompanhe meu progresso no projeto”</td>
+<td>Plano, marcos e revisões autorizadas</td>
+</tr>
+<tr>
+<td>AP11</td>
+<td>Acessar computador</td>
+<td>“Abra este repositório e execute os testes”</td>
+<td>Somente ambiente isolado e autorização explícita</td>
+</tr>
+<tr>
+<td>AP12</td>
+<td>Comunicar-se proativamente</td>
+<td>“Avise se uma tarefa ficar atrasada”</td>
+<td>Evento e notificação no canal autorizado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-arquitetura-de-referencia-proposta">4. Arquitetura de referência proposta<a aria-label="Link para esta seção" class="anchor" href="#4-arquitetura-de-referencia-proposta"> #</a></h2>
+<pre><code class="language-text">WhatsApp / Web / App / Voz
+          ↓
+Gateway de canais + identidade + rate limits
+          ↓
+API de aplicação e serviço de políticas
+          ↓
+CÉREBRO: interpretação → contexto → planejamento → decisão → verificação
+          ↙           ↓                   ↘
+      LLM API/local   Memória/RAG      Catálogo de tools/skills
+          ↓           ↓                   ↓
+       validação   PostgreSQL/pgvector   Agenda, e-mail, notas, automações
+          \           |                   /
+           → serviço de autorização e aprovação → execução controlada
+                                  ↓
+                     estado, logs, métricas, auditoria
+                                  ↓
+                       resposta + confirmação
+</code></pre>
+<p>O serviço de autorização <strong>não pode ser implementado apenas como prompt</strong>. Ferramentas de alto risco devem ficar fora das credenciais e do processo que interpreta o conteúdo não confiável.</p>
+<h2 id="5-tecnologias-candidatas-por-capacidade">5. Tecnologias candidatas por capacidade<a aria-label="Link para esta seção" class="anchor" href="#5-tecnologias-candidatas-por-capacidade"> #</a></h2>
+<table>
+<thead>
+<tr>
+<th>Capacidade</th>
+<th>Implementação candidata</th>
+<th>Alternativas/condições</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cérebro/agent loop</td>
+<td><a href="../fichas/openai-agents-sdk.html">OpenAI Agents SDK</a>, <a href="../fichas/google-adk.html">Google ADK</a> ou <a href="../fichas/pydanticai.html">PydanticAI</a></td>
+<td>Um SDK por protótipo comparativo</td>
+</tr>
+<tr>
+<td>Fluxo com pausa e retomada</td>
+<td><a href="../fichas/langgraph.html">LangGraph</a>, <a href="../fichas/temporal.html">Temporal</a></td>
+<td>Necessário quando há tarefas longas</td>
+</tr>
+<tr>
+<td>Runtime de assistente</td>
+<td><a href="../fichas/openclaw.html">OpenClaw</a>, <a href="../fichas/hermes-agent.html">Hermes Agent</a></td>
+<td>Avaliar primeiro isolamento e política de ferramentas</td>
+</tr>
+<tr>
+<td>Integração e tarefas agendadas</td>
+<td><a href="../fichas/n8n.html">n8n</a>, APIs, webhooks</td>
+<td>Evitar agentes onde regras bastam</td>
+</tr>
+<tr>
+<td>Memória e dados</td>
+<td><a href="../fichas/postgresql.html">PostgreSQL</a>, <a href="../fichas/pgvector.html">pgvector</a>, <a href="../fichas/redis.html">Redis</a></td>
+<td>Rastreabilidade, deleção e retenção</td>
+</tr>
+<tr>
+<td>Documentos</td>
+<td><a href="../fichas/llamaindex-workflows.html">LlamaIndex</a>, busca lexical, RAG</td>
+<td>Avaliar relevância e citações</td>
+</tr>
+<tr>
+<td>Voz</td>
+<td>Whisper/faster-whisper; Kokoro/ElevenLabs</td>
+<td>Verificar idioma, privacidade e direitos</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td><a href="../fichas/oauth-2-1.html">OAuth</a>, <a href="../fichas/json-schema.html">JSON Schema</a>, <a href="../fichas/mcp.html">MCP</a></td>
+<td>Autorizações fora do LLM</td>
+</tr>
+<tr>
+<td>API e interface</td>
+<td>FastAPI / interface web / AG-UI</td>
+<td>Escolher por uso real e controle</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cinco-jornadas-de-ponta-a-ponta">6. Cinco jornadas de ponta a ponta<a aria-label="Link para esta seção" class="anchor" href="#6-cinco-jornadas-de-ponta-a-ponta"> #</a></h2>
+<h3 id="jornada-1-lembrete-por-whatsapp">Jornada 1 — lembrete por WhatsApp<a aria-label="Link para esta seção" class="anchor" href="#jornada-1-lembrete-por-whatsapp"> #</a></h3>
+<p><strong>Entrada:</strong> “Lembre amanhã às 8h de revisar o trabalho”. <strong>Extração:</strong> intenção, título, hora, fuso e destinatário. <strong>Validação:</strong> desambiguar “amanhã” no fuso local; verificar se o canal é legítimo. <strong>Persistência:</strong> tabela <code>lembretes</code> com owner, horário, status e origem. <strong>Execução:</strong> agendador envia no momento previsto e salva recibo de entrega. <strong>Falhas:</strong> indisponibilidade do canal gera reprocessamento idempotente. <strong>Avaliação:</strong> pontualidade e duplicidade zero.</p>
+<h3 id="jornada-2-segundo-cerebro">Jornada 2 — segundo cérebro<a aria-label="Link para esta seção" class="anchor" href="#jornada-2-segundo-cerebro"> #</a></h3>
+<p><strong>Entrada:</strong> “Qual era nossa decisão sobre a arquitetura do projeto?”. <strong>Contexto:</strong> busca em notas e reuniões do próprio usuário; resultados trazem origem e data. <strong>Decisão:</strong> se não existir evidência, declarar a lacuna. <strong>Memória:</strong> distinguir <em>decisão confirmada</em>, <em>hipótese</em>, <em>preferência</em> e <em>ação pendente</em>. <strong>Avaliação:</strong> precisão das referências, taxa de respostas sem fundamento e correções do usuário.</p>
+<h3 id="jornada-3-agendamento-com-terceiros">Jornada 3 — agendamento com terceiros<a aria-label="Link para esta seção" class="anchor" href="#jornada-3-agendamento-com-terceiros"> #</a></h3>
+<p><strong>Entrada:</strong> “Marque uma reunião com dois colegas”. <strong>Ferramentas:</strong> consulta de disponibilidade com escopos mínimos. <strong>Decisão:</strong> selecionar horários candidatos. <strong>Guardrail:</strong> pedir aprovação da lista de participantes e do horário antes de criar evento. <strong>Saída:</strong> apresentar ID de confirmação e atualização após escrita real.</p>
+<h3 id="jornada-4-voz-fotografia-e-despesas">Jornada 4 — voz, fotografia e despesas<a aria-label="Link para esta seção" class="anchor" href="#jornada-4-voz-fotografia-e-despesas"> #</a></h3>
+<p><strong>Entrada:</strong> áudio “Gastei 32 reais no estacionamento” ou foto de comprovante. <strong>Percepção:</strong> transcrição ou leitura visual. <strong>Validação:</strong> valor, moeda, data, categoria e possíveis duplicatas. <strong>Persistência:</strong> gravar apenas dados necessários, sob controle do usuário. <strong>Risco:</strong> nunca iniciar pagamento com base na mensagem interpretada. <strong>Avaliação:</strong> erro de extração e completude da trilha.</p>
+<h3 id="jornada-5-execucao-no-computador">Jornada 5 — execução no computador<a aria-label="Link para esta seção" class="anchor" href="#jornada-5-execucao-no-computador"> #</a></h3>
+<p><strong>Entrada:</strong> “Execute os testes deste projeto”. <strong>Pré-condições:</strong> repositório autorizado, ambiente temporário e sandbox configurado. <strong>Execução:</strong> comandos permitidos e logs, sem acesso amplo ao computador. <strong>Aprovação:</strong> alterações em arquivos sensíveis ou publicação remota exigem revisão. <strong>Saída:</strong> relatório com testes e arquivos modificados.</p>
+<h2 id="7-roadmap-incremental-de-implementacao">7. Roadmap incremental de implementação<a aria-label="Link para esta seção" class="anchor" href="#7-roadmap-incremental-de-implementacao"> #</a></h2>
+<table>
+<thead>
+<tr>
+<th>Incremento</th>
+<th>Produto mínimo verificável</th>
+<th>Testes prioritários</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Conversa</td>
+<td>Chat autenticado e classificador de intenção</td>
+<td>Identidade, latência, intenção</td>
+</tr>
+<tr>
+<td>2 — Ferramentas</td>
+<td>Lembretes e notas com contratos</td>
+<td>Idempotência, persistência, erros</td>
+</tr>
+<tr>
+<td>3 — Memória</td>
+<td>Notas recuperáveis e preferências revogáveis</td>
+<td>Isolamento de usuário, deleção</td>
+</tr>
+<tr>
+<td>4 — Canais</td>
+<td>Mensagem e áudio por Web/WhatsApp</td>
+<td>Autorização e qualidade de transcrição</td>
+</tr>
+<tr>
+<td>5 — Agenda/e-mail</td>
+<td>Leitura e rascunho; escrita com aprovação</td>
+<td>Aprovação, destinatários, revogação</td>
+</tr>
+<tr>
+<td>6 — Proatividade</td>
+<td>Resumo diário e alertas canceláveis</td>
+<td>Duplicidade, horário, custos</td>
+</tr>
+<tr>
+<td>7 — Computador</td>
+<td>Execução limitada em sandbox</td>
+<td>Testes de intrusão, isolamento</td>
+</tr>
+<tr>
+<td>8 — Avaliação</td>
+<td>Comparação entre SDK e runtime escolhido</td>
+<td>Segurança, custo, qualidade, reprodutibilidade</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-metricas-e-criterios-de-aceite">8. Métricas e critérios de aceite<a aria-label="Link para esta seção" class="anchor" href="#8-metricas-e-criterios-de-aceite"> #</a></h2>
+<p>Medir conclusão correta da tarefa, precisão da extração, confiança bem calibrada, número de ações não autorizadas (<strong>meta zero</strong>), uso correto de aprovações, vazamento entre usuários (<strong>meta zero</strong>), tempo de resposta, custo por tarefa e satisfação em avaliação supervisionada. Preparar datasets sintéticos de pedidos benignos, ambíguos, maliciosos e adversariais.</p>
+<h2 id="9-integracao-com-a-trilha-de-aprendizagem">9. Integração com a trilha de aprendizagem<a aria-label="Link para esta seção" class="anchor" href="#9-integracao-com-a-trilha-de-aprendizagem"> #</a></h2>
+<p><a href="../capitulos/02.html">Fundamentos</a> → <a href="../capitulos/03.html">Automação versus agente</a> → <a href="../cerebro.html">Cérebro</a> → <a href="../capitulos/06.html">Memória e RAG</a> → <a href="../matriz.html">Matriz de tecnologias</a> → <a href="../seguranca.html">Guardrails</a> → <a href="../capitulos/08.html">Laboratórios</a>.</p>
+<h2 id="10-fontes-e-cautela">10. Fontes e cautela<a aria-label="Link para esta seção" class="anchor" href="#10-fontes-e-cautela"> #</a></h2>
+<ul>
+<li><a href="https://heyjarvis.com.br/">HeyJarvis</a>, <a href="https://www.openjarvis.org/">OpenJarvis</a>, <a href="https://www.jarvis4.com/">Jarvis4</a>: declarações de produtos consultadas em novembro de 2026; características dependem de versão, implantação e direitos de acesso.</li>
+<li><a href="https://docs.openclaw.ai/">Documentação oficial OpenClaw</a>: referência para modos de implantação, sessões, ferramentas e limites.</li>
+<li><a href="https://www.hostinger.com/tutorials/openclaw-security/">Hostinger — riscos e segurança do OpenClaw</a>: fonte complementar; não substitui auditoria da configuração real.</li>
+</ul>
+<p>Para proteger dados pessoais e integrações, consulte a <a href="../seguranca.html#5-seguranca-no-hermes-agent-configuracao-fronteiras-e-riscos">seção de segurança do Hermes</a> e compare com o OpenClaw.</p></article><footer class="footer">Agente.IA · Documentação integrada · Conteúdo técnico-didático em evolução · Informações de fornecedores e versões exigem revalidação.</footer></main><aside class="toc"><h4>Nesta página</h4><a href="#1-referencias-de-produtos-e-analise-comparativa">1. Referências de produtos e análise comparativa</a><a href="#2-problema-usuarios-e-objetivos">2. Problema, usuários e objetivos</a><a href="#3-requisitos-funcionais-candidatos">3. Requisitos funcionais candidatos</a><a href="#4-arquitetura-de-referencia-proposta">4. Arquitetura de referência proposta</a><a href="#5-tecnologias-candidatas-por-capacidade">5. Tecnologias candidatas por capacidade</a><a href="#6-cinco-jornadas-de-ponta-a-ponta">6. Cinco jornadas de ponta a ponta</a><a href="#jornada-1-lembrete-por-whatsapp">Jornada 1 — lembrete por WhatsApp</a><a href="#jornada-2-segundo-cerebro">Jornada 2 — segundo cérebro</a><a href="#jornada-3-agendamento-com-terceiros">Jornada 3 — agendamento com terceiros</a><a href="#jornada-4-voz-fotografia-e-despesas">Jornada 4 — voz, fotografia e despesas</a><a href="#jornada-5-execucao-no-computador">Jornada 5 — execução no computador</a><a href="#7-roadmap-incremental-de-implementacao">7. Roadmap incremental de implementação</a><a href="#8-metricas-e-criterios-de-aceite">8. Métricas e critérios de aceite</a><a href="#9-integracao-com-a-trilha-de-aprendizagem">9. Integração com a trilha de aprendizagem</a><a href="#10-fontes-e-cautela">10. Fontes e cautela</a></aside></div><script defer="" src="../assets/site.js"></script></body></html>

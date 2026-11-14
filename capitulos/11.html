@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html data-root="../" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Agente.IA: fundamentos, tecnologias, engenharia, governança e aplicações de agentes de IA" name="description"/><title>11. Avaliação científica de agentes e arquiteturas · Agente.IA</title><link href="../assets/style.css" rel="stylesheet"/></head><body><header class="top"><button aria-controls="site-navigation" aria-expanded="true" aria-label="Recolher menu lateral" class="menu-btn" type="button">☰ <span class="menu-label">Recolher menu</span></button><a class="brand" href="../index.html">unesp<span>.IA</span> / Agente.IA</a><small>Aprender. Experimentar. Aplicar.</small><div class="header-actions"><a href="../conceitos.html">Conceitos A–Z</a><a href="../estudos/assistente-pessoal.html">Assistente pessoal</a></div></header><div class="container"><aside class="nav" data-nav="integrada" id="site-navigation"><input aria-label="Buscar páginas" autocomplete="off" class="search" id="search" placeholder="Buscar no Agente.IA... Ctrl+K"/><div class="search-results" id="search-results"></div><h4>COMECE AQUI</h4><a href="../minha-aprendizagem.html">Minha Aprendizagem</a><a href="../guia-de-navegacao.html">Como usar o Agente.IA</a><a href="../primeiro-agente.html">Meu primeiro agente</a><a href="../percurso.html">Trilhas de aprendizagem</a><a href="../adaptativo.html">Roadmap adaptativo</a><h4>ESCOLHA TECNOLÓGICA</h4><a href="../ecossistema-tecnologias.html">Ecossistema: quem faz o quê?</a><a href="../decisao-orientada-a-problemas.html">Decidir pelo problema</a><a href="../matriz.html">Matriz interativa</a><a href="../grafo.html">Grafo tecnológico</a><a href="../catalogo-integral.html">Catálogo integral</a><h4>CONSTRUIR E AVALIAR</h4><a href="../percursos-tecnologia.html">Percursos por tecnologia</a><a href="../laboratorios-completos.html">Laboratórios guiados</a><a href="../formacao-individual.html">Laboratórios por tecnologia</a><a href="../aplicacoes-setoriais.html">Aplicações por setor</a><a href="../formacao-individual.html">Laboratórios por tecnologia</a><a href="../automacao-agentes.html">Automação: workflow × agente</a><a href="../lab-n8n-detalhado.html">n8n + Ollama</a><a href="../lab-agents-sdk.html">Agents SDK Python</a><a href="../lab-langgraph-detalhado.html">LangGraph</a><a href="../laboratorios-comparativos.html">Hermes / OpenClaw / Grok Bot</a><a href="../skills.html">Skills e segurança</a><h4>APLICAÇÕES</h4><a href="../escritorio-virtual-decisao.html">Escritório Virtual</a><a href="../casos-integrados.html">Estudos de caso completos</a><a href="../aplicacoes-automacao.html">Exemplos de automação</a><a href="../segundo-cerebro.html">Segundo Cérebro</a><h4>REFERÊNCIAS</h4><a href="../conceitos.html">Conceitos A–Z</a><a href="../formacao-aprofundada.html">Formação aprofundada</a><a href="../seguranca.html">Segurança e guardrails</a><a href="../integracao-modulos.html">Integração curricular</a></aside><main><div class="breadcrumbs"><a href="../index.html">Início</a> / Capítulo</div><div class="eyebrow">Agente.IA · Guia de referência</div><h1>11. Avaliação científica de agentes e arquiteturas</h1><article class="body"><p>Para projetos de Ciência da Computação, a simples integração de ferramentas não demonstra contribuição científica.</p>
+<p>É necessário formular hipóteses, comparar alternativas e apresentar resultados reproduzíveis.</p>
+<h3 id="11-1-perguntas-de-pesquisa">11.1 Perguntas de pesquisa<a aria-label="Link para esta seção" class="anchor" href="#11-1-perguntas-de-pesquisa"> #</a></h3>
+<p>Podemos investigar, por exemplo, se agentes com <a class="concept-link" href="../conceitos.html#llm" title="Abrir referência: LLM">LLM</a> apresentam vantagens mensuráveis sobre regras e modelos tradicionais.</p>
+<p>Também podemos avaliar o efeito de RAG, <a class="concept-link" href="../conceitos.html#memoria" title="Abrir referência: Memória">memória</a>, skills e MCP sobre qualidade, desempenho e confiabilidade.</p>
+<p>Outra questão relevante é verificar se sistemas multiagentes apresentam vantagens reais sobre agentes únicos com várias ferramentas.</p>
+<h3 id="11-2-protocolo-experimental">11.2 Protocolo experimental<a aria-label="Link para esta seção" class="anchor" href="#11-2-protocolo-experimental"> #</a></h3>
+<p>Uma proposta é comparar cinco tratamentos.</p>
+<table>
+<thead>
+<tr>
+<th>Tratamento</th>
+<th>Arquitetura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T0</td>
+<td>Regras, SQL e algoritmos clássicos</td>
+</tr>
+<tr>
+<td>T1</td>
+<td>Agente único com LLM e ferramentas</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Agente com LLM e RAG</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Agente com grafo e estado persistente</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Sistema multiagente</td>
+</tr>
+</tbody>
+</table>
+<p>É necessário controlar datasets, ferramentas, modelos, versões e orçamento experimental.</p>
+<h3 id="11-3-metricas">11.3 Métricas<a aria-label="Link para esta seção" class="anchor" href="#11-3-metricas"> #</a></h3>
+<p>As métricas podem incluir precisão, revocação, F1, taxa de resolução, correção das ações, bloqueio de operações indevidas, custo, latência, consumo de tokens, disponibilidade e robustez.</p>
+<p>Em experimentos com LLMs, devemos considerar a variabilidade dos resultados e registrar versões, parâmetros e condições de execução.</p>
+<h3 id="11-4-estudos-de-ablacao">11.4 Estudos de ablação<a aria-label="Link para esta seção" class="anchor" href="#11-4-estudos-de-ablacao"> #</a></h3>
+<p>Uma estratégia importante é retirar componentes para compreender suas contribuições.</p>
+<p>Podemos avaliar o mesmo agente com e sem RAG, memória, skills ou <a class="concept-link" href="../conceitos.html#orquestracao" title="Abrir referência: Orquestração">orquestração</a> multiagente.</p>
+<p>Isso ajuda a responder se o aumento da complexidade realmente produz benefícios.</p>
+</article><footer class="footer">Agente.IA · Documentação integrada · Conteúdo técnico-didático em evolução · Informações de fornecedores e versões exigem revalidação.</footer></main><aside class="toc"><h4>Nesta página</h4><a class="sub" href="#11-1-perguntas-de-pesquisa">11.1 Perguntas de pesquisa</a><a class="sub" href="#11-2-protocolo-experimental">11.2 Protocolo experimental</a><a class="sub" href="#11-3-metricas">11.3 Métricas</a><a class="sub" href="#11-4-estudos-de-ablacao">11.4 Estudos de ablação</a></aside></div><script defer="" src="../assets/site.js"></script></body></html>

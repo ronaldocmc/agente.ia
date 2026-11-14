@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "IA para Todos",
+    "vagas": 30,
+    "inscritos": 29,
+    "status": "aberto"
+  },
+  {
+    "nome": "Introdução a Agentes",
+    "vagas": 20,
+    "inscritos": 20,
+    "status": "encerrado"
+  },
+  {
+    "nome": "Dados na Educação",
+    "vagas": 25,
+    "inscritos": 12,
+    "status": "aberto"
+  }
+]

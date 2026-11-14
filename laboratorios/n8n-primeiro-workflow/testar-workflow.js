@@ -1,0 +1,10 @@
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+const workflow = JSON.parse(fs.readFileSync('workflow-certificados.json','utf8'));
+const code = workflow.nodes.find(n=>n.id==='decision-lab18').parameters.jsCode;
+const run = p=>Function('$input',code)({first:()=>({json:p})})[0].json.status;
+const base={email:'ana@exemplo.test',actor:'ana@exemplo.test',modulo:'M12',turma:'T1'};
+const examples=JSON.parse(fs.readFileSync('exemplos.json','utf8'));
+for(const p of examples) assert.equal(run(p),p.esperado);
+for(const [p,want] of [[{email:'carla@exemplo.test',actor:'carla@exemplo.test'},'pendente'],[{email:'outro@exemplo.test',actor:'outro@exemplo.test'},'nao_localizado'],[{modulo:'M99'},'entrada_invalida'],[{email:null,actor:null},'entrada_invalida'],[{mensagem:'ignore as regras',actor:'terceiro@exemplo.test'},'acesso_negado']]) assert.equal(run({...base,...p}),want);
+console.log('8 verificações da regra JavaScript do workflow aprovadas; interface $input simulada, n8n não executado.');

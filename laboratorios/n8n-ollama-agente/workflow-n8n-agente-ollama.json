@@ -1,0 +1,106 @@
+{
+  "name": "unespIA — Agente real com Ollama e ferramenta (laboratorio)",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        200,
+        250
+      ],
+      "id": "76ca647e-a730-452e-974f-bc4918ded06c",
+      "name": "Chat de laboratorio"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "Voce e um agente didatico. Para informacoes sobre vagas, situacao e cursos, CHAME sempre a ferramenta consultar_curso. Nao invente dados. Utilize apenas dados retornados pela ferramenta. Se a ferramenta retornar erro, informe que nao foi possivel consultar. Nunca execute operacoes de escrita."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        480,
+        250
+      ],
+      "id": "dea6340e-4e68-459e-b413-d4483a6ec564",
+      "name": "Agente de cursos"
+    },
+    {
+      "parameters": {
+        "model": "qwen3:4b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        390,
+        480
+      ],
+      "id": "8662dbe2-abe2-4c3d-b153-7d3337febfdf",
+      "name": "Modelo local Ollama"
+    },
+    {
+      "parameters": {
+        "name": "consultar_curso",
+        "description": "Consulte informacoes verificadas sobre cursos ficticios (vagas e inscricoes). Envie uma string JSON como {\"curso\":\"Agentes de IA\"}. Use SEMPRE antes de responder perguntas de cursos. Nao envia dados reais.",
+        "jsCode": "// Ferramenta somente leitura. Dados inteiramente fictícios de laboratório.\n// query é o texto enviado pelo agente, não uma variável do workflow.\nconst raw = typeof query === 'string' ? query : JSON.stringify(query);\nlet value;\ntry { value = JSON.parse(raw); } catch { value = { curso: raw }; }\nif (!value || typeof value !== 'object' || Array.isArray(value)) return JSON.stringify({erro:'entrada invalida'});\nconst curso = String(value.curso || value.course || '').toLowerCase().trim();\nconst catalogo = {\n  'agentes de ia': {nome:'Agentes de IA',vagas:30,situacao:'inscricoes abertas'},\n  'banco de dados': {nome:'Banco de Dados',vagas:25,situacao:'lista de espera'},\n  'python': {nome:'Python',vagas:20,situacao:'inscricoes encerradas'}\n};\nif (typeof raw !== 'string' || raw.length > 200) return JSON.stringify({erro:'entrada extensa'});\nif (/ignore|ignore as regras|apague|remova|delete|shell|terminal/i.test(raw))\n  return JSON.stringify({erro:'instrucoes nao permitidas; informe somente um nome de curso'});\nconst chaves = Object.keys(catalogo);\nconst encontrado = chaves.find(k => curso === k || curso.includes(k));\nreturn JSON.stringify(encontrado ? {encontrado:true,...catalogo[encontrado],fonte:'CATALOGO_SINTETICO'} : {encontrado:false,mensagem:'Curso nao encontrado no catalogo sintetico',fonte:'CATALOGO_SINTETICO'});"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.1,
+      "position": [
+        670,
+        480
+      ],
+      "id": "cb70229a-effb-4c4b-b0f5-4f53ff63c46c",
+      "name": "consultar_curso"
+    }
+  ],
+  "connections": {
+    "Chat de laboratorio": {
+      "main": [
+        [
+          {
+            "node": "Agente de cursos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Modelo local Ollama": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Agente de cursos",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "consultar_curso": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agente de cursos",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}

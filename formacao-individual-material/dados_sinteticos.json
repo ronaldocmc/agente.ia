@@ -1,0 +1,135 @@
+{
+  "nota": "DADOS FICTÍCIOS — NÃO INSERIR DADOS REAIS",
+  "setores": {
+    "Comércio": {
+      "campos": [
+        "pedido_id",
+        "data_compra",
+        "categoria_produto",
+        "motivo"
+      ],
+      "exemplos": [
+        {
+          "id": "SIM-001",
+          "status": "valido"
+        },
+        {
+          "id": "SIM-002",
+          "status": "incompleto"
+        },
+        {
+          "id": "SIM-003",
+          "status": "invalido"
+        },
+        {
+          "id": "SIM-004",
+          "status": "pendente"
+        }
+      ]
+    },
+    "Indústria": {
+      "campos": [
+        "equipamento",
+        "tipo_alerta",
+        "severidade",
+        "turno"
+      ],
+      "exemplos": [
+        {
+          "id": "SIM-001",
+          "status": "valido"
+        },
+        {
+          "id": "SIM-002",
+          "status": "incompleto"
+        },
+        {
+          "id": "SIM-003",
+          "status": "invalido"
+        },
+        {
+          "id": "SIM-004",
+          "status": "pendente"
+        }
+      ]
+    },
+    "Saúde": {
+      "campos": [
+        "especialidade",
+        "disponibilidade_simulada",
+        "convênio_fictício"
+      ],
+      "exemplos": [
+        {
+          "id": "SIM-001",
+          "status": "valido"
+        },
+        {
+          "id": "SIM-002",
+          "status": "incompleto"
+        },
+        {
+          "id": "SIM-003",
+          "status": "invalido"
+        },
+        {
+          "id": "SIM-004",
+          "status": "pendente"
+        }
+      ]
+    },
+    "Educação": {
+      "campos": [
+        "curso",
+        "turma",
+        "vagas",
+        "prazo",
+        "status_inscricao"
+      ],
+      "exemplos": [
+        {
+          "id": "SIM-001",
+          "status": "valido"
+        },
+        {
+          "id": "SIM-002",
+          "status": "incompleto"
+        },
+        {
+          "id": "SIM-003",
+          "status": "invalido"
+        },
+        {
+          "id": "SIM-004",
+          "status": "pendente"
+        }
+      ]
+    },
+    "Varejo e serviços": {
+      "campos": [
+        "produto",
+        "estoque_simulado",
+        "pedido",
+        "canal"
+      ],
+      "exemplos": [
+        {
+          "id": "SIM-001",
+          "status": "valido"
+        },
+        {
+          "id": "SIM-002",
+          "status": "incompleto"
+        },
+        {
+          "id": "SIM-003",
+          "status": "invalido"
+        },
+        {
+          "id": "SIM-004",
+          "status": "pendente"
+        }
+      ]
+    }
+  }
+}

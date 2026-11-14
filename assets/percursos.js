@@ -1,0 +1,9 @@
+(()=>{'use strict';
+const techs=window.AGENTEIA_PERCURSOS||[], etapas=window.AGENTEIA_ETAPAS||[];
+const sel=document.getElementById('p-tech'), summary=document.getElementById('p-summary'), grid=document.getElementById('p-steps');if(!sel)return;
+function node(tag,cls,content){const el=document.createElement(tag);if(cls)el.className=cls;if(content!==undefined)el.textContent=content;return el;}
+function link(href,text){const a=node('a',null,text);a.href=href;return a;}
+techs.forEach(t=>{const o=node('option',null,t.nome);o.value=t.id;sel.append(o)});
+const q=new URLSearchParams(location.search).get('tecnologia');if(q&&techs.some(t=>t.id===q))sel.value=q;
+function render(){const t=techs.find(x=>x.id===sel.value)||techs[0];summary.replaceChildren();summary.append(node('h2',null,t.nome),node('p',null,t.resumo));const refs=node('p');refs.append(link(t.ficha,'Ficha tecnológica'),document.createTextNode(' · '),link(t.laboratorio,'Laboratório principal'),document.createTextNode(' · '),link(t.pratica,'Atividade complementar'),document.createTextNode(' · '),link(t.apoio,'Conteúdo de apoio'),document.createTextNode(' · '),link('minha-aprendizagem.html?tecnologia='+encodeURIComponent(t.id),'Registrar meu percurso'));summary.append(refs);grid.replaceChildren();etapas.forEach((e,i)=>{const box=node('section','path-step');box.append(node('span','step-num','Etapa '+(i+1)),node('h3',null,e.nome),node('p',null,e.objetivo));const a=i<=2?t.ficha:i<=4?t.laboratorio:i===5?t.pratica:t.apoio;box.append(link(a,'Material para esta etapa'));grid.append(box)});}
+sel.addEventListener('change',()=>{history.replaceState(null,'','?tecnologia='+encodeURIComponent(sel.value));render()});render();})();

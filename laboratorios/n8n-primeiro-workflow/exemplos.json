@@ -1,0 +1,23 @@
+[
+  {
+    "email": "ana@exemplo.test",
+    "actor": "ana@exemplo.test",
+    "modulo": "M12",
+    "turma": "T1",
+    "esperado": "apto"
+  },
+  {
+    "email": "bruno@exemplo.test",
+    "actor": "bruno@exemplo.test",
+    "modulo": "M12",
+    "turma": "T1",
+    "esperado": "nao_apto"
+  },
+  {
+    "email": "ana@exemplo.test",
+    "actor": "terceiro@exemplo.test",
+    "modulo": "M12",
+    "turma": "T1",
+    "esperado": "acesso_negado"
+  }
+]
