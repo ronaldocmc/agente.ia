@@ -206,3 +206,21 @@ body.nav-collapsed main{padding-left:34px;padding-right:34px}
 
 /* Agente.IA — percursos e progresso individual */
 .path-chooser,.path-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:16px 0}.path-chooser select,#m-tech{padding:9px 12px;border:1px solid #9eb8c1;border-radius:8px;background:var(--bg,#fff);color:inherit;max-width:100%}.path-step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;margin:18px 0}.path-step{border:1px solid #a4b8c488;border-radius:12px;padding:16px;background:#ffffff0a}.path-step h3{margin:6px 0 10px}.step-num{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#427f94}.path-step a{display:inline-block;margin:7px 0}.path-step textarea,#m-reflection{box-sizing:border-box;display:block;width:100%;padding:10px;background:var(--card,#fff);color:inherit;border:1px solid #9eb8c1;border-radius:7px;margin:6px 0 10px}.path-step label{display:block;margin-top:12px;font-size:.9rem}.path-check{font-weight:600}.path-check input{margin-right:8px}.progressbar{height:14px;border-radius:30px;background:#dce7ec;overflow:hidden;margin-top:15px}.progressbar span{display:block;height:100%;width:0;background:#15867d;transition:width .2s}.path-actions button,.path-upload{cursor:pointer;padding:10px 14px;border:1px solid #51828f;border-radius:9px;background:#e6f3f1;color:#173d46;font-size:.91rem;font-weight:600}.path-upload input{display:block;max-width:235px;margin-top:6px;font-size:.78rem}.muted{opacity:.78;font-size:.9rem}
+
+/* Agente.IA: posicionamento explícito das colunas e controle por ícone. */
+.container{transition:none}
+.container > .nav{grid-column:1;grid-row:1}
+.container > main{grid-column:2;grid-row:1;min-width:0}
+.container > .toc{grid-column:3;grid-row:1;min-width:0}
+body.nav-collapsed .container{grid-template-columns:minmax(0,1fr) 225px}
+body.nav-collapsed .container > main{grid-column:1;grid-row:1}
+body.nav-collapsed .container > .toc{grid-column:2;grid-row:1}
+body.nav-collapsed .container > .nav{display:none!important}
+.top{gap:14px}
+.top .menu-btn{width:36px;height:36px;min-height:36px;padding:0;border:0;background:transparent;border-radius:7px;color:#e1f1f5}
+.top .menu-btn:hover{background:#206174}
+.top .menu-btn svg{display:block;flex:none}
+.top .brand{display:flex;align-items:center;flex:none;background:#fff;border-radius:6px;padding:3px 7px;line-height:1}
+.top .brand-logo{display:block;width:245px;height:auto;max-height:49px;object-fit:contain}
+@media(max-width:1180px){body.nav-collapsed .container{grid-template-columns:minmax(0,1fr)}.container > .toc{display:none}}
+@media(max-width:760px){.container,body.nav-collapsed .container{display:block}.top{gap:9px;flex-wrap:nowrap;min-height:65px}.top .brand{max-width:calc(100vw - 75px);min-width:0}.top .brand-logo{width:245px;max-width:100%;max-height:46px}.top .menu-btn{width:36px;height:36px}.top small{display:none}}
