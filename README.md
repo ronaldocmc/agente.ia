@@ -1,4 +1,8 @@
-# Agente.IA — Agente.IA de IA
+# Agente.IA — Plataforma de Aprendizagem Progressiva sobre Agentes de IA
+
+## Pesquisa
+
+Consulte [Framework e pesquisa](framework-pesquisa.html) e [Protocolo de pesquisa](PESQUISA_AGENTEIA.md). A plataforma materializa a proposta técnico-metodológica; a avaliação científica ainda está em planejamento.
 
 ## Abrir
 Abra `index.html`; para usar busca, rode um servidor HTTP local, por exemplo `python -m http.server 8000` e acesse `http://localhost:8000/`.

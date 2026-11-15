@@ -224,3 +224,60 @@ body.nav-collapsed .container > .nav{display:none!important}
 .top .brand-logo{display:block;width:245px;height:auto;max-height:49px;object-fit:contain}
 @media(max-width:1180px){body.nav-collapsed .container{grid-template-columns:minmax(0,1fr)}.container > .toc{display:none}}
 @media(max-width:760px){.container,body.nav-collapsed .container{display:block}.top{gap:9px;flex-wrap:nowrap;min-height:65px}.top .brand{max-width:calc(100vw - 75px);min-width:0}.top .brand-logo{width:245px;max-width:100%;max-height:46px}.top .menu-btn{width:36px;height:36px}.top small{display:none}}
+
+
+/* Agente.IA — cabeçalho branco, padrão Observar.IA (2026-11-14). */
+:root{--header-height:112px}
+.top{height:var(--header-height);min-height:var(--header-height);background:#fff;color:#17344c;border-bottom:1px solid #dfe5eb;box-shadow:none;padding:16px 32px;gap:22px;flex-wrap:nowrap;z-index:40}
+.top .menu-btn{width:36px;height:36px;min-height:36px;color:#30465a;background:transparent;border:0;flex:none}
+.top .menu-btn:hover{background:#edf2f6;color:#087d83}
+.top .brand{background:transparent;padding:0;border:0;border-radius:0;flex:0 0 auto;max-width:none}
+.top .brand-logo{width:320px;max-width:100%;height:auto;max-height:76px;object-fit:contain}
+.top .header-search{position:relative;display:flex;align-items:center;gap:12px;height:50px;border:1px solid #dce5ed;border-radius:8px;background:#f4f7f9;padding:7px 9px 7px 15px;flex:1 1 680px;max-width:730px;min-width:110px}
+.header-search-icon{color:#52677e;flex:none}
+.top .header-search .search{width:100%;min-width:0;flex:1 1 auto;appearance:none;border:0;outline:0;background:transparent;padding:4px 0;font:inherit;font-size:15px;color:#17344c}
+.top .header-search:focus-within{border-color:#80b8bf;box-shadow:0 0 0 2px #087d8312}
+.top .header-search button{flex:none;font:inherit;font-size:13px;padding:6px 13px;background:#fff;color:#486178;border:0;border-radius:6px;cursor:pointer}
+.top .header-search button:hover{background:#e7f0f3}
+.top .search-results{left:0;right:0;top:calc(100% + 6px);max-height:min(430px,60vh);z-index:50;color:#17344c;text-align:left}
+.top .search-results a{color:#17344c;padding:10px 14px;line-height:1.4}
+.top .search-results a:hover{background:#eef6f6;text-decoration:none}
+.top .search-results p{padding:10px 14px;margin:0;font-size:13px;color:#617086}
+.top .header-actions{margin-left:auto;gap:14px;flex:none;white-space:nowrap;font-size:13px}
+.top .header-actions a{color:#365168}
+.container{min-height:calc(100vh - var(--header-height));align-items:start}
+.container>aside.nav{top:var(--header-height);height:calc(100vh - var(--header-height));padding-top:20px}
+.container>main{min-height:calc(100vh - var(--header-height))}
+.container>.toc{top:calc(var(--header-height) + 18px);max-height:calc(100vh - var(--header-height) - 24px)}
+h2,h3,[id]{scroll-margin-top:calc(var(--header-height) + 16px)}
+.map-detail{top:calc(var(--header-height) + 12px)}
+@media(max-width:1180px){.top{padding:14px 22px;gap:15px}.top .brand-logo{width:280px}.top .header-actions{display:none}}
+@media(max-width:760px){:root{--header-height:120px}.top{display:grid;grid-template-columns:36px minmax(0,1fr);grid-template-rows:44px 42px;gap:8px 10px;padding:12px 14px;height:var(--header-height);min-height:var(--header-height)}.top .brand{max-width:100%;min-width:0;justify-self:start}.top .brand-logo{width:240px;max-height:44px}.top .header-search{grid-column:1/-1;height:42px;width:100%;max-width:none;min-width:0;padding:5px 8px 5px 12px;gap:8px}.top .header-search .search{font-size:13px}.top .header-search button{font-size:12px;padding:5px 9px}.container>aside.nav{top:var(--header-height)!important;height:calc(100dvh - var(--header-height))!important;z-index:35}.container>main{min-height:calc(100vh - var(--header-height))}}
+
+/* Cabeçalho compacto: marca fornecida, título institucional e busca à direita. */
+:root{--header-height:92px}
+.top{gap:18px;padding:12px 26px}
+.top .brand{flex:0 0 auto;max-width:35%}
+.top .brand-logo{width:290px;max-height:65px;height:auto}
+.top .header-title{color:#17344c;font-size:clamp(14px,1.35vw,21px);font-weight:650;line-height:1.3;max-width:560px;min-width:0;flex:1 1 340px}
+.top .header-search{margin-left:auto;flex:0 1 230px;max-width:230px;min-width:135px;height:38px;padding:3px 6px 3px 12px;gap:4px}
+.top .header-search .search{font-size:13px}
+.top .header-search button{display:grid;place-items:center;width:30px;height:30px;padding:0;background:transparent;color:#365168}
+.top .search-results{left:auto;right:0;width:min(380px,calc(100vw - 28px))}
+@media(max-width:1180px) and (min-width:761px){.top{gap:12px;padding:10px 18px}.top .brand-logo{width:225px}.top .header-title{font-size:15px}.top .header-search{flex-basis:170px;max-width:170px}}
+@media(max-width:760px){:root{--header-height:104px}.top{grid-template-columns:36px minmax(0,1fr) minmax(95px,145px);grid-template-rows:43px 34px;gap:4px 9px;padding:10px 12px}.top .brand{grid-column:2;grid-row:1;max-width:100%;width:100%;min-width:0}.top .brand-logo{width:225px;max-width:100%;max-height:43px}.top .menu-btn{grid-column:1;grid-row:1}.top .header-title{grid-column:2/-1;grid-row:2;font-size:12px;line-height:1.25;max-width:none}.top .header-search{grid-column:3;grid-row:1;width:100%;min-width:0;max-width:none;height:34px;margin:0;padding:2px 4px 2px 7px}.top .header-search button{width:27px;height:27px}.top .header-search .search{font-size:12px}}
+
+/* Cabeçalho em linha única e leitura sem índice lateral (2026-11-15). */
+.container > .toc{display:none!important}
+@media(min-width:761px){
+ .container{grid-template-columns:260px minmax(0,1fr);max-width:none;width:100%}
+ .container > main{grid-column:2;grid-row:1;min-width:0}
+ body.nav-collapsed .container{grid-template-columns:minmax(0,1fr)}
+ body.nav-collapsed .container > main{grid-column:1;grid-row:1}
+ .top{gap:clamp(10px,1.15vw,20px)}
+ .top .brand-logo{width:clamp(155px,18vw,290px)}
+ .top .header-title{white-space:nowrap;max-width:none;min-width:max-content;flex:0 0 auto;font-size:clamp(12px,1.24vw,21px)}
+ .top .header-search{flex:0 1 230px;min-width:90px}
+}
+@media(min-width:761px) and (max-width:1180px){.container{grid-template-columns:240px minmax(0,1fr)}.top .brand-logo{width:clamp(135px,17vw,225px)}.top .header-title{font-size:clamp(11px,1.22vw,15px)}.top .header-search{flex-basis:170px;min-width:80px}}
+@media(max-width:760px){.container,body.nav-collapsed .container{display:block}.top .header-title{white-space:normal;min-width:0}.container > main{min-width:0}}

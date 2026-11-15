@@ -1,5 +1,45 @@
 [
   {
+    "title": "Auditoria das 169 fichas tecnológicas",
+    "url": "auditoria-catalogo-tecnologico.html",
+    "type": "Auditoria de catálogo"
+  },
+  {
+    "title": "Wang et al. (2024) — A survey on large language model based autonomous agents",
+    "url": "trabalho-wang-2024.html",
+    "type": "Ficha científica"
+  },
+  {
+    "title": "Li et al. (2024) — A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges",
+    "url": "trabalho-li-2024.html",
+    "type": "Ficha científica"
+  },
+  {
+    "title": "Ma et al. (2024) — AgentBoard: An Analytical Evaluation Board of Multi-turn LLM Agents",
+    "url": "trabalho-ma-2024.html",
+    "type": "Ficha científica"
+  },
+  {
+    "title": "Kapoor et al. (2025) — AI Agents That Matter",
+    "url": "trabalho-kapoor-2025.html",
+    "type": "Ficha científica"
+  },
+  {
+    "title": "Bajoria et al. (2026) — From Language Models to Agentic AI: A Survey of Autonomous, Action-Enabled, and Collaborative LLM Agents",
+    "url": "trabalho-bajoria-2026.html",
+    "type": "Ficha científica"
+  },
+  {
+    "title": "Stanford CS329Z (2026) — Engineering AI Agents",
+    "url": "trabalho-stanford-cs329z.html",
+    "type": "Referência curricular"
+  },
+  {
+    "title": "UCSC Extension — Agentic AI — Agentic AI",
+    "url": "trabalho-ucsc-agentic-ai.html",
+    "type": "Referência curricular"
+  },
+  {
     "title": "Estudos de caso por problema",
     "url": "casos-por-problema.html",
     "type": "Aprenda a construir"
@@ -1232,5 +1272,416 @@
     "title": "Percurso pedagógico N1–N7",
     "url": "percurso.html",
     "text": "Sete níveis de formação em agentes de inteligência artificial"
+  },
+  {
+    "title": "Framework técnico-metodológico e pesquisa — Agente.IA",
+    "url": "framework-pesquisa.html",
+    "type": "Pesquisa",
+    "text": "DSR avaliação científica artigo protocolo aprendizagem progressiva seleção tecnológica questões de pesquisa"
+  },
+  {
+    "title": "Trabalhos relacionados",
+    "url": "trabalhos-relacionados.html",
+    "type": "Pesquisa"
+  },
+  {
+    "title": "A2A",
+    "url": "conceito-a2a.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "A2UI",
+    "url": "conceito-a2ui.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "ACP",
+    "url": "conceito-acp.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "AG-UI",
+    "url": "conceito-ag-ui.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Agente de IA",
+    "url": "conceito-agente-de-ia.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Agente multimodal",
+    "url": "conceito-agente-multimodal.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Agente reativo",
+    "url": "conceito-agente-reativo.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Agentes persistentes",
+    "url": "conceito-agentes-persistentes.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Assistente",
+    "url": "conceito-assistente.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Automação",
+    "url": "conceito-automacao.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Autonomia",
+    "url": "conceito-autonomia.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Avaliação científica",
+    "url": "conceito-avaliacao-cientifica.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "Banco vetorial",
+    "url": "conceito-banco-vetorial.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Coordenação dinâmica",
+    "url": "conceito-coordenacao-dinamica.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Curadoria humana",
+    "url": "conceito-curadoria-humana.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Embeddings",
+    "url": "conceito-embeddings.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Estado",
+    "url": "conceito-estado.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Evento",
+    "url": "conceito-evento.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Governança",
+    "url": "conceito-governanca.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Guardrails",
+    "url": "conceito-guardrails.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Human-in-the-loop",
+    "url": "conceito-human-in-the-loop.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Identidade",
+    "url": "conceito-identidade.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "LLM",
+    "url": "conceito-llm.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "MCP",
+    "url": "conceito-mcp.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Memória",
+    "url": "conceito-memoria.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Modelo de IA",
+    "url": "conceito-modelo-de-ia.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Multimodalidade",
+    "url": "conceito-multimodalidade.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Observabilidade",
+    "url": "conceito-observabilidade.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "Orquestração",
+    "url": "conceito-orquestracao.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Permissões",
+    "url": "conceito-permissoes.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Persistência",
+    "url": "conceito-persistencia.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Proatividade",
+    "url": "conceito-proatividade.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Prompt",
+    "url": "conceito-prompt.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Proveniência",
+    "url": "conceito-proveniencia.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "RAG",
+    "url": "conceito-rag.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Reprodutibilidade",
+    "url": "conceito-reprodutibilidade.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "Sistema multiagente",
+    "url": "conceito-sistema-multiagente.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Skills",
+    "url": "conceito-skills.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Tool calling",
+    "url": "conceito-tool-calling.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Workflow",
+    "url": "conceito-workflow.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Cérebro do agente",
+    "url": "conceito-cerebro-do-agente.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Segundo cérebro",
+    "url": "conceito-segundo-cerebro.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Prompt injection",
+    "url": "conceito-prompt-injection.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Sandbox",
+    "url": "conceito-sandbox.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Menor privilégio",
+    "url": "conceito-menor-privilegio.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Aprovação humana",
+    "url": "conceito-aprovacao-humana.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Isolamento de usuários",
+    "url": "conceito-isolamento-de-usuarios.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Memória episódica",
+    "url": "conceito-memoria-episodica.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Memória semântica",
+    "url": "conceito-memoria-semantica.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Política de ferramentas",
+    "url": "conceito-politica-de-ferramentas.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Runtime",
+    "url": "conceito-runtime.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Gateway",
+    "url": "conceito-gateway.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Sessão",
+    "url": "conceito-sessao.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Checkpoint",
+    "url": "conceito-checkpoint.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Handoff",
+    "url": "conceito-handoff.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Framework",
+    "url": "conceito-framework.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "SDK",
+    "url": "conceito-sdk.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "API",
+    "url": "conceito-api.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Webhook",
+    "url": "conceito-webhook.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Trigger",
+    "url": "conceito-trigger.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Ferramenta",
+    "url": "conceito-ferramenta.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Planejamento",
+    "url": "conceito-planejamento.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Roteamento",
+    "url": "conceito-roteamento.html",
+    "type": "Conceito · Arquitetura e execução"
+  },
+  {
+    "title": "Agendamento",
+    "url": "conceito-agendamento.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Inferência",
+    "url": "conceito-inferencia.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Tokens",
+    "url": "conceito-tokens.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Janela de contexto",
+    "url": "conceito-janela-de-contexto.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Memória procedural",
+    "url": "conceito-memoria-procedural.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Interoperabilidade",
+    "url": "conceito-interoperabilidade.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Idempotência",
+    "url": "conceito-idempotencia.html",
+    "type": "Conceito · Integração e automação"
+  },
+  {
+    "title": "Autenticação",
+    "url": "conceito-autenticacao.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Autorização",
+    "url": "conceito-autorizacao.html",
+    "type": "Conceito · Segurança e governança"
+  },
+  {
+    "title": "Trace",
+    "url": "conceito-trace.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "Métrica",
+    "url": "conceito-metrica.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "Baseline",
+    "url": "conceito-baseline.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "Benchmark",
+    "url": "conceito-benchmark.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "Evidência",
+    "url": "conceito-evidencia.html",
+    "type": "Conceito · Avaliação e evidências"
+  },
+  {
+    "title": "Grafo de conhecimento",
+    "url": "conceito-grafo-de-conhecimento.html",
+    "type": "Conceito · Memória e conhecimento"
+  },
+  {
+    "title": "Chatbot",
+    "url": "conceito-chatbot.html",
+    "type": "Conceito · Fundamentos e modelos"
+  },
+  {
+    "title": "Base semântica e seleção explicável",
+    "url": "base-semantica.html",
+    "type": "Pesquisa"
   }
 ]

@@ -1,0 +1,13 @@
+test_desempate (test_modelo.Contratos.test_desempate) ... ok
+test_escopo_invalido (test_modelo.Contratos.test_escopo_invalido) ... ok
+test_etapa_invalida (test_modelo.Contratos.test_etapa_invalida) ... ok
+test_evidencia_incompleta (test_modelo.Contratos.test_evidencia_incompleta) ... ok
+test_evidencia_valida (test_modelo.Contratos.test_evidencia_valida) ... ok
+test_pontuacao (test_modelo.Contratos.test_pontuacao) ... ok
+test_restricao (test_modelo.Contratos.test_restricao) ... ok
+test_sem_candidata (test_modelo.Contratos.test_sem_candidata) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK

@@ -1,0 +1,170 @@
+﻿id,tecnologia,categoria original,papel,perfil,palavras antes,palavras depois,validacao,apoio
+a2a,A2A,Protocolos e interoperabilidade,"Protocolo, padrão ou contrato",Integração e avaliação de componente,95,465,Roteiro proposto; execução específica pendente,seguranca.html
+a2ui,A2UI,Protocolos e interoperabilidade,"Protocolo, padrão ou contrato",Integração e avaliação de componente,97,463,Roteiro proposto; execução específica pendente,seguranca.html
+activepieces,Activepieces,Automação visual,Automação e integração,Aprofundamento por função,87,455,Roteiro proposto; execução específica pendente,automacao-agentes.html
+ag-ui,AG-UI,Protocolos e interoperabilidade,"Protocolo, padrão ou contrato",Integração e avaliação de componente,101,459,Roteiro proposto; execução específica pendente,seguranca.html
+agno,Agno,Orquestração multiagente,Framework de coordenação,Aprofundamento por função,93,449,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+ai21-labs,AI21 Labs,LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,92,465,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+amazon-bedrock,Amazon Bedrock,LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,98,469,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+apache-airflow,Apache Airflow,Automação visual,Orquestrador de pipelines,Aprofundamento por função,90,441,Roteiro proposto; execução específica pendente,automacao-agentes.html
+apache-kafka,Apache Kafka,Memória dados e RAG,Mensageria de eventos,Integração e avaliação de componente,94,439,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+apache-nifi,Apache NiFi,Automação visual,Fluxo de dados,Aprofundamento por função,95,435,Roteiro proposto; execução específica pendente,automacao-agentes.html
+apps-script,Apps Script,Automação visual,Automação por código,Ficha curricular aprofundada,708,1012,Roteiro proposto; execução específica pendente,automacao-agentes.html
+arize-phoenix,Arize Phoenix,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,98,443,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+asyncapi,AsyncAPI,Protocolos e interoperabilidade,"Protocolo, padrão ou contrato",Integração e avaliação de componente,92,440,Roteiro proposto; execução específica pendente,seguranca.html
+autogen,AutoGen,Orquestração multiagente,Framework de coordenação,Aprofundamento por função,95,444,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+azure-ai-foundry,Azure AI Foundry,LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,92,462,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+beautiful-soup,Beautiful Soup,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,93,445,Roteiro proposto; execução específica pendente,casos-integrados.html
+bertimbau,BERTimbau,Modelos com pesos disponíveis,Encoder em português,Aprofundamento por função,99,432,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+bge-embeddings,BGE Embeddings,Modelos com pesos disponíveis,Família de embeddings e rerankers,Aprofundamento por função,97,434,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+botpress,Botpress,Automação visual,Plataforma conversacional,Ficha curricular aprofundada,712,1009,Roteiro proposto; execução específica pendente,automacao-agentes.html
+canva,Canva,Automação visual,Produção visual,Ficha curricular aprofundada,717,1023,Roteiro proposto; execução específica pendente,automacao-agentes.html
+ceia-lumi-4b,CEIA Lumi-4B — modelo brasileiro do CEIA/UFG,Modelos com pesos disponíveis,Modelo ou encoder com pesos,Aprofundamento por função,402,767,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+celery,Celery,Infraestrutura e serving,Componente de infraestrutura,Integração e avaliação de componente,92,434,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+chatgpt,ChatGPT,Automação visual,Plataforma / assistente,Ficha curricular aprofundada,738,1042,Roteiro proposto; execução específica pendente,automacao-agentes.html
+chroma,Chroma,Memória dados e RAG,Infraestrutura de dados,Integração e avaliação de componente,97,458,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+claude-agent-sdk,Claude Agent SDK,SDKs de agentes,SDK programável,Aprofundamento por função,96,450,Roteiro proposto; execução específica pendente,laboratorios-completos.html
+claude-anthropic,Claude (Anthropic),LLMs por API,Modelo ou serviço gerenciado de inferência,Ficha curricular aprofundada,483,796,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+claude-code,Claude Code,Runtimes e assistentes,Runtime de agente ou assistente,Aprofundamento por função,93,448,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+codex,Codex,Runtimes e assistentes,Runtime de agente ou assistente,Aprofundamento por função,93,449,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+cohere,Cohere,LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,93,455,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+copilot-studio,Copilot Studio,Automação visual,Plataforma de agentes,Ficha curricular aprofundada,724,1031,Roteiro proposto; execução específica pendente,automacao-agentes.html
+copilotkit,CopilotKit,Interfaces e métricas,Interface ou análise de uso,Integração e avaliação de componente,100,453,Roteiro proposto; execução específica pendente,escritorio-virtual-arquitetura.html
+crewai,CrewAI,Orquestração multiagente,"Agents, Tasks, Crew e Flows",Implementação prioritária,493,944,Roteiro proposto; execução específica pendente,laboratorio-crewai-passo-a-passo.html
+dagster,Dagster,Automação visual,Orquestrador de dados,Aprofundamento por função,93,429,Roteiro proposto; execução específica pendente,automacao-agentes.html
+datahub,DataHub,Governança e proveniência,Governança e rastreabilidade,Integração e avaliação de componente,86,423,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+deepeval,DeepEval,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,100,447,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+deepseek-api,DeepSeek API,LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,96,458,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+deepseek-pesos,DeepSeek (pesos),Modelos com pesos disponíveis,Modelo ou encoder com pesos,Aprofundamento por função,99,455,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+dialogflow-cx,Dialogflow CX,Automação visual,Plataforma conversacional,Ficha curricular aprofundada,717,1017,Roteiro proposto; execução específica pendente,automacao-agentes.html
+dify,Dify,Automação visual,Automação e integração,Aprofundamento por função,96,462,Roteiro proposto; execução específica pendente,automacao-agentes.html
+docker,Docker,Infraestrutura e serving,Componente de infraestrutura,Integração e avaliação de componente,90,435,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+dots-openai,Dots (OpenAI),Dots,Runtime de agente ou assistente,Aprofundamento por função,307,665,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+dspy,DSPy,Orquestração multiagente,Otimização de programas com modelos,Aprofundamento por função,94,434,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+dvc,DVC,Governança e proveniência,Governança e rastreabilidade,Integração e avaliação de componente,92,440,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+elasticsearch,Elasticsearch,Memória dados e RAG,Infraestrutura de dados,Integração e avaliação de componente,96,452,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+elevenlabs,ElevenLabs,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,94,438,Roteiro proposto; execução específica pendente,casos-integrados.html
+evidently-ai,Evidently AI,Governança e proveniência,Governança e rastreabilidade,Integração e avaliação de componente,92,435,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+faiss,FAISS,Memória dados e RAG,Biblioteca de busca vetorial,Integração e avaliação de componente,95,435,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+fastapi,FastAPI,Infraestrutura e serving,Componente de infraestrutura,Integração e avaliação de componente,95,437,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+figjam,FigJam,Automação visual,Modelagem visual,Ficha curricular aprofundada,703,1009,Roteiro proposto; execução específica pendente,automacao-agentes.html
+flowise,Flowise,Automação visual,Automação e integração,Aprofundamento por função,91,454,Roteiro proposto; execução específica pendente,automacao-agentes.html
+garak,Garak,Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,98,448,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+gemini-cli,Gemini CLI,Runtimes e assistentes,Runtime de agente ou assistente,Aprofundamento por função,95,443,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+gemini-google,Gemini (Google),LLMs por API,Modelo ou serviço gerenciado de inferência,Ficha curricular aprofundada,485,791,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+gemma-google,Gemma (Google),Modelos com pesos disponíveis,Modelo ou encoder com pesos,Aprofundamento por função,96,447,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+github-copilot,GitHub Copilot,Runtimes e assistentes,Runtime de agente ou assistente,Ficha curricular aprofundada,497,801,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+gmail,Gmail,Automação visual,Comunicação,Ficha curricular aprofundada,715,1018,Roteiro proposto; execução específica pendente,automacao-agentes.html
+google-adk,Google ADK,SDKs de agentes,"Agent Development Kit, Runner, sessões e workflows",Implementação prioritária,116,568,Roteiro proposto; execução específica pendente,formacao-individual.html
+google-calendar,Google Calendar,Automação visual,Agenda,Ficha curricular aprofundada,706,1012,Roteiro proposto; execução específica pendente,automacao-agentes.html
+google-forms,Google Forms,Automação visual,Coleta de dados,Ficha curricular aprofundada,709,1007,Roteiro proposto; execução específica pendente,automacao-agentes.html
+google-news-rss,Google News RSS,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,97,451,Roteiro proposto; execução específica pendente,casos-integrados.html
+google-sheets,Google Sheets,Automação visual,Dados / planilhas,Ficha curricular aprofundada,712,1014,Roteiro proposto; execução específica pendente,automacao-agentes.html
+google-workspace,Google Workspace,Automação visual,Aplicativos e dados,Ficha curricular aprofundada,715,1020,Roteiro proposto; execução específica pendente,automacao-agentes.html
+gpt-6-openai,GPT-6 (OpenAI),LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,103,484,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+gradio,Gradio,Interfaces e métricas,Interface ou análise de uso,Integração e avaliação de componente,92,436,Roteiro proposto; execução específica pendente,escritorio-virtual-arquitetura.html
+grafana,Grafana,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,91,438,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+great-expectations,Great Expectations,Governança e proveniência,Governança e rastreabilidade,Integração e avaliação de componente,95,440,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+grok-bot,Grok Bot,Grok Bot,Serviço gerenciado de agentes persistentes,Implementação prioritária,166,645,Roteiro proposto; execução específica pendente,lab-grok-detalhado.html
+grok-xai,Grok (xAI),LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,98,459,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+guardrails-ai,Guardrails AI,Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,100,448,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+haystack-agents,Haystack Agents,Orquestração multiagente,Framework de coordenação,Aprofundamento por função,94,447,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+helicone,Helicone,Roteamento de modelos,Gateway ou roteador de inferência,Integração e avaliação de componente,99,436,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+hermes-agent,Hermes Agent,Runtimes e assistentes,"Runtime, ferramentas, memória procedural e canais",Implementação prioritária,156,617,Roteiro proposto; execução específica pendente,lab-hermes-detalhado.html
+hugging-face-tgi,Hugging Face TGI,Infraestrutura e serving,Componente de infraestrutura,Integração e avaliação de componente,95,441,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+hugging-face-transformers,Hugging Face Transformers,Infraestrutura e serving,Biblioteca de modelos,Integração e avaliação de componente,100,426,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+jev-typesafe-ai,Jev (TypeSafe AI),Modelos de decisão,Componente de decisão restrita,Integração e avaliação de componente,103,455,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+jina-embeddings,Jina Embeddings,Modelos com pesos disponíveis,Encoder de embeddings,Aprofundamento por função,95,422,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+json-schema,JSON Schema,Protocolos e interoperabilidade,"Protocolo, padrão ou contrato",Integração e avaliação de componente,94,446,Roteiro proposto; execução específica pendente,seguranca.html
+kestra,Kestra,Automação visual,Orquestração de workflows,Aprofundamento por função,89,426,Roteiro proposto; execução específica pendente,automacao-agentes.html
+kev-system-one,Kev (System One),Modelos de decisão,Componente de decisão restrita,Integração e avaliação de componente,104,448,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+keycloak,Keycloak,Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,101,451,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+kubernetes,Kubernetes,Infraestrutura e serving,Componente de infraestrutura,Integração e avaliação de componente,90,435,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+lakefs,lakeFS,Governança e proveniência,Governança e rastreabilidade,Integração e avaliação de componente,87,429,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+lakera-guard,Lakera Guard,Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,97,440,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+langchain,LangChain,SDKs de agentes,SDK programável,Aprofundamento por função,94,455,Roteiro proposto; execução específica pendente,laboratorios-completos.html
+langflow,Langflow,Automação visual,Automação e integração,Aprofundamento por função,93,449,Roteiro proposto; execução específica pendente,automacao-agentes.html
+langfuse,Langfuse,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,95,431,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+langgraph,LangGraph,SDKs de agentes,"Grafo de estado, nós, arestas e checkpoints",Implementação prioritária,524,983,Roteiro proposto; execução específica pendente,lab-langgraph-detalhado.html
+litellm,LiteLLM,Roteamento de modelos,Gateway ou roteador de inferência,Integração e avaliação de componente,101,445,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+llama-cpp,llama.cpp,Infraestrutura e serving,Componente de infraestrutura,Integração e avaliação de componente,94,433,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+llama-meta,Llama (Meta),Modelos com pesos disponíveis,Modelo ou encoder com pesos,Aprofundamento por função,98,451,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+llamaindex-workflows,LlamaIndex Workflows,Orquestração multiagente,Framework de coordenação,Aprofundamento por função,97,444,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+make,Make,Automação visual,Automação visual,Ficha curricular aprofundada,726,1026,Roteiro proposto; execução específica pendente,automacao-agentes.html
+manychat,ManyChat,Automação visual,Automação de canais,Ficha curricular aprofundada,712,1013,Roteiro proposto; execução específica pendente,automacao-agentes.html
+mastra,Mastra,Orquestração multiagente,Framework de coordenação,Aprofundamento por função,95,446,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+matomo,Matomo,Interfaces e métricas,Analytics de uso,Integração e avaliação de componente,97,426,Roteiro proposto; execução específica pendente,escritorio-virtual-arquitetura.html
+mcp,MCP,Protocolos e interoperabilidade,"Protocolo, padrão ou contrato",Integração e avaliação de componente,126,476,Roteiro proposto; execução específica pendente,seguranca.html
+meta-graph-api,Meta Graph API,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,99,447,Roteiro proposto; execução específica pendente,casos-integrados.html
+microsoft-agent-framework,Microsoft Agent Framework,Orquestração multiagente,Framework de coordenação,Aprofundamento por função,96,453,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+microsoft-presidio,Microsoft Presidio,Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,97,441,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+milvus,Milvus,Memória dados e RAG,Infraestrutura de dados,Integração e avaliação de componente,92,449,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+minio,MinIO,Memória dados e RAG,Armazenamento de objetos,Integração e avaliação de componente,94,431,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+miro,Miro,Automação visual,Modelagem visual,Ficha curricular aprofundada,690,987,Roteiro proposto; execução específica pendente,automacao-agentes.html
+mistral-ai,Mistral AI,LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,100,454,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+mistral-small-pesos,Mistral Small (pesos),Modelos com pesos disponíveis,Modelo ou encoder com pesos,Aprofundamento por função,101,449,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+mitre-atlas,MITRE ATLAS,Segurança e governança de agentes,Base de conhecimento de ameaças,Integração e avaliação de componente,100,430,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+mlflow,MLflow,Governança e proveniência,Governança e rastreabilidade,Integração e avaliação de componente,93,434,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+mongodb,MongoDB,Memória dados e RAG,Infraestrutura de dados,Integração e avaliação de componente,96,453,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+n8n,n8n,Automação visual,"Workflows, execução de nós e AI Agent",Implementação prioritária,785,1224,Roteiro proposto; execução específica pendente,laboratorio-n8n-passo-a-passo.html
+nemo-guardrails,NeMo Guardrails,Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,97,441,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+neo4j,Neo4j,Memória dados e RAG,Banco de grafos,Integração e avaliação de componente,97,441,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+next-js,Next.js,Interfaces e métricas,Interface ou análise de uso,Integração e avaliação de componente,94,441,Roteiro proposto; execução específica pendente,escritorio-virtual-arquitetura.html
+nist-ai-rmf,NIST AI RMF,Segurança e governança de agentes,Framework de gestão de riscos,Integração e avaliação de componente,100,435,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+node-red,Node-RED,Automação visual,Automação e integração,Aprofundamento por função,89,448,Roteiro proposto; execução específica pendente,automacao-agentes.html
+oauth-2-1,OAuth 2.1,Protocolos e interoperabilidade,Referência de autorização,Integração e avaliação de componente,88,432,Roteiro proposto; execução específica pendente,seguranca.html
+ollama,Ollama,Infraestrutura e serving,"Servidor, modelos e API de inferência",Implementação prioritária,418,863,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+olmo-ai2,OLMo (AI2),Modelos com pesos disponíveis,Modelo ou encoder com pesos,Aprofundamento por função,103,454,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+opa,OPA,Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,95,440,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+openai-agents-sdk,OpenAI Agents SDK,SDKs de agentes,"Agent, Runner, function tools, handoffs e traces",Implementação prioritária,537,983,Roteiro proposto; execução específica pendente,lab-agents-sdk.html
+openapi,OpenAPI,Protocolos e interoperabilidade,"Protocolo, padrão ou contrato",Integração e avaliação de componente,92,446,Roteiro proposto; execução específica pendente,seguranca.html
+openclaw,OpenClaw,Runtimes e assistentes,"Gateway, sessões, canais e skills",Implementação prioritária,133,605,Roteiro proposto; execução específica pendente,lab-openclaw-detalhado.html
+openhands,OpenHands,Runtimes e assistentes,Runtime de agente ou assistente,Aprofundamento por função,92,438,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+openlineage,OpenLineage,Governança e proveniência,Governança e rastreabilidade,Integração e avaliação de componente,95,439,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+openmetadata,OpenMetadata,Governança e proveniência,Governança e rastreabilidade,Integração e avaliação de componente,88,424,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+openrouter,OpenRouter,Roteamento de modelos,Gateway ou roteador de inferência,Integração e avaliação de componente,98,437,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+opensearch,OpenSearch,Memória dados e RAG,Infraestrutura de dados,Integração e avaliação de componente,93,447,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+opentelemetry,OpenTelemetry,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,93,432,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+owasp-genai-top-10-2026,OWASP GenAI Top 10 2026,Segurança e governança de agentes,Referência de riscos,Integração e avaliação de componente,103,446,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+pgvector,pgvector,Memória dados e RAG,Extensão vetorial de PostgreSQL,Integração e avaliação de componente,122,471,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+phi-microsoft,Phi (Microsoft),Modelos com pesos disponíveis,Modelo ou encoder com pesos,Aprofundamento por função,98,450,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+piper-tts,Piper TTS,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,94,432,Roteiro proposto; execução específica pendente,casos-integrados.html
+plausible-analytics,Plausible Analytics,Interfaces e métricas,Analytics de uso,Integração e avaliação de componente,95,420,Roteiro proposto; execução específica pendente,escritorio-virtual-arquitetura.html
+playwright,Playwright,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,100,448,Roteiro proposto; execução específica pendente,casos-integrados.html
+portkey,Portkey,Roteamento de modelos,Gateway ou roteador de inferência,Integração e avaliação de componente,92,431,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+postgresql,PostgreSQL,Memória dados e RAG,Banco relacional,Integração e avaliação de componente,126,469,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+posthog,PostHog,Interfaces e métricas,Analytics de produto,Integração e avaliação de componente,95,419,Roteiro proposto; execução específica pendente,escritorio-virtual-arquitetura.html
+power-automate,Power Automate,Automação visual,Automação corporativa,Ficha curricular aprofundada,720,1019,Roteiro proposto; execução específica pendente,automacao-agentes.html
+prefect,Prefect,Automação visual,Orquestrador de tarefas,Aprofundamento por função,89,430,Roteiro proposto; execução específica pendente,automacao-agentes.html
+prometheus,Prometheus,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,92,432,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+promptfoo,Promptfoo,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,98,437,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+pydantic-evals,Pydantic Evals,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,99,438,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+pydantic,Pydantic,Infraestrutura e serving,Validação de dados,Integração e avaliação de componente,94,423,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+pydanticai,PydanticAI,SDKs de agentes,SDK programável,Aprofundamento por função,125,476,Roteiro proposto; execução específica pendente,laboratorios-completos.html
+qdrant,Qdrant,Memória dados e RAG,Infraestrutura de dados,Integração e avaliação de componente,94,449,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+qwen,Qwen,Modelos com pesos disponíveis,Modelo ou encoder com pesos,Aprofundamento por função,100,454,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+rabbitmq,RabbitMQ,Infraestrutura e serving,Componente de infraestrutura,Integração e avaliação de componente,91,430,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+ragas,Ragas,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,98,444,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+react,React,Interfaces e métricas,Interface ou análise de uso,Integração e avaliação de componente,91,438,Roteiro proposto; execução específica pendente,escritorio-virtual-arquitetura.html
+redis,Redis,Memória dados e RAG,Estado e cache,Integração e avaliação de componente,97,437,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+ro-crate,RO-Crate,Governança e proveniência,Empacotamento de pesquisa,Integração e avaliação de componente,90,411,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+rss-atom,RSS/Atom,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,93,437,Roteiro proposto; execução específica pendente,casos-integrados.html
+semantic-kernel,Semantic Kernel,Orquestração multiagente,Framework de coordenação,Aprofundamento por função,99,452,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+sentence-transformers,Sentence Transformers,Modelos com pesos disponíveis,Biblioteca de embeddings,Aprofundamento por função,98,427,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+smolagents,smolagents,Orquestração multiagente,Framework de coordenação,Aprofundamento por função,92,454,Roteiro proposto; execução específica pendente,laboratorios-comparativos.html
+streamlit,Streamlit,Interfaces e métricas,Interface ou análise de uso,Integração e avaliação de componente,97,443,Roteiro proposto; execução específica pendente,escritorio-virtual-arquitetura.html
+telegram-bot-api,Telegram Bot API,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,91,438,Roteiro proposto; execução específica pendente,casos-integrados.html
+temporal,Temporal,Automação visual,Execução durável,Aprofundamento por função,92,435,Roteiro proposto; execução específica pendente,automacao-agentes.html
+trivy,Trivy,Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,96,441,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+trulens,TruLens,Observabilidade e avaliação,Instrumentação ou avaliação,Integração e avaliação de componente,96,432,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+vault-hashicorp,Vault (HashiCorp),Segurança e governança de agentes,Controle de segurança ou referência de risco,Integração e avaliação de componente,98,444,Roteiro proposto; execução específica pendente,laboratorio-seguranca.html
+vertex-ai,Vertex AI,LLMs por API,Modelo ou serviço gerenciado de inferência,Aprofundamento por função,96,462,Roteiro proposto; execução específica pendente,laboratorio-modelos.html
+vllm,vLLM,Infraestrutura e serving,Componente de infraestrutura,Integração e avaliação de componente,94,434,Roteiro proposto; execução específica pendente,laboratorios-plataformas.html
+w3c-prov,W3C PROV,Governança e proveniência,Modelo de proveniência,Integração e avaliação de componente,96,429,Roteiro proposto; execução específica pendente,evidencias-laboratorios.html
+weaviate,Weaviate,Memória dados e RAG,Infraestrutura de dados,Integração e avaliação de componente,94,452,Roteiro proposto; execução específica pendente,segundo-cerebro.html
+webhooks,Webhooks,Protocolos e interoperabilidade,"Protocolo, padrão ou contrato",Ficha curricular aprofundada,482,782,Roteiro proposto; execução específica pendente,seguranca.html
+whatsapp-business-platform,WhatsApp Business Platform,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Ficha curricular aprofundada,492,800,Roteiro proposto; execução específica pendente,casos-integrados.html
+whisper-faster-whisper,Whisper / faster-whisper,Multimodalidade e canais,Reconhecimento de fala,Integração e avaliação de componente,97,421,Roteiro proposto; execução específica pendente,casos-integrados.html
+youtube-data-api,YouTube Data API,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,97,442,Roteiro proposto; execução específica pendente,casos-integrados.html
+z-api,Z-API,Multimodalidade e canais,"Adaptador de canal, aquisição ou multimodalidade",Integração e avaliação de componente,93,443,Roteiro proposto; execução específica pendente,casos-integrados.html
+zapier,Zapier,Automação visual,Automação visual,Ficha curricular aprofundada,721,1026,Roteiro proposto; execução específica pendente,automacao-agentes.html

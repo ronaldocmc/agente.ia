@@ -1,0 +1,11 @@
+test_capabilities (__main__.BaseTests.test_capabilities) ... ok
+test_counts (__main__.BaseTests.test_counts) ... ok
+test_ids (__main__.BaseTests.test_ids) ... ok
+test_paths (__main__.BaseTests.test_paths) ... ok
+test_relations (__main__.BaseTests.test_relations) ... ok
+test_uncertainty (__main__.BaseTests.test_uncertainty) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK

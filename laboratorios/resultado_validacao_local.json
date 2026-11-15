@@ -1,5 +1,5 @@
 {
-  "data_utc": "2026-11-14T11:34:21.830907+00:00",
+  "data_utc": "2026-11-15T20:15:07.587067+00:00",
   "python": "3.13.5",
   "sistema": "Linux-6.18.57-x86_64-with-glibc2.41",
   "node": "v22.16.0",
@@ -80,7 +80,7 @@
       "comando": "/opt/pyvenv/bin/python teste_integracao_simulada.py",
       "status": "aprovado",
       "verificacoes_previstas": 3,
-      "saida": "test_limit (__main__.Protocol.test_limit) ... ok\ntest_tool_roundtrip (__main__.Protocol.test_tool_roundtrip) ... ok\ntest_unauthorized (__main__.Protocol.test_unauthorized) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n"
+      "saida": "test_limit (__main__.Protocol.test_limit) ... ok\ntest_tool_roundtrip (__main__.Protocol.test_tool_roundtrip) ... ok\ntest_unauthorized (__main__.Protocol.test_unauthorized) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
     },
     {
       "pasta": "n8n-primeiro-workflow",

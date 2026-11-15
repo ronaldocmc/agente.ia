@@ -1,0 +1,29 @@
+# Auditoria de conteúdo das ferramentas curriculares
+Base: AgenteIA_2026-11-15_Completo.zip. Escopo: 26 fichas da seção 2 de integração curricular. Todas receberam aprofundamento específico em oito etapas; o n8n recebeu exemplo adicional de três paradigmas. Conteúdo antigo preservado. Referências de versões históricas removidas da página de auditoria. Copilot permanece mapeado ao GitHub Copilot, identificação curricular não confirmada. M11 não verificado. Roteiros novos não executados em runtimes externos; referências oficiais são pontos de partida, não certificação de todas as versões. Contagem de palavras é apenas indicador editorial.
+Ferramenta;Arquivo;Palavras antes;Palavras depois
+ChatGPT;fichas/chatgpt.html;343;738
+Gemini;fichas/gemini-google.html;100;485
+Claude;fichas/claude-anthropic.html;100;483
+Copilot;fichas/github-copilot.html;92;497
+n8n;fichas/n8n.html;125;785
+Make;fichas/make.html;327;726
+Zapier;fichas/zapier.html;328;721
+Power Automate;fichas/power-automate.html;331;720
+Copilot Studio;fichas/copilot-studio.html;330;724
+Botpress;fichas/botpress.html;325;712
+Dialogflow CX;fichas/dialogflow-cx.html;324;717
+WhatsApp Business;fichas/whatsapp-business-platform.html;100;492
+ManyChat;fichas/manychat.html;327;712
+Google Workspace;fichas/google-workspace.html;324;715
+Google Forms;fichas/google-forms.html;320;709
+Google Sheets;fichas/google-sheets.html;328;712
+Gmail;fichas/gmail.html;323;715
+Google Calendar;fichas/google-calendar.html;328;706
+Apps Script;fichas/apps-script.html;327;708
+APIs e Webhooks;fichas/webhooks.html;89;482
+OpenAI Agents SDK;fichas/openai-agents-sdk.html;126;537
+LangGraph;fichas/langgraph.html;127;524
+CrewAI;fichas/crewai.html;94;493
+Miro;fichas/miro.html;319;690
+FigJam;fichas/figjam.html;321;703
+Canva;fichas/canva.html;325;717
