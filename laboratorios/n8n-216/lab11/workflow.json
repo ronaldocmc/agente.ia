@@ -1,0 +1,72 @@
+{
+  "name": "Agente.IA n8n Lab 11 — simulação local",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "5bdb3a31-910c-4a6c-8de1-03fa16417a6b",
+      "name": "Iniciar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{\"role\": \"editor\", \"action\": \"publicar\", \"version\": 2, \"approvedVersion\": 2}}];"
+      },
+      "id": "5e3b4b1a-5357-4712-9fd4-6ebc51bce8a4",
+      "name": "Entrada sintética",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function avaliar(p){return {status:p.action==='publicar'&&p.role==='editor'&&Number.isInteger(p.version)&&p.version===p.approvedVersion?'ok':'negado'};}\nreturn [{json:avaliar($input.first().json)}];"
+      },
+      "id": "66d23dff-0f12-476f-9597-d2159fea7e01",
+      "name": "Validação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Iniciar": {
+      "main": [
+        [
+          {
+            "node": "Entrada sintética",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Entrada sintética": {
+      "main": [
+        [
+          {
+            "node": "Validação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}

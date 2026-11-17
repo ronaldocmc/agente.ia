@@ -1,0 +1,72 @@
+{
+  "name": "Agente.IA n8n Lab 04 — simulação local",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "cda80880-65ca-484d-8ca3-c01b3f1dafb2",
+      "name": "Iniciar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{\"sender\": \"teste-01\", \"kind\": \"text\", \"text\": \"ESTOQUE P001\"}}];"
+      },
+      "id": "1f24e57b-aa4c-484d-a9db-979341bba8f4",
+      "name": "Entrada sintética",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function avaliar(p){if(p.kind!=='text')return {status:'ignorado'};if(p.sender!=='teste-01')return {status:'negado'};const m=/^ESTOQUE (P\\d{3})$/i.exec(p.text||'');return !m?{status:'invalido'}:m[1].toUpperCase()==='P001'?{status:'ok',estoque:8}:m[1].toUpperCase()==='P002'?{status:'ok',estoque:0}:{status:'nao_encontrado'};}\nreturn [{json:avaliar($input.first().json)}];"
+      },
+      "id": "5bbaa935-b805-48f2-8c9a-428a6f897f6c",
+      "name": "Validação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Iniciar": {
+      "main": [
+        [
+          {
+            "node": "Entrada sintética",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Entrada sintética": {
+      "main": [
+        [
+          {
+            "node": "Validação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}

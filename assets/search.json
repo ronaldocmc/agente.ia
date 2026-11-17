@@ -2283,5 +2283,180 @@
     "title": "Hermes Agent — Lab 12: Segurança e testes adversariais",
     "url": "laboratorios/hermes-212/lab12/index.html",
     "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 01 — Primeiro workflow — consulta de cursos sem IA",
+    "url": "laboratorios/n8n-216/lab01/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 02 — Google Forms + Sheets + Gmail — inscrições",
+    "url": "laboratorios/n8n-216/lab02/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 03 — Google Sheets + Telegram — consulta e avisos",
+    "url": "laboratorios/n8n-216/lab03/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 04 — Google Sheets + WhatsApp — atendimento e estoque",
+    "url": "laboratorios/n8n-216/lab04/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 05 — Aplicação web + Webhook + Sheets",
+    "url": "laboratorios/n8n-216/lab05/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 06 — Google Calendar + Gmail — agenda",
+    "url": "laboratorios/n8n-216/lab06/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 07 — Google Drive + Docs + Sheets — certificados",
+    "url": "laboratorios/n8n-216/lab07/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 08 — Gmail + Drive + Sheets — triagem de solicitações",
+    "url": "laboratorios/n8n-216/lab08/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 09 — Skills reutilizáveis e sub-workflows",
+    "url": "laboratorios/n8n-216/lab09/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 10 — LLM local e API externa — classificação e agente",
+    "url": "laboratorios/n8n-216/lab10/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 11 — Guardrails, logs, erros e administração",
+    "url": "laboratorios/n8n-216/lab11/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n Lab 12 — Projeto integrador — Observar.IA multicanal",
+    "url": "laboratorios/n8n-216/lab12/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "n8n — MCP cliente e servidor",
+    "url": "formacao-individual-01.html#n8-mcp",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "n8n — Guardrails nativos",
+    "url": "formacao-individual-01.html#n8-guardrails",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "n8n — Human review e aprovação humana",
+    "url": "formacao-individual-01.html#n8-hitl",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "n8n — Cérebro e memória",
+    "url": "formacao-individual-01.html#n8-cerebro",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Pipeline",
+    "url": "conceito-pipeline.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Node",
+    "url": "conceito-node.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Execution",
+    "url": "conceito-execution.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Expression",
+    "url": "conceito-expression.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Sub-workflow",
+    "url": "conceito-sub-workflow.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Credential",
+    "url": "conceito-credential.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Google Drive",
+    "url": "fichas/google-drive.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Google Docs",
+    "url": "fichas/google-docs.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "HTTP",
+    "url": "conceito-http.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "JSON",
+    "url": "conceito-json.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Polling",
+    "url": "conceito-polling.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "API REST",
+    "url": "conceito-api-rest.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Reverse proxy",
+    "url": "conceito-reverse-proxy.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Arquitetura orientada a eventos",
+    "url": "conceito-event-driven-architecture.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Rate limiting",
+    "url": "conceito-rate-limiting.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Postman",
+    "url": "conceito-postman.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Insomnia",
+    "url": "conceito-insomnia.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "cURL",
+    "url": "conceito-curl.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "n8n — Webhooks, APIs e eventos",
+    "url": "formacao-individual-01.html#n8-webhooks",
+    "type": "Tutorial guiado"
   }
 ]

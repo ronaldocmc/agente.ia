@@ -1,0 +1,72 @@
+{
+  "name": "Agente.IA n8n Lab 01 — simulação local",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "ee42dd58-924d-4b04-8f81-6ef9347951d8",
+      "name": "Iniciar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{\"acao\": \"consultar\", \"curso\": \"C001\"}}];"
+      },
+      "id": "3ef62aee-d333-41a1-b857-fe860e957078",
+      "name": "Entrada sintética",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function avaliar(p){const cat={C001:{nome:'Introdução à IA',vagas:30},C002:{nome:'Agentes de IA',vagas:25}}; let r=typeof p.curso==='string'&&Object.hasOwn(cat,p.curso)?cat[p.curso]:undefined;return p.acao!=='consultar'?{status:'negado'}:r?{status:'ok',...r}:{status:'nao_encontrado'};}\nreturn [{json:avaliar($input.first().json)}];"
+      },
+      "id": "e0775fb1-eaef-450b-beb8-166eb069f3fa",
+      "name": "Validação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Iniciar": {
+      "main": [
+        [
+          {
+            "node": "Entrada sintética",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Entrada sintética": {
+      "main": [
+        [
+          {
+            "node": "Validação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}

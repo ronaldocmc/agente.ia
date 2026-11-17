@@ -1,0 +1,72 @@
+{
+  "name": "Agente.IA n8n Lab 03 — simulação local",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "8ac725ad-b8a3-4bd8-a481-320137a614a2",
+      "name": "Iniciar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{\"sender\": \"aluno-teste\", \"text\": \"/curso C001\"}}];"
+      },
+      "id": "f66b192a-01a1-4d7e-99d9-4514d28c26a0",
+      "name": "Entrada sintética",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function avaliar(p){if(p.sender!=='aluno-teste')return {status:'negado'};const m=/^\\/curso\\s+(C\\d{3})$/i.exec(p.text||'');if(!m)return {status:'invalido'};return m[1].toUpperCase()==='C001'?{status:'ok',vagas:30}:{status:'nao_encontrado'};}\nreturn [{json:avaliar($input.first().json)}];"
+      },
+      "id": "dca20117-b36f-4b0e-bd6e-624eec99d22c",
+      "name": "Validação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Iniciar": {
+      "main": [
+        [
+          {
+            "node": "Entrada sintética",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Entrada sintética": {
+      "main": [
+        [
+          {
+            "node": "Validação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}

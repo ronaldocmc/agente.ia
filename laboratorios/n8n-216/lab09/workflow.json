@@ -1,0 +1,72 @@
+{
+  "name": "Agente.IA n8n Lab 09 — simulação local",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "44f67457-fb3a-41ac-8ae5-7129007774f6",
+      "name": "Iniciar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{\"sku\": \"P001\"}}];"
+      },
+      "id": "e1f34961-2744-4bc9-99bf-d6fc670aa7ef",
+      "name": "Entrada sintética",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function avaliar(p){return !/^P[0-9]{3}$/.test(p.sku||'')?{status:'invalido'}:p.sku==='P001'?{status:'ok',quantidade:8,fonte:'estoque_sintetico_v1'}:p.sku==='P002'?{status:'ok',quantidade:0,fonte:'estoque_sintetico_v1'}:{status:'nao_encontrado'};}\nreturn [{json:avaliar($input.first().json)}];"
+      },
+      "id": "cec1e2eb-ff3d-4f56-b369-0f6e5f772355",
+      "name": "Validação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Iniciar": {
+      "main": [
+        [
+          {
+            "node": "Entrada sintética",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Entrada sintética": {
+      "main": [
+        [
+          {
+            "node": "Validação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}

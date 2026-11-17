@@ -8,3 +8,6 @@ Este registro preserva a evolução da Wiki sem apresentar números de versão n
 Os nomes físicos de arquivos anteriores foram preservados para garantir compatibilidade dos links existentes.
 
 A versão de distribuição não altera o comportamento dos experimentos ou dos agentes.
+
+## V219 — Laboratórios n8n integrados
+Distribuição única da Wiki. Removido o pacote redundante do n8n, mantidos os materiais nos respectivos laboratórios e os recursos comuns em sua pasta compartilhada. OpenClaw e Hermes preservados.

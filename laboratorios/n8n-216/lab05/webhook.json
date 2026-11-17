@@ -1,0 +1,82 @@
+{
+  "name": "Agente.IA Lab05 — Webhook, configurar Header Auth antes de ativar",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "agenteia-lab05-ALTERE",
+        "authentication": "headerAuth",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "c962a70b-a714-4abd-bba4-cd1b99e1d3ed",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function avaliar(p){return {status:typeof p.id==='string'&&/^REQ-[0-9]+$/.test(p.id)&&/^C[0-9]{3}$/.test(p.curso||'')?'ok':'invalido',id:p.id};}\nreturn [{json:avaliar($input.first().json.body||{})}];"
+      },
+      "id": "ffe6e56b-a9ba-493e-b6d0-a4ff7f317c8d",
+      "name": "Validação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {
+          "responseCode": "={{ $json.status === \"ok\" ? 200 : 400 }}"
+        }
+      },
+      "id": "fd0df0dc-65e2-47e0-9505-7929eb6603cc",
+      "name": "Responder",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        720,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validação": {
+      "main": [
+        [
+          {
+            "node": "Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}

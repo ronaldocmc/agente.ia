@@ -1,0 +1,43 @@
+[
+  {
+    "id": "MCP01",
+    "tool": "consultar_estoque",
+    "arguments": {
+      "sku": "P001"
+    },
+    "expected": "ok, quantidade 8"
+  },
+  {
+    "id": "MCP02",
+    "tool": "consultar_estoque",
+    "arguments": {
+      "sku": "P999"
+    },
+    "expected": "não encontrado"
+  },
+  {
+    "id": "MCP03",
+    "tool": "consultar_estoque",
+    "arguments": {
+      "sku": "INVALIDO"
+    },
+    "expected": "rejeitar entrada"
+  },
+  {
+    "id": "MCP04",
+    "tool": "alterar_estoque",
+    "arguments": {
+      "sku": "P001"
+    },
+    "expected": "ferramenta indisponível"
+  },
+  {
+    "id": "MCP05",
+    "auth": "inválida",
+    "tool": "consultar_estoque",
+    "arguments": {
+      "sku": "P001"
+    },
+    "expected": "acesso negado"
+  }
+]

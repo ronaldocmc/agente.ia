@@ -1,0 +1,346 @@
+[
+  {
+    "lab": 1,
+    "tests": [
+      {
+        "input": {
+          "acao": "consultar",
+          "curso": "C001"
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {},
+        "expected": "negado"
+      },
+      {
+        "input": {
+          "acao": "consultar",
+          "curso": "C999"
+        },
+        "expected": "nao_encontrado"
+      },
+      {
+        "input": {
+          "acao": "consultar",
+          "curso": "constructor"
+        },
+        "expected": "nao_encontrado"
+      }
+    ]
+  },
+  {
+    "lab": 2,
+    "tests": [
+      {
+        "input": {
+          "id": "INS-01",
+          "nome": "Ana Teste",
+          "email": "ana@example.test",
+          "curso": "C001"
+        },
+        "expected": "recebido"
+      },
+      {
+        "input": {
+          "id": "X",
+          "nome": "Ana",
+          "email": "bad",
+          "curso": "C001"
+        },
+        "expected": "invalido"
+      }
+    ]
+  },
+  {
+    "lab": 3,
+    "tests": [
+      {
+        "input": {
+          "sender": "aluno-teste",
+          "text": "/curso C001"
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {
+          "sender": "outro",
+          "text": "/curso C001"
+        },
+        "expected": "negado"
+      },
+      {
+        "input": {
+          "sender": "aluno-teste",
+          "text": "/curso C999"
+        },
+        "expected": "nao_encontrado"
+      },
+      {
+        "input": {
+          "sender": "aluno-teste",
+          "text": "outro"
+        },
+        "expected": "invalido"
+      }
+    ]
+  },
+  {
+    "lab": 4,
+    "tests": [
+      {
+        "input": {
+          "sender": "teste-01",
+          "kind": "text",
+          "text": "ESTOQUE P001"
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {
+          "sender": "teste-01",
+          "kind": "text",
+          "text": "ESTOQUE P999"
+        },
+        "expected": "nao_encontrado"
+      },
+      {
+        "input": {
+          "sender": "teste-01",
+          "kind": "text",
+          "text": "ESTOQUE P002"
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {
+          "sender": "outro",
+          "kind": "text",
+          "text": "ESTOQUE P001"
+        },
+        "expected": "negado"
+      },
+      {
+        "input": {
+          "kind": "status"
+        },
+        "expected": "ignorado"
+      }
+    ]
+  },
+  {
+    "lab": 5,
+    "tests": [
+      {
+        "input": {
+          "id": "REQ-01",
+          "curso": "C001"
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {
+          "id": "REQ-01",
+          "curso": "bad"
+        },
+        "expected": "invalido"
+      }
+    ]
+  },
+  {
+    "lab": 6,
+    "tests": [
+      {
+        "input": {
+          "id": "AG-01",
+          "inicio": "2026-12-01T14:00:00-03:00",
+          "fim": "2026-12-01T15:00:00-03:00"
+        },
+        "expected": "proposta_valida"
+      },
+      {
+        "input": {
+          "inicio": "2026-12-01T15:00:00-03:00",
+          "fim": "2026-12-01T14:00:00-03:00"
+        },
+        "expected": "invalido"
+      }
+    ]
+  },
+  {
+    "lab": 7,
+    "tests": [
+      {
+        "input": {
+          "id": "AL-01",
+          "nome": "Pessoa Teste",
+          "frequencia": 80,
+          "regular": true
+        },
+        "expected": "apto"
+      },
+      {
+        "input": {
+          "frequencia": 60,
+          "regular": true
+        },
+        "expected": "nao_apto"
+      },
+      {
+        "input": {
+          "regular": true
+        },
+        "expected": "invalido"
+      }
+    ]
+  },
+  {
+    "lab": 8,
+    "tests": [
+      {
+        "input": {
+          "id": "MSG-01",
+          "assunto": "CERTIFICADO"
+        },
+        "expected": "certificado"
+      },
+      {
+        "input": {
+          "assunto": "INSCRIÇÃO"
+        },
+        "expected": "inscricao"
+      },
+      {
+        "input": {
+          "assunto": "OUTRO"
+        },
+        "expected": "revisao"
+      }
+    ]
+  },
+  {
+    "lab": 9,
+    "tests": [
+      {
+        "input": {
+          "sku": "P001"
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {
+          "sku": "P999"
+        },
+        "expected": "nao_encontrado"
+      },
+      {
+        "input": {
+          "sku": "P002"
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {
+          "sku": "outro"
+        },
+        "expected": "invalido"
+      }
+    ]
+  },
+  {
+    "lab": 10,
+    "tests": [
+      {
+        "input": {
+          "categoria": "inscricao",
+          "confianca": 0.9
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {
+          "categoria": "outro",
+          "confianca": 2
+        },
+        "expected": "revisao"
+      },
+      {
+        "input": {
+          "categoria": "desconhecida",
+          "confianca": 1
+        },
+        "expected": "revisao"
+      }
+    ]
+  },
+  {
+    "lab": 11,
+    "tests": [
+      {
+        "input": {
+          "role": "editor",
+          "action": "publicar",
+          "version": 2,
+          "approvedVersion": 2
+        },
+        "expected": "ok"
+      },
+      {
+        "input": {
+          "role": "colaborador",
+          "action": "publicar",
+          "version": 2,
+          "approvedVersion": 2
+        },
+        "expected": "negado"
+      },
+      {
+        "input": {
+          "role": "editor",
+          "action": "publicar",
+          "version": 2,
+          "approvedVersion": 1
+        },
+        "expected": "negado"
+      }
+    ]
+  },
+  {
+    "lab": 12,
+    "tests": [
+      {
+        "input": {
+          "role": "editor",
+          "version": 2,
+          "approvedVersion": 2,
+          "hash": "abc",
+          "approvedHash": "abc",
+          "approved": true
+        },
+        "expected": "publicacao_autorizada"
+      },
+      {
+        "input": {
+          "role": "editor",
+          "version": 2,
+          "approvedVersion": 2,
+          "hash": "abc",
+          "approvedHash": "zzz",
+          "approved": true
+        },
+        "expected": "negado"
+      },
+      {
+        "input": {
+          "role": "curador",
+          "version": 2,
+          "approvedVersion": 2,
+          "hash": "abc",
+          "approvedHash": "abc",
+          "approved": true
+        },
+        "expected": "negado"
+      }
+    ]
+  }
+]

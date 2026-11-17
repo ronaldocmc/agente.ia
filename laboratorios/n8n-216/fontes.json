@@ -1,0 +1,8 @@
+[
+  {
+    "id": "OBS-001",
+    "url": "https://example.test/noticia",
+    "titulo": "Fonte sintética",
+    "texto": "Exemplo de notícia para teste; não é conteúdo real."
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "name": "Agente.IA n8n Lab 02 — simulação local",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "439c6a1f-7650-433b-af2c-a2495ed92099",
+      "name": "Iniciar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{\"id\": \"INS-01\", \"nome\": \"Ana Teste\", \"email\": \"ana@example.test\", \"curso\": \"C001\"}}];"
+      },
+      "id": "ab1b807e-d852-4b1b-aa73-b1028dead45a",
+      "name": "Entrada sintética",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function avaliar(p){return {status:p.id&&p.nome&&typeof p.email==='string'&&/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(p.email)&&p.curso?'recebido':'invalido',id:p.id};}\nreturn [{json:avaliar($input.first().json)}];"
+      },
+      "id": "a5d9bf71-ea2a-4a13-8356-a2ab4043194a",
+      "name": "Validação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Iniciar": {
+      "main": [
+        [
+          {
+            "node": "Entrada sintética",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Entrada sintética": {
+      "main": [
+        [
+          {
+            "node": "Validação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}
