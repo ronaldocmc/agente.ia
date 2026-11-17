@@ -1,0 +1,4 @@
+caso,remetente,esperado,observado,evidencia
+T1,autorizado,resposta normal,,
+T2,nao autorizado,sem execucao do agente,,
+T3,grupo,sem execucao do agente,,

@@ -1,0 +1,17 @@
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:stable
+    ports: ["127.0.0.1:5678:5678"]
+    environment:
+      N8N_HOST: localhost
+      N8N_PROTOCOL: http
+      N8N_SECURE_COOKIE: "false"
+      GENERIC_TIMEZONE: America/Sao_Paulo
+    volumes: [n8n_laboratorio:/home/node/.n8n]
+  ollama:
+    image: ollama/ollama:latest
+    volumes: [ollama_laboratorio:/root/.ollama]
+    # Nenhuma porta publicada: apenas n8n e comandos docker compose exec.
+volumes:
+  n8n_laboratorio:
+  ollama_laboratorio:

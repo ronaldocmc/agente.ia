@@ -1,0 +1,9 @@
+{
+  "id": "guardrails-lab",
+  "name": "Guardrails Lab",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

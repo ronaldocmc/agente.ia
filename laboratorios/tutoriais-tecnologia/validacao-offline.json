@@ -1,0 +1,30 @@
+{
+  "escopo": "Testes offline; dependências externas, instalação e execução real de provedores não testadas.",
+  "testes": [
+    {
+      "comando": "python test_core.py",
+      "codigo": 0,
+      "saida": "test_ambiguidade (__main__.TestCatalogo.test_ambiguidade) ... ok\ntest_arg_invalido (__main__.TestCatalogo.test_arg_invalido) ... ok\ntest_c001 (__main__.TestCatalogo.test_c001) ... ok\ntest_c002 (__main__.TestCatalogo.test_c002) ... ok\ntest_c003 (__main__.TestCatalogo.test_c003) ... ok\ntest_inexistente (__main__.TestCatalogo.test_inexistente) ... ok\ntest_injecao (__main__.TestCatalogo.test_injecao) ... ok\ntest_nome_literal (__main__.TestCatalogo.test_nome_literal) ... ok\ntest_revisao (__main__.TestCatalogo.test_revisao) ... ok\ntest_sem_escrita (__main__.TestCatalogo.test_sem_escrita) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK"
+    },
+    {
+      "comando": "python test_ollama.py",
+      "codigo": 0,
+      "saida": "test_allowlist (__main__.TestLoop.test_allowlist) ... ok\ntest_arg_extra (__main__.TestLoop.test_arg_extra) ... ok\ntest_duas_rodadas (__main__.TestLoop.test_duas_rodadas) ... ok\ntest_limite (__main__.TestLoop.test_limite) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK"
+    },
+    {
+      "comando": "node test_n8n.js",
+      "codigo": 0,
+      "saida": "10 verificações JavaScript aprovadas (nós simulados; não é uma execução real do n8n)."
+    },
+    {
+      "comando": "node --check /tmp/agente-tutoriais/site/Wiki_unespIA/assets/tutorial-guiado.js",
+      "codigo": 0,
+      "saida": ""
+    }
+  ],
+  "referencias_locais_novos_tutoriais": 343,
+  "referencias_ausentes": [],
+  "tutoriais": 10,
+  "secoes": 120,
+  "catalogo_igual_ao_original": true
+}

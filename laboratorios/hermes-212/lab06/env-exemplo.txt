@@ -1,0 +1,2 @@
+WHATSAPP_ALLOWED_USERS=5518000000001
+# Número fictício; substitua pelo número de teste.

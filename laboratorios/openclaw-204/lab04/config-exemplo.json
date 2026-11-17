@@ -1,0 +1,12 @@
+{
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "SUBSTITUIR_ID_NUMERICO"
+      ],
+      "groupPolicy": "disabled"
+    }
+  }
+}

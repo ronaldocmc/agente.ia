@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "id": "N001",
+      "resumo": "Oficina fictícia para professores sobre agentes."
+    },
+    {
+      "id": "N002",
+      "resumo": "Dataset fictício para testar curadoria."
+    }
+  ]
+}

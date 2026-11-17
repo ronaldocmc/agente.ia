@@ -143,6 +143,41 @@
       "technology": "Grok Bot",
       "page": "lab-grok-detalhado.html",
       "artifact": "laboratorios/avancados/PROMPTS_GROK_BOT.md"
+    },
+    {
+      "technology": "Firecrawl",
+      "page": "lab-expansao-firecrawl.html",
+      "artifact": "lab-expansao-firecrawl.html"
+    },
+    {
+      "technology": "Crawl4AI",
+      "page": "lab-expansao-crawl4ai.html",
+      "artifact": "lab-expansao-crawl4ai.html"
+    },
+    {
+      "technology": "OpenSandbox",
+      "page": "lab-expansao-opensandbox.html",
+      "artifact": "lab-expansao-opensandbox.html"
+    },
+    {
+      "technology": "FastMCP",
+      "page": "lab-expansao-fastmcp.html",
+      "artifact": "lab-expansao-fastmcp.html"
+    },
+    {
+      "technology": "ToolHive",
+      "page": "lab-expansao-toolhive.html",
+      "artifact": "lab-expansao-toolhive.html"
+    },
+    {
+      "technology": "OpenFGA",
+      "page": "lab-expansao-openfga.html",
+      "artifact": "lab-expansao-openfga.html"
+    },
+    {
+      "technology": "Stripe Link CLI",
+      "page": "lab-expansao-stripe-link-cli.html",
+      "artifact": "lab-expansao-stripe-link-cli.html"
     }
   ]
 }

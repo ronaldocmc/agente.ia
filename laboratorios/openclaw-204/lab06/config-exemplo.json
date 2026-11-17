@@ -1,0 +1,13 @@
+{
+  "channels": {
+    "whatsapp": {
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "+5518000000001",
+        "+5518000000002"
+      ],
+      "groupPolicy": "disabled",
+      "selfChatMode": false
+    }
+  }
+}

@@ -1,0 +1,195 @@
+id,tecnologia,status,campos_nao_confirmados,fontes
+t:elasticsearch,Elasticsearch,Pendente de curadoria,18,
+t:pydantic-evals,Pydantic Evals,Pendente de curadoria,18,
+t:deepseek-pesos,DeepSeek (pesos),Pendente de curadoria,18,
+t:z-api,Z-API,Pendente de curadoria,18,
+t:mistral-small-pesos,Mistral Small (pesos),Pendente de curadoria,18,
+t:zapier,Zapier,Pendente de curadoria,18,
+t:matomo,Matomo,Pendente de curadoria,18,
+t:canva,Canva,Pendente de curadoria,18,
+t:trulens,TruLens,Pendente de curadoria,18,
+t:dvc,DVC,Pendente de curadoria,18,
+t:owasp-genai-top-10-2026,OWASP GenAI Top 10 2026,Pendente de curadoria,18,
+t:opentelemetry,OpenTelemetry,Pendente de curadoria,18,
+t:ro-crate,RO-Crate,Pendente de curadoria,18,
+t:rss-atom,RSS/Atom,Pendente de curadoria,18,
+t:smolagents,smolagents,Pendente de curadoria,18,
+t:elevenlabs,ElevenLabs,Pendente de curadoria,18,
+t:next-js,Next.js,Pendente de curadoria,18,
+t:temporal,Temporal,Pendente de curadoria,18,
+t:haystack-agents,Haystack Agents,Pendente de curadoria,18,
+t:gemini-cli,Gemini CLI,Pendente de curadoria,18,
+t:opa,OPA,Pendente de curadoria,18,
+t:ai21-labs,AI21 Labs,Pendente de curadoria,18,
+t:apache-kafka,Apache Kafka,Pendente de curadoria,18,
+t:weaviate,Weaviate,Pendente de curadoria,18,
+t:kestra,Kestra,Pendente de curadoria,18,
+t:apache-nifi,Apache NiFi,Pendente de curadoria,18,
+t:google-workspace,Google Workspace,Pendente de curadoria,18,
+t:a2ui,A2UI,Pendente de curadoria,18,
+t:posthog,PostHog,Pendente de curadoria,18,
+t:prometheus,Prometheus,Pendente de curadoria,18,
+t:google-sheets,Google Sheets,Pendente de curadoria,18,
+t:figjam,FigJam,Pendente de curadoria,18,
+t:bertimbau,BERTimbau,Pendente de curadoria,18,
+t:prefect,Prefect,Pendente de curadoria,18,
+t:gradio,Gradio,Pendente de curadoria,18,
+t:dots-openai,Dots (OpenAI),Pendente de curadoria,18,
+t:pydantic,Pydantic,Pendente de curadoria,18,
+t:nist-ai-rmf,NIST AI RMF,Pendente de curadoria,18,
+t:sentence-transformers,Sentence Transformers,Pendente de curadoria,18,
+t:hugging-face-transformers,Hugging Face Transformers,Pendente de curadoria,18,
+t:semantic-kernel,Semantic Kernel,Pendente de curadoria,18,
+t:ragas,Ragas,Pendente de curadoria,18,
+t:neo4j,Neo4j,Pendente de curadoria,18,
+t:vault-hashicorp,Vault (HashiCorp),Pendente de curadoria,18,
+t:activepieces,Activepieces,Pendente de curadoria,18,
+t:phi-microsoft,Phi (Microsoft),Pendente de curadoria,18,
+t:gpt-6-openai,GPT-6 (OpenAI),Pendente de curadoria,18,
+t:milvus,Milvus,Pendente de curadoria,18,
+t:n8n,n8n,Curadoria parcial; verificar versão e edição,10,https://docs.n8n.io/hosting/
+t:copilotkit,CopilotKit,Pendente de curadoria,18,
+t:oauth-2-1,OAuth 2.1,Pendente de curadoria,18,
+t:crewai,CrewAI,Curadoria parcial; verificar versão e edição,10,https://github.com/crewAIInc/crewAI
+t:great-expectations,Great Expectations,Pendente de curadoria,18,
+t:telegram-bot-api,Telegram Bot API,Pendente de curadoria,18,
+t:node-red,Node-RED,Pendente de curadoria,18,
+t:mistral-ai,Mistral AI,Pendente de curadoria,18,
+t:openmetadata,OpenMetadata,Pendente de curadoria,18,
+t:apache-airflow,Apache Airflow,Pendente de curadoria,18,
+t:openai-agents-sdk,OpenAI Agents SDK,Curadoria parcial; verificar versão e edição,10,https://github.com/openai/openai-agents-python
+t:llama-meta,Llama (Meta),Pendente de curadoria,18,
+t:ollama,Ollama,Curadoria parcial; verificar versão e edição,10,https://github.com/ollama/ollama
+t:codex,Codex,Pendente de curadoria,18,
+t:chroma,Chroma,Pendente de curadoria,18,
+t:lakefs,lakeFS,Pendente de curadoria,18,
+t:microsoft-presidio,Microsoft Presidio,Pendente de curadoria,18,
+t:postgresql,PostgreSQL,Pendente de curadoria,18,
+t:make,Make,Pendente de curadoria,18,
+t:docker,Docker,Pendente de curadoria,18,
+t:olmo-ai2,OLMo (AI2),Pendente de curadoria,18,
+t:mlflow,MLflow,Pendente de curadoria,18,
+t:apps-script,Apps Script,Pendente de curadoria,18,
+t:kubernetes,Kubernetes,Pendente de curadoria,18,
+t:amazon-bedrock,Amazon Bedrock,Pendente de curadoria,18,
+t:claude-agent-sdk,Claude Agent SDK,Pendente de curadoria,18,
+t:mcp,MCP,Pendente de curadoria,18,
+t:fastapi,FastAPI,Pendente de curadoria,18,
+t:json-schema,JSON Schema,Pendente de curadoria,18,
+t:beautiful-soup,Beautiful Soup,Pendente de curadoria,18,
+t:faiss,FAISS,Pendente de curadoria,18,
+t:lakera-guard,Lakera Guard,Pendente de curadoria,18,
+t:gmail,Gmail,Pendente de curadoria,18,
+t:gemma-google,Gemma (Google),Pendente de curadoria,18,
+t:vllm,vLLM,Pendente de curadoria,18,
+t:vertex-ai,Vertex AI,Pendente de curadoria,18,
+t:langflow,Langflow,Curadoria parcial; verificar versão e edição,10,https://github.com/langflow-ai/langflow
+t:asyncapi,AsyncAPI,Pendente de curadoria,18,
+t:pgvector,pgvector,Pendente de curadoria,18,
+t:flowise,Flowise,Curadoria parcial; verificar versão e edição,10,https://github.com/FlowiseAI/Flowise
+t:opensearch,OpenSearch,Pendente de curadoria,18,
+t:minio,MinIO,Pendente de curadoria,18,
+t:azure-ai-foundry,Azure AI Foundry,Pendente de curadoria,18,
+t:nemo-guardrails,NeMo Guardrails,Pendente de curadoria,18,
+t:google-adk,Google ADK,Curadoria parcial; verificar versão e edição,10,https://github.com/google/adk-python
+t:agno,Agno,Pendente de curadoria,18,
+t:deepseek-api,DeepSeek API,Pendente de curadoria,18,
+t:llama-cpp,llama.cpp,Pendente de curadoria,18,
+t:cohere,Cohere,Pendente de curadoria,18,
+t:dify,Dify,Curadoria parcial; verificar versão e edição,10,https://github.com/langgenius/dify
+t:kev-system-one,Kev (System One),Pendente de curadoria,18,
+t:dagster,Dagster,Pendente de curadoria,18,
+t:ag-ui,AG-UI,Pendente de curadoria,18,
+t:botpress,Botpress,Pendente de curadoria,18,
+t:autogen,AutoGen,Pendente de curadoria,18,
+t:langchain,LangChain,Pendente de curadoria,18,
+t:grafana,Grafana,Pendente de curadoria,18,
+t:langfuse,Langfuse,Pendente de curadoria,18,
+t:promptfoo,Promptfoo,Pendente de curadoria,18,
+t:dialogflow-cx,Dialogflow CX,Pendente de curadoria,18,
+t:redis,Redis,Pendente de curadoria,18,
+t:pydanticai,PydanticAI,Curadoria parcial; verificar versão e edição,10,https://github.com/pydantic/pydantic-ai
+t:power-automate,Power Automate,Pendente de curadoria,18,
+t:celery,Celery,Pendente de curadoria,18,
+t:qwen,Qwen,Pendente de curadoria,18,
+t:webhooks,Webhooks,Pendente de curadoria,18,
+t:openhands,OpenHands,Pendente de curadoria,18,
+t:datahub,DataHub,Pendente de curadoria,18,
+t:helicone,Helicone,Pendente de curadoria,18,
+t:w3c-prov,W3C PROV,Pendente de curadoria,18,
+t:ceia-lumi-4b,CEIA Lumi-4B — modelo brasileiro do CEIA/UFG,Pendente de curadoria,18,
+t:llamaindex-workflows,LlamaIndex Workflows,Pendente de curadoria,18,
+t:grok-bot,Grok Bot,Curadoria parcial; verificar versão e edição,1,https://docs.x.ai/grok-bot/security; https://docs.x.ai/grok-bot/security-faq
+t:google-news-rss,Google News RSS,Pendente de curadoria,18,
+t:jina-embeddings,Jina Embeddings,Pendente de curadoria,18,
+t:manychat,ManyChat,Pendente de curadoria,18,
+t:garak,Garak,Pendente de curadoria,18,
+t:google-calendar,Google Calendar,Pendente de curadoria,18,
+t:react,React,Pendente de curadoria,18,
+t:chatgpt,ChatGPT,Pendente de curadoria,18,
+t:keycloak,Keycloak,Pendente de curadoria,18,
+t:dspy,DSPy,Pendente de curadoria,18,
+t:openrouter,OpenRouter,Pendente de curadoria,18,
+t:evidently-ai,Evidently AI,Pendente de curadoria,18,
+t:piper-tts,Piper TTS,Pendente de curadoria,18,
+t:claude-anthropic,Claude (Anthropic),Pendente de curadoria,18,
+t:rabbitmq,RabbitMQ,Pendente de curadoria,18,
+t:gemini-google,Gemini (Google),Pendente de curadoria,18,
+t:whisper-faster-whisper,Whisper / faster-whisper,Pendente de curadoria,18,
+t:arize-phoenix,Arize Phoenix,Pendente de curadoria,18,
+t:hermes-agent,Hermes Agent,Curadoria parcial; verificar versão e edição,3,https://github.com/NousResearch/hermes-agent; https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/local-models.md
+t:github-copilot,GitHub Copilot,Pendente de curadoria,18,
+t:trivy,Trivy,Pendente de curadoria,18,
+t:mongodb,MongoDB,Pendente de curadoria,18,
+t:jev-typesafe-ai,Jev (TypeSafe AI),Pendente de curadoria,18,
+t:mitre-atlas,MITRE ATLAS,Pendente de curadoria,18,
+t:youtube-data-api,YouTube Data API,Pendente de curadoria,18,
+t:openapi,OpenAPI,Pendente de curadoria,18,
+t:litellm,LiteLLM,Pendente de curadoria,18,
+t:qdrant,Qdrant,Pendente de curadoria,18,
+t:claude-code,Claude Code,Pendente de curadoria,18,
+t:copilot-studio,Copilot Studio,Pendente de curadoria,18,
+t:openclaw,OpenClaw,Curadoria parcial; verificar versão e edição,4,https://github.com/openclaw/openclaw; https://docs.openclaw.ai/
+t:meta-graph-api,Meta Graph API,Pendente de curadoria,18,
+t:plausible-analytics,Plausible Analytics,Pendente de curadoria,18,
+t:openlineage,OpenLineage,Pendente de curadoria,18,
+t:google-forms,Google Forms,Pendente de curadoria,18,
+t:portkey,Portkey,Pendente de curadoria,18,
+t:playwright,Playwright,Pendente de curadoria,18,
+t:microsoft-agent-framework,Microsoft Agent Framework,Pendente de curadoria,18,
+t:grok-xai,Grok (xAI),Pendente de curadoria,18,
+t:miro,Miro,Pendente de curadoria,18,
+t:whatsapp-business-platform,WhatsApp Business Platform,Pendente de curadoria,18,
+t:deepeval,DeepEval,Pendente de curadoria,18,
+t:bge-embeddings,BGE Embeddings,Pendente de curadoria,18,
+t:a2a,A2A,Pendente de curadoria,18,
+t:hugging-face-tgi,Hugging Face TGI,Pendente de curadoria,18,
+t:streamlit,Streamlit,Pendente de curadoria,18,
+t:mastra,Mastra,Pendente de curadoria,18,
+t:langgraph,LangGraph,Curadoria parcial; verificar versão e edição,9,https://github.com/langchain-ai/langgraph
+t:guardrails-ai,Guardrails AI,Pendente de curadoria,18,
+t:paperclip,Paperclip,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/paperclipai/paperclip
+t:agent-zero,Agent Zero,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/agent0ai/agent-zero
+t:nanobot,Nanobot,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/HKUDS/nanobot
+t:nanoclaw,NanoClaw,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/qwibitai/nanoclaw
+t:zeroclaw,ZeroClaw,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/zeroclaw-labs/zeroclaw
+t:picoclaw,PicoClaw,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/sipeed/picoclaw
+t:ironclaw,IronClaw,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/nearai/ironclaw
+t:letta,Letta,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://docs.letta.com/
+t:mem0,Mem0,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/mem0ai/mem0
+t:graphiti,Graphiti,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/getzep/graphiti
+t:cognee,Cognee,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/topoteretes/cognee
+t:deep-agents,Deep Agents,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/langchain-ai/deepagents
+t:vercel-ai-sdk,Vercel AI SDK,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://ai-sdk.dev/docs/introduction
+t:strands-agents,Strands Agents,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://strandsagents.com/
+t:e2b,E2B,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/e2b-dev/E2B
+t:daytona,Daytona,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/daytonaio/daytona
+t:browser-use,Browser Use,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/browser-use/browser-use
+t:stagehand,Stagehand,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/browserbase/stagehand
+t:dbos,DBOS,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/dbos-inc/dbos-transact-py
+t:restate,Restate,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/restatedev/restate
+t:livekit-agents,LiveKit Agents,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/livekit/agents
+t:pipecat,Pipecat,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://github.com/pipecat-ai/pipecat
+t:docling,Docling,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",7,https://github.com/docling-project/docling
+t:inspect-ai,Inspect AI,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://inspect.aisi.org.uk/
+t:opencode,OpenCode,"Curadoria inicial; versão, licença, preço e recursos específicos ainda não auditados integralmente",9,https://opencode.ai/docs/

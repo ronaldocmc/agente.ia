@@ -1,5 +1,105 @@
 [
   {
+    "title": "Tutorial 01 — n8n: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-01.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 02 — n8n + Ollama: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-02.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 03 — OpenAI Agents SDK: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-03.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 04 — Google ADK: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-04.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 05 — LangGraph: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-05.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 06 — CrewAI: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-06.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 07 — Hermes Agent: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-07.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 08 — OpenClaw: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-08.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 09 — Grok Bot: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-09.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Tutorial 10 — Python + Ollama: instalação, configuração, exemplo completo e testes",
+    "url": "formacao-individual-10.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Observar.IA — TURING e onze especialistas: equipe, curadoria, Observar.Dia e governança",
+    "url": "estudos/observar.html#equipe-observar",
+    "type": "Estudo de caso"
+  },
+  {
+    "title": "FCT.IA — Escritório Virtual da FCT/UNESP: DARCY e nove especialistas",
+    "url": "escritorio-virtual-arquitetura.html#equipe-fctia",
+    "type": "Estudo de caso"
+  },
+  {
+    "title": "Simuladores de Engenharia de Agentes de IA",
+    "url": "simuladores.html",
+    "type": "Laboratórios interativos"
+  },
+  {
+    "title": "S01 — Custos de execução de agentes",
+    "url": "simulador-s01.html",
+    "type": "Simulador"
+  },
+  {
+    "title": "S02 — Viabilidade de arquiteturas",
+    "url": "simulador-s02.html",
+    "type": "Simulador"
+  },
+  {
+    "title": "S03 — Dimensionamento de infraestrutura",
+    "url": "simulador-s03.html",
+    "type": "Simulador"
+  },
+  {
+    "title": "S04 — Execução de sistemas multiagentes",
+    "url": "simulador-s04.html",
+    "type": "Simulador"
+  },
+  {
+    "title": "S05 — Memória e recuperação de conhecimento",
+    "url": "simulador-s05.html",
+    "type": "Simulador"
+  },
+  {
+    "title": "Publicações Técnicas unesp.IA",
+    "url": "publicacoes-tecnicas.html",
+    "type": "Acervo editorial"
+  },
+  {
+    "title": "EA-001 — Engenharia de Agentes de IA: Tecnologias, Arquiteturas e Integração de Sistemas",
+    "url": "publicacoes/EA-001.html",
+    "type": "Publicação técnica"
+  },
+  {
     "title": "Auditoria das 169 fichas tecnológicas",
     "url": "auditoria-catalogo-tecnologico.html",
     "type": "Auditoria de catálogo"
@@ -1683,5 +1783,505 @@
     "title": "Base semântica e seleção explicável",
     "url": "base-semantica.html",
     "type": "Pesquisa"
+  },
+  {
+    "title": "Paperclip",
+    "url": "fichas/paperclip.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Paperclip",
+    "url": "lab-expansao-paperclip.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Agent Zero",
+    "url": "fichas/agent-zero.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Agent Zero",
+    "url": "lab-expansao-agent-zero.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Nanobot",
+    "url": "fichas/nanobot.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Nanobot",
+    "url": "lab-expansao-nanobot.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "NanoClaw",
+    "url": "fichas/nanoclaw.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — NanoClaw",
+    "url": "lab-expansao-nanoclaw.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "ZeroClaw",
+    "url": "fichas/zeroclaw.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — ZeroClaw",
+    "url": "lab-expansao-zeroclaw.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "PicoClaw",
+    "url": "fichas/picoclaw.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — PicoClaw",
+    "url": "lab-expansao-picoclaw.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "IronClaw",
+    "url": "fichas/ironclaw.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — IronClaw",
+    "url": "lab-expansao-ironclaw.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Letta",
+    "url": "fichas/letta.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Letta",
+    "url": "lab-expansao-letta.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Mem0",
+    "url": "fichas/mem0.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Mem0",
+    "url": "lab-expansao-mem0.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Graphiti",
+    "url": "fichas/graphiti.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Graphiti",
+    "url": "lab-expansao-graphiti.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Cognee",
+    "url": "fichas/cognee.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Cognee",
+    "url": "lab-expansao-cognee.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Deep Agents",
+    "url": "fichas/deep-agents.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Deep Agents",
+    "url": "lab-expansao-deep-agents.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Vercel AI SDK",
+    "url": "fichas/vercel-ai-sdk.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Vercel AI SDK",
+    "url": "lab-expansao-vercel-ai-sdk.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Strands Agents",
+    "url": "fichas/strands-agents.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Strands Agents",
+    "url": "lab-expansao-strands-agents.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "E2B",
+    "url": "fichas/e2b.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — E2B",
+    "url": "lab-expansao-e2b.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Daytona",
+    "url": "fichas/daytona.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Daytona",
+    "url": "lab-expansao-daytona.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Browser Use",
+    "url": "fichas/browser-use.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Browser Use",
+    "url": "lab-expansao-browser-use.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Stagehand",
+    "url": "fichas/stagehand.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Stagehand",
+    "url": "lab-expansao-stagehand.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "DBOS",
+    "url": "fichas/dbos.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — DBOS",
+    "url": "lab-expansao-dbos.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Restate",
+    "url": "fichas/restate.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Restate",
+    "url": "lab-expansao-restate.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "LiveKit Agents",
+    "url": "fichas/livekit-agents.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — LiveKit Agents",
+    "url": "lab-expansao-livekit-agents.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Pipecat",
+    "url": "fichas/pipecat.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Pipecat",
+    "url": "lab-expansao-pipecat.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Docling",
+    "url": "fichas/docling.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Docling",
+    "url": "lab-expansao-docling.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Inspect AI",
+    "url": "fichas/inspect-ai.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Inspect AI",
+    "url": "lab-expansao-inspect-ai.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "OpenCode",
+    "url": "fichas/opencode.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — OpenCode",
+    "url": "lab-expansao-opencode.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Ciclo de vida da engenharia de agentes",
+    "url": "ciclo-engenharia.html",
+    "type": "Engenharia"
+  },
+  {
+    "title": "Expansão tecnológica e laboratórios",
+    "url": "expansao-tecnologica.html",
+    "type": "Catálogo"
+  },
+  {
+    "title": "Web Crawling",
+    "url": "conceito-web-crawling.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Web Scraping",
+    "url": "conceito-web-scraping.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Extração estruturada Web",
+    "url": "conceito-extracao-web.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "MCP Gateway",
+    "url": "conceito-mcp-gateway.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "MCP Registry",
+    "url": "conceito-mcp-registry.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Governança de ferramentas",
+    "url": "conceito-governanca-ferramentas.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Autenticação de agentes",
+    "url": "conceito-autenticacao-agentes.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Autorização granular",
+    "url": "conceito-autorizacao-granular.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "RBAC",
+    "url": "conceito-rbac.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "ABAC",
+    "url": "conceito-abac.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "ReBAC",
+    "url": "conceito-rebac.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Isolamento computacional",
+    "url": "conceito-isolamento-computacional.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Controle de tráfego de saída",
+    "url": "conceito-controle-egress.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Identidade de agentes",
+    "url": "conceito-identidade-agentes.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Pagamentos agênticos",
+    "url": "conceito-pagamentos-agenticos.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Gestão de credenciais",
+    "url": "conceito-gestao-credenciais.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Agentes em produção",
+    "url": "conceito-agentes-producao.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Firecrawl",
+    "url": "fichas/firecrawl.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Firecrawl",
+    "url": "lab-expansao-firecrawl.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Crawl4AI",
+    "url": "fichas/crawl4ai.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Crawl4AI",
+    "url": "lab-expansao-crawl4ai.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "OpenSandbox",
+    "url": "fichas/opensandbox.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — OpenSandbox",
+    "url": "lab-expansao-opensandbox.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "FastMCP",
+    "url": "fichas/fastmcp.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — FastMCP",
+    "url": "lab-expansao-fastmcp.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "ToolHive",
+    "url": "fichas/toolhive.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — ToolHive",
+    "url": "lab-expansao-toolhive.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "OpenFGA",
+    "url": "fichas/openfga.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — OpenFGA",
+    "url": "lab-expansao-openfga.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Stripe Link CLI",
+    "url": "fichas/stripe-link-cli.html",
+    "type": "Ficha tecnológica"
+  },
+  {
+    "title": "Laboratório — Stripe Link CLI",
+    "url": "lab-expansao-stripe-link-cli.html",
+    "type": "Protocolo experimental"
+  },
+  {
+    "title": "Da prototipação à produção",
+    "url": "agentes-producao.html",
+    "type": "Engenharia"
+  },
+  {
+    "title": "Hermes Agent — Lab 01 — Instalação e configuração",
+    "url": "laboratorios/hermes-212/lab01/index.html",
+    "type": "Laboratório prático"
+  },
+  {
+    "title": "Hermes Agent — Lab 02 — Análise de dados CSV",
+    "url": "laboratorios/hermes-212/lab02/index.html",
+    "type": "Laboratório prático"
+  },
+  {
+    "title": "Hermes Agent — Lab 03 — Skills e memória procedimental",
+    "url": "laboratorios/hermes-212/lab03/index.html",
+    "type": "Laboratório prático"
+  },
+  {
+    "title": "Hermes Agent — Lab 04 — Integração com Telegram",
+    "url": "laboratorios/hermes-212/lab04/index.html",
+    "type": "Laboratório prático"
+  },
+  {
+    "title": "Hermes Agent — Lab 05 — Modelos locais, servidores e APIs",
+    "url": "laboratorios/hermes-212/lab05/index.html",
+    "type": "Laboratório prático"
+  },
+  {
+    "title": "Hermes Agent — Lab 06 — Assistente pelo WhatsApp",
+    "url": "laboratorios/hermes-212/lab06/index.html",
+    "type": "Laboratório prático"
+  },
+  {
+    "title": "Hermes Agent — Lab 07 — Observar.IA — curadoria pelo WhatsApp",
+    "url": "laboratorios/hermes-212/lab07/index.html",
+    "type": "Laboratório prático"
+  },
+  {
+    "title": "Hermes Agent — Lab 08 — Assistente de consulta a cursos",
+    "url": "laboratorios/hermes-212/lab08/index.html",
+    "type": "Laboratório prático"
+  },
+  {
+    "title": "OpenClaw — Lab 09: Segundo cérebro",
+    "url": "laboratorios/openclaw-204/lab09/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "OpenClaw — Lab 10: Engenharia de skills",
+    "url": "laboratorios/openclaw-204/lab10/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "OpenClaw — Lab 11: Guardrails personalizados",
+    "url": "laboratorios/openclaw-204/lab11/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "OpenClaw — Lab 12: Segurança e testes adversariais",
+    "url": "laboratorios/openclaw-204/lab12/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Hermes Agent — Lab 09: Segundo cérebro",
+    "url": "laboratorios/hermes-212/lab09/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Hermes Agent — Lab 10: Engenharia de skills",
+    "url": "laboratorios/hermes-212/lab10/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Hermes Agent — Lab 11: Guardrails personalizados",
+    "url": "laboratorios/hermes-212/lab11/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Hermes Agent — Lab 12: Segurança e testes adversariais",
+    "url": "laboratorios/hermes-212/lab12/index.html",
+    "type": "Laboratório"
   }
 ]

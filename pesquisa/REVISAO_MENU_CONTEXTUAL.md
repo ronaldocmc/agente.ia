@@ -1,0 +1,1 @@
+Menu unificado: 572 páginas; 48 links por menu; 27456 destinos locais verificados. Seção Construir e Avaliar: 6 opções. Sete páginas receberam referências contextuais. Conteúdo original, simuladores e publicação preservados. Sem teste visual no Edge.

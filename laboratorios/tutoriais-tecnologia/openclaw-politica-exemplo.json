@@ -1,0 +1,1 @@
+{"agents":{"defaults":{"sandbox":{"mode":"all","scope":"session","workspaceAccess":"ro"}}},"tools":{"allow":["read","skills_search","skills_read"],"deny":["exec","write","edit","apply_patch","browser","message"]},"gateway":{"bind":"loopback"}}

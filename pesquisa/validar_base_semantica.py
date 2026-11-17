@@ -8,7 +8,7 @@ class BaseTests(unittest.TestCase):
  def test_relations(self):
   ids={x['id'] for x in D['entities']};self.assertTrue(all(x['source'] in ids and x['target'] in ids and x['provenance'] for x in D['relations']))
  def test_counts(self):
-  self.assertEqual(sum(x['type']=='conceito' for x in D['entities']),79);self.assertEqual(sum(x['type']=='tecnologia' for x in D['entities']),169)
+  self.assertEqual(sum(x['type']=='conceito' for x in D['entities']),109);self.assertEqual(sum(x['type']=='tecnologia' for x in D['entities']),201)
  def test_paths(self):
   self.assertTrue(all((R/x['href']).is_file() for x in D['entities'] if x.get('href')))
  def test_capabilities(self):

@@ -9,6 +9,7 @@ const C={
 const T={
  n8n:['n8n','fichas/n8n.html'],python:['Python','capitulos/08.html'],openclaw:['OpenClaw','fichas/openclaw.html'],hermes:['Hermes Agent','fichas/hermes-agent.html'],crewai:['CrewAI','fichas/crewai.html'],adk:['Google ADK','fichas/google-adk.html'],agents:['OpenAI Agents SDK','fichas/openai-agents-sdk.html'],pydantic:['PydanticAI','fichas/pydanticai.html'],langgraph:['LangGraph','fichas/langgraph.html'],maf:['Microsoft Agent Framework','fichas/microsoft-agent-framework.html'],mastra:['Mastra','fichas/mastra.html'],postgres:['PostgreSQL','fichas/postgresql.html'],pgvector:['pgvector','fichas/pgvector.html'],qdrant:['Qdrant','fichas/qdrant.html'],llamaindex:['LlamaIndex Workflows','fichas/llamaindex-workflows.html'],haystack:['Haystack Agents','fichas/haystack-agents.html'],flowise:['Flowise','fichas/flowise.html'],dify:['Dify','fichas/dify.html'],temporal:['Temporal','fichas/temporal.html'],mcp:['MCP','fichas/mcp.html'],a2a:['A2A','fichas/a2a.html'],minio:['MinIO','fichas/minio.html'],whisper:['Whisper','tecnologias/multimodalidade-e-canais.html'],redis:['Redis','fichas/redis.html'],neo4j:['Neo4j','fichas/neo4j.html']
 };
+for(const e of (window.AGENTEIA_SEMANTICA?.entities||[])){if(e.type==='tecnologia')T[e.id.slice(2)]=[e.label,e.href];}
 const PROFILES={
  observar:{name:'Observar.IA — Observatório Inteligente',objective:'Receber fontes, verificar evidências e preparar publicações para curadoria.',flags:['docs','multi','channels','approval','automation'],example:'Receber uma notícia, conferir sua procedência, registrar evidências e preparar um boletim para o curador.',case:'estudos/observar.html',skill:'verificar-fonte-observar'},
  assistente:{name:'Assistente pessoal',objective:'Organizar tarefas, documentos e compromissos sob controle do usuário.',flags:['memory','channels','skills','approval'],example:'Receber uma mensagem, consultar compromissos, propor horários e solicitar confirmação.',case:'estudos/assistente-pessoal.html',skill:'preparar-compromisso'},
@@ -45,7 +46,23 @@ function recommend(c){
  if(selectedFlag('skills',f)){add('hermes','Documentos de procedimentos sob demanda.');add('openclaw','Skills e canais integrados.');}
  if(selectedFlag('local',f)){add('hermes','Candidato para execução local, exigindo sandbox e políticas.');add('postgres','Armazenamento sob gestão própria.');}
  if(!list.length)add('agents','Agente simples com ferramentas, após baseline determinístico.');
- return list;
+ const d=window.AGENTEIA_SEMANTICA?.implantacao_custos, req=window.AGENTEIA_REQUISITOS;
+ if(!d||!req)return list;
+ const goals={assistente:'personal',escritorio:'team',observar:'app',varejo:'automation',educacao:'app',custom:'app'};
+ const group=goals[c.profile===PROFILES.assistente?'assistente':Object.keys(PROFILES).find(k=>PROFILES[k]===c.profile)]||'app';
+ const own=$('adapt-env').value==='own',cloud=$('adapt-env').value==='cloud';
+ const required=[...(own?['proprio']:[]),...($('adapt-free').checked?['sem_assinatura']:[]),...($('adapt-local').checked?['local']:[]),...($('adapt-offline').checked?['offline']:[])];
+ const alias={hermes:'hermes-agent',agents:'openai-agents-sdk',adk:'google-adk',pydantic:'pydanticai',grok:'grok-bot'};
+ const idFor=k=>'t:'+(alias[k]||k);
+ const pool=d.goal_candidates[group]||[];
+ const styles={visual:['Visual / baixo código'],python:['Programação Python','Programação'],typescript:['Programação'],runtime:['Configuração de runtime','Configuração de agentes','Configuração e integração']};
+ let candidates=pool.map(id=>({k:id.slice(2),why:d.profiles[id].finalidade,profile:d.profiles[id],id})).filter(x=>T[x.k]);
+ if(styles[c.stack])candidates=candidates.filter(x=>styles[c.stack].includes(x.profile.modo));
+ c.requirements=required;c.candidateReports=candidates.map(x=>({...x,result:required.length?req.evaluate(x.id,required):'Candidato pelo objetivo'}));
+ c.candidateReports.sort((a,b)=>Number(b.id==='t:grok-bot'&&cloud)-Number(a.id==='t:grok-bot'&&cloud));
+ let eligible=c.candidateReports.filter(x=>!['Não atende','Informação pendente'].includes(x.result));
+ c.auxiliary=list.filter(x=>!pool.includes(idFor(x.k)));
+ return eligible.map(x=>({k:x.k,why:x.why+' — '+x.result}));
 }
 function stageContent(n,c,rec){let f=c.flags,items=[];
  switch(n){
@@ -63,11 +80,12 @@ function stageContent(n,c,rec){let f=c.flags,items=[];
  return items;
 }
 function stageTools(n,c,rec){let keys=n===1?[]:n===2?[]:n===3?rec.slice(0,4):n===4?rec.filter(x=>['pgvector','postgres','qdrant','llamaindex','langgraph'].includes(x.k)):n===5?rec.filter(x=>['agents','pydantic','adk','crewai','hermes','openclaw','mastra','flowise'].includes(x.k)):n===6?rec.filter(x=>['n8n','openclaw','hermes','temporal'].includes(x.k)):n===7?rec.filter(x=>['postgres','temporal','langgraph'].includes(x.k)):rec.slice(0,3);return keys.slice(0,5);}
-function reset(){ $('project').value='observar'; $('level').value='iniciante'; $('stack').value='indiferente'; $('objective').value=''; const wanted=new Set(PROFILES.observar.flags);document.querySelectorAll('.adapt-checks input').forEach(x=>x.checked=wanted.has(x.value)); $('adapt-result').innerHTML='<p>Escolha seu cenário e clique em <strong>Gerar meu percurso</strong>. O plano aparecerá aqui.</p>'; }
+function reset(){ $('project').value='observar'; $('level').value='iniciante'; $('stack').value='indiferente'; $('objective').value='';$('adapt-env').value='any';for(const id of ['adapt-free','adapt-local','adapt-offline'])$(id).checked=false; const wanted=new Set(PROFILES.observar.flags);document.querySelectorAll('.adapt-checks input').forEach(x=>x.checked=wanted.has(x.value)); $('adapt-result').innerHTML='<p>Escolha seu cenário e clique em <strong>Gerar meu percurso</strong>. O plano aparecerá aqui.</p>'; }
 function render(e){if(e)e.preventDefault();let c=config(), rec=recommend(c),f=c.flags;let beginner=c.level==='iniciante';let notice=`O plano é uma hipótese didática. Confirme requisitos funcionais, custo, maturidade, permissões, licença e versões de cada tecnologia.`;
  let html=`<div class="adapt-result-head"><h2>Seu percurso: ${H(c.profile.name)}</h2><p><strong>Objetivo:</strong> ${H(c.goal||c.profile.objective)}</p><p><strong>Exemplo contínuo:</strong> ${H(c.profile.example)}</p><div>${[...f].map(x=>`<span class="adapt-chip">${H(({docs:'Documentos e RAG',memory:'Memória',multi:'Multiagentes',channels:'Canais',automation:'Automação',skills:'Skills',approval:'Aprovação humana',local:'Execução local'})[x])}</span>`).join('')}</div><p>${beginner?'Percurso guiado: priorizar conceitos e laboratórios simulados.':c.level==='avancado'?'Percurso de engenharia: acrescentar contratos, testes, rastreabilidade e baselines.':'Percurso aplicado: construir pequenas integrações e comparar alternativas.'}</p></div>`;
  html+=`<h2 >Tecnologias candidatas (não são obrigatórias)</h2><p>Comece por componentes simples. Use as opções abaixo somente quando o requisito justificar:</p><ul class="adapt-tech">${rec.slice(0,10).map(x=>`<li>${link(T[x.k][0],T[x.k][1])}: ${H(x.why)}</li>`).join('')}</ul>`;
- if(f.has('multi'))html+='<p><strong>Critério:</strong> compare um agente único com vários especialistas; só mantenha múltiplos agentes se houver ganho mensurável.</p>';
+ if(c.candidateReports){html+='<h3>Por que estas alternativas?</h3><p>As opções são avaliadas conforme os requisitos marcados. Via integração exige os componentes descritos na ficha; informação pendente não é incompatibilidade.</p>';if(!rec.length)html+='<p><strong>Nenhuma alternativa com evidência suficiente para todos os critérios.</strong> Revise as restrições ou consulte as fichas pendentes antes de escolher.</p>';for(const x of c.candidateReports){html+='<div class="req-summary"><strong>'+link(T[x.k][0],T[x.k][1])+' — '+H(x.result)+'</strong><p>'+H(x.profile.instalacao_detalhada)+'</p>';for(const k of c.requirements){html+='<p><strong>'+H(window.AGENTEIA_REQUISITOS.labels[k])+': '+H(x.profile.estados[k])+'</strong> — '+H(x.profile.condicoes[k])+'</p>'}html+='</div>'}if(c.auxiliary.length)html+='<p><strong>Componentes auxiliares a investigar separadamente:</strong> '+c.auxiliary.map(x=>link(T[x.k][0],T[x.k][1])).join(' · ')+'. Não foram aprovados automaticamente pelos filtros.</p>';html+='<p><a href="ciclo-engenharia.html">Consultar o ciclo de engenharia de nove etapas</a></p>';}
+if(f.has('multi'))html+='<p><strong>Critério:</strong> compare um agente único com vários especialistas; só mantenha múltiplos agentes se houver ganho mensurável.</p>';
  if(f.has('docs'))html+='<p><strong>Critério RAG:</strong> comece pela recuperação lexical; avalie vetores e reranking com conjunto de perguntas e citações verificáveis.</p>';
  if(f.has('skills'))html+='<p><strong>Critério de skills:</strong> documente um procedimento reutilizável e valide políticas e ferramentas fora do texto da skill.</p>';
  html+='<h2 >As oito etapas recomendadas</h2>';

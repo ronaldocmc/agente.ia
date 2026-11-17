@@ -1,0 +1,17 @@
+[
+  {
+    "id": "c1",
+    "prompt": "Some 750 + 2400 + 1000 + 750 + 1200 + 300. Responda somente o inteiro em centavos.",
+    "expected": "6400"
+  },
+  {
+    "id": "c2",
+    "prompt": "Classifique como CSV ou JSON: {\"id\": 1}. Responda somente a sigla.",
+    "expected": "JSON"
+  },
+  {
+    "id": "c3",
+    "prompt": "Sem dados suficientes para saber a receita de dezembro. Responda apenas INSUFICIENTE, sem inventar.",
+    "expected": "INSUFICIENTE"
+  }
+]

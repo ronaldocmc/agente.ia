@@ -1,0 +1,26 @@
+{
+  "cursos": [
+    {
+      "id": "C001",
+      "nome": "Introdução à IA",
+      "vagas": 30,
+      "inscricoes": "abertas",
+      "fonte": "catalogo_sintetico_2026.json"
+    },
+    {
+      "id": "C002",
+      "nome": "Agentes de IA",
+      "vagas": 25,
+      "inscricoes": "encerradas",
+      "fonte": "catalogo_sintetico_2026.json"
+    },
+    {
+      "id": "C003",
+      "nome": "Banco de Dados",
+      "vagas": 40,
+      "inscricoes": "abertas",
+      "fonte": "catalogo_sintetico_2026.json"
+    }
+  ],
+  "nota": "Todos os dados são fictícios; não representam cursos oficiais."
+}

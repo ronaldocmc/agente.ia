@@ -1,0 +1,5 @@
+{
+  "agents": {"defaults": {"sandbox": {"mode": "all", "scope": "agent", "workspaceAccess": "ro"}}},
+  "tools": {"deny": ["exec", "write", "edit", "apply_patch"], "elevated": {"enabled": false}},
+  "gateway": {"bind": "loopback"}
+}

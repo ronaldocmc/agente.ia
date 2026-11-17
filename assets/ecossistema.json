@@ -2853,6 +2853,422 @@
       "href": "lab-grok-detalhado.html",
       "cat": "Implementação guiada",
       "summary": "Equipe gerenciada e delegação"
+    },
+    {
+      "id": "t:paperclip",
+      "label": "Paperclip",
+      "kind": "tecnologia",
+      "href": "fichas/paperclip.html",
+      "cat": "Tecnologias",
+      "catId": "cat:orquestracao-multiagente",
+      "summary": "Organiza agentes por responsabilidades, tarefas e orçamento; adaptadores acionam runtimes distintos. Não substitui o runtime.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Criar uma organização fictícia com coordenador e analista, atribuir tarefa e exigir aprovação.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:agent-zero",
+      "label": "Agent Zero",
+      "kind": "tecnologia",
+      "href": "fichas/agent-zero.html",
+      "cat": "Tecnologias",
+      "catId": "cat:runtimes-e-assistentes",
+      "summary": "Ambiente generalista de agentes com ferramentas, arquivos, execução de código e delegação; isolar o ambiente antes de executar.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Em contêiner descartável, pedir leitura de CSV sintético e relatório, limitando escrita ao diretório de trabalho.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:nanobot",
+      "label": "Nanobot",
+      "kind": "tecnologia",
+      "href": "fichas/nanobot.html",
+      "cat": "Tecnologias",
+      "catId": "cat:runtimes-e-assistentes",
+      "summary": "Runtime Python para estudar ciclo de agente, ferramentas, sessões e canais; capacidades dependem da revisão.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Configurar provedor compatível e uma ferramenta de consulta de catálogo fictício.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:nanoclaw",
+      "label": "NanoClaw",
+      "kind": "tecnologia",
+      "href": "fichas/nanoclaw.html",
+      "cat": "Tecnologias",
+      "catId": "cat:runtimes-e-assistentes",
+      "summary": "Assistente orientado a execução isolada e mensageria; verificar limites do isolamento e permissões montadas.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Separar duas sessões em ambientes descartáveis e fornecer arquivos sintéticos distintos.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:zeroclaw",
+      "label": "ZeroClaw",
+      "kind": "tecnologia",
+      "href": "fichas/zeroclaw.html",
+      "cat": "Tecnologias",
+      "catId": "cat:runtimes-e-assistentes",
+      "summary": "Runtime em Rust orientado à portabilidade e modularidade; executar com provedor explicitamente selecionado.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Comparar execução de uma consulta de ferramenta com Nanobot usando o mesmo endpoint de modelo.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:picoclaw",
+      "label": "PicoClaw",
+      "kind": "tecnologia",
+      "href": "fichas/picoclaw.html",
+      "cat": "Tecnologias",
+      "catId": "cat:runtimes-e-assistentes",
+      "summary": "Runtime em Go com foco em baixo consumo de recursos; não implica que o modelo execute no dispositivo.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Executar tarefa simples em hardware de borda com modelo externo controlado e depois avaliar alternativa local compatível.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:ironclaw",
+      "label": "IronClaw",
+      "kind": "tecnologia",
+      "href": "fichas/ironclaw.html",
+      "cat": "Tecnologias",
+      "catId": "cat:runtimes-e-assistentes",
+      "summary": "Agente voltado a isolamento de ferramentas e gestão de segredos; verificar as garantias na versão selecionada.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Criar ferramenta de leitura autorizada e enviar entrada que tenta acessar segredo fictício.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:letta",
+      "label": "Letta",
+      "kind": "tecnologia",
+      "href": "fichas/letta.html",
+      "cat": "Tecnologias",
+      "catId": "cat:memoria-dados-e-rag",
+      "summary": "Gerencia agentes com estado e memória entre interações; backend, políticas e modelo devem ser configurados.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Criar agente que registra preferência sintética, reiniciar serviço e consultar a preferência.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:mem0",
+      "label": "Mem0",
+      "kind": "tecnologia",
+      "href": "fichas/mem0.html",
+      "cat": "Tecnologias",
+      "catId": "cat:memoria-dados-e-rag",
+      "summary": "Biblioteca e serviço de memória para aplicações; edição aberta e serviço gerenciado não devem ser confundidos.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Inserir três preferências fictícias, atualizar uma delas e consultar contexto relevante.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:graphiti",
+      "label": "Graphiti",
+      "kind": "tecnologia",
+      "href": "fichas/graphiti.html",
+      "cat": "Tecnologias",
+      "catId": "cat:memoria-dados-e-rag",
+      "summary": "Constrói grafo de fatos temporais a partir de episódios; validade e tempo de registro são importantes para rastrear mudanças.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Inserir duas notícias sintéticas com datas e retificação; consultar o estado anterior e atual.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:cognee",
+      "label": "Cognee",
+      "kind": "tecnologia",
+      "href": "fichas/cognee.html",
+      "cat": "Tecnologias",
+      "catId": "cat:memoria-dados-e-rag",
+      "summary": "Organiza ingestão, representações vetoriais e relações de conhecimento para recuperação contextual.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Ingerir documentos sintéticos e relacionar entidades de departamentos e projetos.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:deep-agents",
+      "label": "Deep Agents",
+      "kind": "tecnologia",
+      "href": "fichas/deep-agents.html",
+      "cat": "Tecnologias",
+      "catId": "cat:orquestracao-multiagente",
+      "summary": "Harness do ecossistema LangChain com planejamento, arquivos, subagentes e backends configuráveis. Não confundir com SDKs homônimos.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Planejar relatório de duas fontes fictícias, delegar subtarefa e armazenar evidência em workspace limitado.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:vercel-ai-sdk",
+      "label": "Vercel AI SDK",
+      "kind": "tecnologia",
+      "href": "fichas/vercel-ai-sdk.html",
+      "cat": "Tecnologias",
+      "catId": "cat:sdks-de-agentes",
+      "summary": "SDK para geração, streaming, ferramentas e interfaces de IA, com adaptadores de modelos; hospedagem Vercel não é requisito geral do SDK.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Construir rota local de consulta com saída estruturada e uma ferramenta de estoque fictícia.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:strands-agents",
+      "label": "Strands Agents",
+      "kind": "tecnologia",
+      "href": "fichas/strands-agents.html",
+      "cat": "Tecnologias",
+      "catId": "cat:sdks-de-agentes",
+      "summary": "SDK orientado ao modelo para ciclo de agente, ferramentas e provedores; verificar recursos por linguagem.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Criar agente que chama ferramenta de cálculo determinística com argumentos tipados.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:e2b",
+      "label": "E2B",
+      "kind": "tecnologia",
+      "href": "fichas/e2b.html",
+      "cat": "Tecnologias",
+      "catId": "cat:seguranca-e-governanca-de-agentes",
+      "summary": "Ambientes isolados para código de agentes; distinguir SDK, serviço hospedado e infraestrutura própria disponível.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Verificar edição gerenciada ou própria",
+      "use": "Executar análise de CSV sintético em ambiente descartável sem credenciais reais.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:daytona",
+      "label": "Daytona",
+      "kind": "tecnologia",
+      "href": "fichas/daytona.html",
+      "cat": "Tecnologias",
+      "catId": "cat:seguranca-e-governanca-de-agentes",
+      "summary": "Ambientes programáveis para execução de código e aplicações; verificar edição e opções de hospedagem.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Verificar edição gerenciada ou própria",
+      "use": "Criar workspace de teste, executar programa, coletar resultado e destruir o ambiente.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:browser-use",
+      "label": "Browser Use",
+      "kind": "tecnologia",
+      "href": "fichas/browser-use.html",
+      "cat": "Tecnologias",
+      "catId": "cat:automacao-visual",
+      "summary": "Biblioteca para interação com navegador por agentes; browser e provedor podem ser componentes separados.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Navegar em página HTML de teste, localizar registro fictício e extrair dado sem clicar em ações destrutivas.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:stagehand",
+      "label": "Stagehand",
+      "kind": "tecnologia",
+      "href": "fichas/stagehand.html",
+      "cat": "Tecnologias",
+      "catId": "cat:automacao-visual",
+      "summary": "SDK de automação web que combina operações estruturadas e interpretação por IA; distinguir browser local do serviço remoto.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Extrair tabela de página local com seletores e instruções em linguagem natural.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:dbos",
+      "label": "DBOS",
+      "kind": "tecnologia",
+      "href": "fichas/dbos.html",
+      "cat": "Tecnologias",
+      "catId": "cat:automacao-visual",
+      "summary": "Execução durável com persistência em banco de dados; não é runtime de LLM.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Definir workflow com duas etapas e falha após primeira gravação em banco de teste.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:restate",
+      "label": "Restate",
+      "kind": "tecnologia",
+      "href": "fichas/restate.html",
+      "cat": "Tecnologias",
+      "catId": "cat:automacao-visual",
+      "summary": "Servidor e SDKs para execução durável de serviços; chamadas externas ainda exigem desenho idempotente.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Criar serviço de aprovação com pausa e reinicialização planejada.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:livekit-agents",
+      "label": "LiveKit Agents",
+      "kind": "tecnologia",
+      "href": "fichas/livekit-agents.html",
+      "cat": "Tecnologias",
+      "catId": "cat:multimodalidade-e-canais",
+      "summary": "Framework para agentes de voz e mídia; transporte, STT, LLM e TTS são componentes distintos.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Executar conversa curta com áudio sintético em sala de teste e registrar interrupção.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:pipecat",
+      "label": "Pipecat",
+      "kind": "tecnologia",
+      "href": "fichas/pipecat.html",
+      "cat": "Tecnologias",
+      "catId": "cat:multimodalidade-e-canais",
+      "summary": "Framework para pipelines conversacionais em tempo real, com componentes de transporte, fala e IA.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Montar pipeline com entrada de áudio de teste e duas configurações de STT/TTS.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:docling",
+      "label": "Docling",
+      "kind": "tecnologia",
+      "href": "fichas/docling.html",
+      "cat": "Tecnologias",
+      "catId": "cat:memoria-dados-e-rag",
+      "summary": "Biblioteca de conversão documental que preserva estruturas como tabelas e títulos, permitindo ingestão para agentes.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Converter PDF sintético com tabela e títulos para saída estruturada.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:inspect-ai",
+      "label": "Inspect AI",
+      "kind": "tecnologia",
+      "href": "fichas/inspect-ai.html",
+      "cat": "Tecnologias",
+      "catId": "cat:observabilidade-e-avaliacao",
+      "summary": "Framework de avaliação com tarefas, datasets, ferramentas e scorers; não substitui o runtime avaliado.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Biblioteca executável na aplicação própria",
+      "use": "Criar dataset de cinco tarefas sintéticas, critérios determinísticos e registrar execuções repetidas.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:opencode",
+      "label": "OpenCode",
+      "kind": "tecnologia",
+      "href": "fichas/opencode.html",
+      "cat": "Tecnologias",
+      "catId": "cat:runtimes-e-assistentes",
+      "summary": "Agente de desenvolvimento com integração a modelos e ferramentas; permissões e diffs devem ser revisados.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Auto-hospedável — verificar edição e versão",
+      "use": "Em repositório descartável, corrigir teste que falha e revisar o diff antes de aceitar.",
+      "caution": "Revisar versão, licença, permissões e dependências."
+    },
+    {
+      "id": "t:firecrawl",
+      "label": "Firecrawl",
+      "kind": "tecnologia",
+      "href": "fichas/firecrawl.html",
+      "cat": "Tecnologias",
+      "catId": "cat:memoria-dados-e-rag",
+      "summary": "Transforma páginas autorizadas em Markdown e conteúdo estruturado para indexação e análise. Não substitui verificação da fonte.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Implantar a edição própria seguindo o guia do projeto; configurar navegador, filas e serviços exigidos pela versão. A edição cloud oferece recursos adicionais.",
+      "use": "Extrair título e corpo de três páginas HTML de teste, sem enviar dados pessoais.",
+      "caution": "Comparar campos com gabarito; medir latência e duplicatas. Bloquear URL fora da lista autorizada."
+    },
+    {
+      "id": "t:crawl4ai",
+      "label": "Crawl4AI",
+      "kind": "tecnologia",
+      "href": "fichas/crawl4ai.html",
+      "cat": "Tecnologias",
+      "catId": "cat:memoria-dados-e-rag",
+      "summary": "Biblioteca de coleta assíncrona com navegador, Markdown e extração estruturada; serviço cloud opcional.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Instalar Python e navegador via guia oficial ou executar imagem Docker com token de acesso.",
+      "use": "Percorrer um portal sintético de três páginas; limitar profundidade e domínio.",
+      "caution": "Recuperar as três páginas sem duplicatas e sem seguir link externo; registrar tempo e erros."
+    },
+    {
+      "id": "t:opensandbox",
+      "label": "OpenSandbox",
+      "kind": "tecnologia",
+      "href": "fichas/opensandbox.html",
+      "cat": "Tecnologias",
+      "catId": "cat:infraestrutura-e-serving",
+      "summary": "Cria ambientes computacionais descartáveis para execução de código e acesso controlado a arquivos. Isolamento depende do backend e da configuração.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Implantar servidor e backend de sandbox conforme documentação; proteger API, restringir rede e recursos.",
+      "use": "Executar um cálculo em duas sandboxes separadas e tentar ler um arquivo da outra.",
+      "caution": "Nenhum acesso cruzado; timeout aplicado; ambientes destruídos; registrar backend."
+    },
+    {
+      "id": "t:fastmcp",
+      "label": "FastMCP",
+      "kind": "tecnologia",
+      "href": "fichas/fastmcp.html",
+      "cat": "Tecnologias",
+      "catId": "cat:protocolos-e-interoperabilidade",
+      "summary": "Framework Python que expõe funções e recursos mediante MCP. A aplicação deve validar entradas, identidade e autorização antes da ação.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Criar ambiente virtual Python, instalar FastMCP na versão fixada e configurar transporte stdio ou HTTP protegido.",
+      "use": "Expor consulta somente leitura a registros sintéticos por uma ferramenta MCP; rejeitar argumento inválido.",
+      "caution": "Cliente autorizado recebe resultado estruturado; entrada inválida e acesso indevido não executam consulta."
+    },
+    {
+      "id": "t:toolhive",
+      "label": "ToolHive",
+      "kind": "tecnologia",
+      "href": "fichas/toolhive.html",
+      "cat": "Tecnologias",
+      "catId": "cat:protocolos-e-interoperabilidade",
+      "summary": "Gerencia implantação e acesso a servidores MCP em contêineres ou Kubernetes; pode intermediar servidores remotos. Não substitui autorização de objetos no backend.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Configurar CLI e runtime de contêiner ou operador Kubernetes; registrar servidores e políticas de acesso.",
+      "use": "Disponibilizar servidor MCP sintético e bloquear o acesso de um cliente sem credencial.",
+      "caution": "Cliente autorizado acessa apenas ferramentas previstas; logs não contêm segredos; acesso revogado falha."
+    },
+    {
+      "id": "t:openfga",
+      "label": "OpenFGA",
+      "kind": "tecnologia",
+      "href": "fichas/openfga.html",
+      "cat": "Tecnologias",
+      "catId": "cat:seguranca-e-governanca-de-agentes",
+      "summary": "Motor de decisão de acesso que avalia relações entre identidades e recursos. O backend aplica a decisão antes de realizar a operação.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Implantar servidor por imagem oficial, definir modelo e tuplas de relações; usar armazenamento persistente em produção.",
+      "use": "Modelar curador, observação e leitor. Consultar autorização para publicar com duas identidades distintas.",
+      "caution": "Curador autorizado e leitor negado; revogação reflete na política; falha do serviço impede alteração."
+    },
+    {
+      "id": "t:stripe-link-cli",
+      "label": "Stripe Link CLI",
+      "kind": "tecnologia",
+      "href": "fichas/stripe-link-cli.html",
+      "cat": "Tecnologias",
+      "catId": "cat:protocolos-e-interoperabilidade",
+      "summary": "CLI e integração MCP para solicitar aprovação de pagamento e obter credencial limitada. Serviço externo Link obrigatório; contas elegíveis dos EUA e Canadá.",
+      "maturity": "não avaliada experimentalmente",
+      "deployment": "Cliente Node.js/npm; conta Link elegível e conexão externa. No Brasil, usar somente simulação local sem credenciais reais neste laboratório.",
+      "use": "Simular pedido de compra com valor, vendedor e finalidade; testar aprovação e recusa, sem transação real.",
+      "caution": "Recusa impede pagamento; aprovação não é reutilizável em outro pedido; nenhum dado de cartão ou token real."
     }
   ],
   "edges": [
@@ -4340,6 +4756,236 @@
       "source": "t:grok-bot",
       "target": "laboratorio:guia-grok-bot",
       "relation": "implementado em"
+    },
+    {
+      "source": "t:paperclip",
+      "target": "c:orquestracao",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:paperclip",
+      "target": "cat:orquestracao-multiagente",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:agent-zero",
+      "target": "cat:runtimes-e-assistentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:nanobot",
+      "target": "c:tool-calling",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:nanobot",
+      "target": "c:memoria",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:nanobot",
+      "target": "cat:runtimes-e-assistentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:nanoclaw",
+      "target": "cat:runtimes-e-assistentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:zeroclaw",
+      "target": "c:tool-calling",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:zeroclaw",
+      "target": "cat:runtimes-e-assistentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:picoclaw",
+      "target": "cat:runtimes-e-assistentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:ironclaw",
+      "target": "cat:runtimes-e-assistentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:letta",
+      "target": "c:memoria",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:letta",
+      "target": "cat:memoria-dados-e-rag",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:mem0",
+      "target": "c:memoria",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:mem0",
+      "target": "cat:memoria-dados-e-rag",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:graphiti",
+      "target": "c:segundo-cerebro",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:graphiti",
+      "target": "cat:memoria-dados-e-rag",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:cognee",
+      "target": "c:rag",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:cognee",
+      "target": "c:memoria",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:cognee",
+      "target": "cat:memoria-dados-e-rag",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:deep-agents",
+      "target": "cat:orquestracao-multiagente",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:vercel-ai-sdk",
+      "target": "c:tool-calling",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:vercel-ai-sdk",
+      "target": "cat:sdks-de-agentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:strands-agents",
+      "target": "c:tool-calling",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:strands-agents",
+      "target": "cat:sdks-de-agentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:e2b",
+      "target": "cat:seguranca-e-governanca-de-agentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:daytona",
+      "target": "cat:seguranca-e-governanca-de-agentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:browser-use",
+      "target": "c:automacao",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:browser-use",
+      "target": "cat:automacao-visual",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:stagehand",
+      "target": "c:automacao",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:stagehand",
+      "target": "cat:automacao-visual",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:dbos",
+      "target": "cat:automacao-visual",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:restate",
+      "target": "cat:automacao-visual",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:livekit-agents",
+      "target": "cat:multimodalidade-e-canais",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:pipecat",
+      "target": "cat:multimodalidade-e-canais",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:docling",
+      "target": "c:rag",
+      "relation": "relacionado a"
+    },
+    {
+      "source": "t:docling",
+      "target": "cat:memoria-dados-e-rag",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:inspect-ai",
+      "target": "cat:observabilidade-e-avaliacao",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:opencode",
+      "target": "cat:runtimes-e-assistentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:firecrawl",
+      "target": "cat:memoria-dados-e-rag",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:crawl4ai",
+      "target": "cat:memoria-dados-e-rag",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:opensandbox",
+      "target": "cat:infraestrutura-e-serving",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:fastmcp",
+      "target": "cat:protocolos-e-interoperabilidade",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:toolhive",
+      "target": "cat:protocolos-e-interoperabilidade",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:openfga",
+      "target": "cat:seguranca-e-governanca-de-agentes",
+      "relation": "classificado em"
+    },
+    {
+      "source": "t:stripe-link-cli",
+      "target": "cat:protocolos-e-interoperabilidade",
+      "relation": "classificado em"
     }
   ],
   "version": "integrada-automacao",

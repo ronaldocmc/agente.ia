@@ -1,0 +1,72 @@
+{
+  "name": "Agente.IA T01 — Workflow de consulta de cursos",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-lab18",
+      "name": "Iniciar (manual)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{acao:'consultar',curso:'C001'}}];"
+      },
+      "id": "input-lab18",
+      "name": "Pedido sintético",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        470,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const catalogo = [{\"id\": \"C001\", \"nome\": \"Introdução à IA\", \"vagas\": 30, \"inscricoes\": \"abertas\", \"fonte\": \"catalogo_sintetico_2026.json\"}, {\"id\": \"C002\", \"nome\": \"Agentes de IA\", \"vagas\": 25, \"inscricoes\": \"encerradas\", \"fonte\": \"catalogo_sintetico_2026.json\"}, {\"id\": \"C003\", \"nome\": \"Banco de Dados\", \"vagas\": 40, \"inscricoes\": \"abertas\", \"fonte\": \"catalogo_sintetico_2026.json\"}];\nfunction consultar(curso) {\n  if (typeof curso !== 'string' || !curso.trim() || curso.length > 120)\n    return {status:'esclarecer',mensagem:'Informe o nome ou ID do curso.'};\n  const chave=curso.trim().toLowerCase();\n  const item=catalogo.find(c=>[c.nome.toLowerCase(),c.id.toLowerCase()].includes(chave));\n  return item ? {status:'ok',curso:item.nome,vagas:item.vagas,inscricoes:item.inscricoes,fonte:item.fonte} :\n    {status:'nao_encontrado',mensagem:'Curso não localizado.',fonte:'catalogo_sintetico_2026.json'};\n}\nfunction atender(acao,curso) {\n  if (acao==='consultar') return consultar(curso);\n  if (acao==='inscrever') return {status:curso?'revisao':'esclarecer',mensagem:'Nenhuma inscrição foi realizada.'};\n  return {status:'negado',mensagem:'Operação não autorizada.'};\n}\nconst p=$input.first().json; return [{json:atender(p.acao,p.curso)}];"
+      },
+      "id": "decision-lab18",
+      "name": "Regra institucional (determinística)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        710,
+        280
+      ]
+    }
+  ],
+  "connections": {
+    "Iniciar (manual)": {
+      "main": [
+        [
+          {
+            "node": "Pedido sintético",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pedido sintético": {
+      "main": [
+        [
+          {
+            "node": "Regra institucional (determinística)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": []
+}

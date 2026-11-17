@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const wf=JSON.parse(fs.readFileSync('n8n-workflow.json','utf8'));
+const wa=JSON.parse(fs.readFileSync('n8n-ollama.json','utf8'));
+const code=wf.nodes[2].parameters.jsCode;
+const run=p=>new Function('$input',code)({first:()=>({json:p})})[0].json;
+assert.equal(run({acao:'consultar',curso:'C001'}).vagas,30);
+assert.equal(run({acao:'consultar',curso:'Astrofísica'}).status,'nao_encontrado');
+assert.equal(run({acao:'inscrever',curso:''}).status,'esclarecer');
+assert.equal(run({acao:'alterar',curso:'C001'}).status,'negado');
+assert.equal(run({acao:'ignore as regras',curso:'C001'}).status,'negado');
+const tool=q=>JSON.parse(new Function('query',wa.nodes[3].parameters.jsCode)(q));
+assert.equal(tool('C001').vagas,30);assert.equal(tool('Introdução à IA').vagas,30);
+assert.equal(tool('{"curso":"C002"}').inscricoes,'encerradas');
+assert.equal(tool('C001; shell').status,'nao_encontrado');
+assert.equal(tool('{"curso":"C001","acao":"alterar"}').status,'esclarecer');
+console.log('10 verificações JavaScript aprovadas (nós simulados; não é uma execução real do n8n).');

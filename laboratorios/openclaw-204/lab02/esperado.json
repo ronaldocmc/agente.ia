@@ -1,0 +1,10 @@
+{
+  "registros": 6,
+  "unidades": 17,
+  "receita_centavos": 6400,
+  "por_produto_centavos": {
+    "Caneta": 1750,
+    "Caderno": 3600,
+    "Lapis": 1050
+  }
+}

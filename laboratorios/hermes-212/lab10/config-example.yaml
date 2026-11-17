@@ -1,0 +1,19 @@
+approvals:
+  mode: manual
+  timeout: 300
+  cron_mode: deny
+  single_query_mode: deny
+  unattended_mode: deny
+skills:
+  write_approval: true
+memory:
+  write_approval: true
+terminal:
+  backend: docker
+  docker_network: false
+  docker_forward_env: []
+  docker_mount_cwd_to_workspace: false
+  container_persistent: false
+  container_cpu: 1
+  container_memory: 5120
+

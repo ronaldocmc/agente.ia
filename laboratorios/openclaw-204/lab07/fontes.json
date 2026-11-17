@@ -1,0 +1,23 @@
+[
+  {
+    "id": "N001",
+    "titulo": "Oficina de IA para professores (simulação)",
+    "url": "https://example.org/oficina",
+    "texto": "Oficina fictícia sobre uso de agentes em sala de aula.",
+    "data": "2026-11-16"
+  },
+  {
+    "id": "N002",
+    "titulo": "Dataset educacional sintético (simulação)",
+    "url": "https://example.org/dataset",
+    "texto": "Conjunto fictício para testar curadoria de dados.",
+    "data": "2026-11-16"
+  },
+  {
+    "id": "N003",
+    "titulo": "Duplicata da oficina",
+    "url": "https://example.org/oficina",
+    "texto": "Registro repetido.",
+    "data": "2026-11-16"
+  }
+]
