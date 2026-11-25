@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    env_file: .env
+    ports:
+      - '127.0.0.1:8233:8000'
+    restart: unless-stopped
+    depends_on: [ollama]
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - models:/root/.ollama
+    restart: unless-stopped
+volumes:
+  models:

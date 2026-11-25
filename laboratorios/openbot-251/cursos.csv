@@ -1,0 +1,6 @@
+curso_id,nome,vagas,preco_brl
+C01,Introdução à IA,30,0
+C02,Agentes de IA,15,100
+C03,Banco de Dados,20,80
+C04,Engenharia de Prompts,0,50
+C05,Automação com n8n,10,60

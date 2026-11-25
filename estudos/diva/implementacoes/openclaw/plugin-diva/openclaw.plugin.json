@@ -1,0 +1,15 @@
+{
+  "id": "diva-local",
+  "name": "DIVA Local",
+  "description": "Operações locais da DIVA com aprovação humana externa",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "contracts": {
+    "tools": [
+      "diva_local"
+    ]
+  }
+}

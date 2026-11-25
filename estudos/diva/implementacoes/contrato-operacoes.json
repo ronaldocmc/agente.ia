@@ -1,0 +1,38 @@
+{
+  "operations": [
+    "propose",
+    "approve",
+    "reject",
+    "list",
+    "total",
+    "due",
+    "day",
+    "audit"
+  ],
+  "proposal": {
+    "kind": [
+      "expense",
+      "note",
+      "task",
+      "reminder",
+      "appointment"
+    ],
+    "title": "string",
+    "cents": "integer only for expense",
+    "category": "string only for expense",
+    "due": "ISO8601 with timezone for reminders/appointments",
+    "destination": [
+      "local",
+      "calendar",
+      "tasks",
+      "sheets",
+      "gmail-draft",
+      "drive"
+    ]
+  },
+  "approval": {
+    "proposal_id": "string",
+    "token": "operator-held secret, never LLM"
+  },
+  "remote_execution": "disabled"
+}

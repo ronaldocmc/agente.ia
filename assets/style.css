@@ -286,3 +286,8 @@ h2,h3,[id]{scroll-margin-top:calc(var(--header-height) + 16px)}
 .roadmap-visual figure{margin:12px 0}.roadmap-visual img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid #d7e4eb}.roadmap-visual figcaption{font-size:.85rem;color:#526779;margin-top:8px}.roadmap-visual figure a{display:block}.roadmap-visual{max-width:1200px}
 /* Critérios explícitos de seleção */
 .requirement-options{display:flex;flex-wrap:wrap;gap:10px 18px;margin:12px 0 18px;align-items:center}.requirement-options label{display:flex;align-items:center;gap:6px}.req-table{width:100%;border-collapse:collapse;font-size:.9rem;margin:14px 0}.req-table th,.req-table td{padding:10px;border:1px solid #d8e2e8;text-align:left;vertical-align:top}.req-table th{background:#e8f2f3}.req-table details{min-width:110px}.req-state{display:inline-block;border-radius:4px;padding:3px 6px;font-weight:600;font-size:.82rem;white-space:nowrap;background:#edf0f3;color:#425466}.req-state[data-state="Sim"]{background:#e2f3e9;color:#18653a}.req-state[data-state="Não"]{background:#fbe8e6;color:#9b3028}.req-state[data-state="Via integração"]{background:#fff1d7;color:#815500}.req-state[data-state="Não confirmado"]{background:#edf0f3;color:#425466}.req-summary{border:1px solid #d8e2e8;border-radius:8px;padding:14px;margin:12px 0}.req-summary p{margin:6px 0}
+
+/* Navegação unificada: posição, hierarquia e destaque únicos. */
+.container > aside.nav h4 { margin-top:22px; }
+.container > aside.nav h4:first-child { margin-top:4px; }
+.container > aside.nav a[aria-current="page"] { font-weight:650; }

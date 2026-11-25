@@ -1,0 +1,6 @@
+{
+  "kind": "expense",
+  "title": "Combustível",
+  "cents": 25000,
+  "category": "transporte"
+}

@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict'),D=require('../assets/diva236-core.js');let s=D.fresh();let n=0;const test=(name,fn)=>{fn();n++;console.log('OK',name)};const add=x=>{s=D.add(s,x).state};
+test('agenda',()=>{add({kind:'agenda',title:'Reunião',date:'2026-11-20',time:'14:00'});assert.equal(s.items.length,1)});
+test('receita e despesa',()=>{add({kind:'financas',title:'Receita',date:'2026-11-20',flow:'receita',amount:'500'});add({kind:'financas',title:'Gasolina',date:'2026-11-20',flow:'despesa',amount:'150,25',category:'Transporte'});assert.equal(D.totals(s,'2026-11').balance,34975)});
+test('categorias',()=>assert.equal(D.totals(s,'2026-11').categories.Transporte,15025));
+test('mês distinto',()=>assert.equal(D.totals(s,'2026-12').expense,0));
+test('tarefa concluída',()=>{add({kind:'tarefas',title:'Aula',date:'2026-11-20'});assert.equal(D.daily(s,'2026-11-20').tarefas.length,1);s=D.change(s,4,'toggle');assert.equal(D.daily(s,'2026-11-20').tarefas.length,0)});
+test('lembrete vencido',()=>{add({kind:'lembretes',title:'Conta',date:'2026-11-19',time:'10:00'});assert.equal(D.daily(s,'2026-11-20').lembretes.length,1)});
+test('anotação',()=>{add({kind:'anotacoes',title:'Ideia'});assert.equal(D.daily(s,'2026-11-20').anotacoes,1)});
+test('serialização',()=>assert.deepEqual(D.load(JSON.stringify(s)),s));
+test('exclusão',()=>{s=D.change(s,6,'remove');assert.equal(D.daily(s,'2026-11-20').anotacoes,0)});
+test('valor negativo',()=>assert.throws(()=>D.add(s,{kind:'financas',title:'Inválido',date:'2026-11-20',flow:'despesa',amount:'-1'})));
+test('data impossível',()=>assert.equal(D.dateOK('2026-02-30'),false));
+test('horário inválido',()=>assert.throws(()=>D.add(s,{kind:'agenda',title:'X',date:'2026-11-20',time:'25:00'})));
+test('descrição vazia',()=>assert.throws(()=>D.add(s,{kind:'anotacoes',title:' '})));
+test('armazenamento corrompido',()=>assert.throws(()=>D.load('{')));
+test('operação inválida',()=>assert.throws(()=>D.change(s,1,'toggle')));
+console.log(n+' testes aprovados');

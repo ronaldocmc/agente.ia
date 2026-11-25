@@ -1,0 +1,15 @@
+function parse(text, today){
+ const s=String(text||'').trim(); if(s.length>500) throw Error('Limite de 500 caracteres');
+ if(/^total$/i.test(s)) return {op:'total',month:today.slice(0,7)};
+ if(/^listar (notas|tarefas)$/i.test(s)) return {op:'list',kind:/notas/i.test(s)?'note':'task'};
+ const p=s.split('|').map(x=>x.trim()); const cmd=p[0].toLowerCase();
+ if(!['despesa','receita','nota','tarefa'].includes(cmd)) throw Error('Use despesa|ID|valor|categoria|titulo; receita|ID|valor|categoria|titulo; nota|ID|texto; tarefa|ID|texto|AAAA-MM-DD; total; listar notas; listar tarefas.');
+ if(!/^[A-Za-z0-9_-]{1,40}$/.test(p[1]||'')) throw Error('ID invalido');
+ const fin=['despesa','receita'].includes(cmd); if(p.length!==(fin?5:cmd==='nota'?3:4)) throw Error('Campos incompletos');
+ let r={op:'write',ref:p[1],kind:({despesa:'expense',receita:'income',nota:'note',tarefa:'task'})[cmd],title:fin?p[4]:p[2],cents:0,category:fin?p[3]:'',day:today,due:cmd==='tarefa'?p[3]:'',status:'open'};
+ if(!r.title|| (fin&&!r.category)) throw Error('Titulo ou categoria ausente');
+ if(fin){if(!/^\d{1,7}([,.]\d{1,2})?$/.test(p[2])) throw Error('Valor invalido'); const v=p[2].replace(',','.').split('.'); r.cents=Number(v[0])*100+Number((v[1]||'').padEnd(2,'0')); if(r.cents<=0) throw Error('Valor deve ser positivo');}
+ if(r.due && (!/^\d{4}-\d{2}-\d{2}$/.test(r.due)||!Number.isFinite(Date.parse(r.due))||new Date(r.due).toISOString().slice(0,10)!==r.due)) throw Error('Data invalida'); return r;
+}
+function summarize(q,rows){ const rr=rows.filter(r=>r.ref); if(q.op==='total'){const a=rr.filter(r=>r.day.startsWith(q.month)); let e=0,i=0; for(const r of a){if(!Number.isSafeInteger(r.cents)||r.cents<0) throw Error('Registro monetario invalido');if(r.kind==='expense')e+=r.cents;if(r.kind==='income')i+=r.cents;} return `Mes ${q.month}: despesas R$ ${(e/100).toFixed(2)}, receitas R$ ${(i/100).toFixed(2)}.`;} return rr.filter(r=>r.kind===q.kind).map(r=>`${r.ref}: ${r.title}${r.due?' — '+r.due:''}`).join('\n')||'Nenhum registro.';}
+const assert=require('node:assert/strict'); const d='2026-11-18';const a=parse('despesa|T01|250,00|transporte|Gasolina',d), b=parse('despesa|T02|32|transporte|Estacionamento',d); assert.equal(a.cents,25000);assert.equal(b.cents,3200);assert.equal(parse('nota|N01|Ideia',d).kind,'note');assert.equal(parse('tarefa|A01|Relatorio|2026-11-20',d).due,'2026-11-20');assert.equal(parse('receita|R01|100|salario|Teste',d).cents,10000);assert.throws(()=>parse('despesa|X|20 ou 30|x|y',d));assert.throws(()=>parse('tarefa|X|y|2026-02-30',d));assert.throws(()=>parse('despesa|X|-1|x|y',d));assert.throws(()=>parse('nota||x',d));assert.match(summarize(parse('total',d),[a,b]),/282.00/);assert.equal(summarize(parse('listar notas',d),[]),'Nenhum registro.');assert.match(summarize(parse('listar tarefas',d),[parse('tarefa|A01|Relatorio|2026-11-20',d)]),/Relatorio/);console.log('12 assertions OK');

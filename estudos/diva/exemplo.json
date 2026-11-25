@@ -1,0 +1,9 @@
+{
+  "op": "create",
+  "id": "T01",
+  "kind": "expense",
+  "title": "Gasolina",
+  "cents": 25000,
+  "category": "transporte",
+  "confirmed": true
+}

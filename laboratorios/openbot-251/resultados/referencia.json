@@ -1,0 +1,44 @@
+{
+  "cursos": 5,
+  "solicitacoes": 6,
+  "resultados": [
+    {
+      "id": "S01",
+      "curso_id": "C01",
+      "status": "com_vagas",
+      "vagas": 30
+    },
+    {
+      "id": "S02",
+      "curso_id": "C04",
+      "status": "sem_vagas",
+      "vagas": 0
+    },
+    {
+      "id": "S03",
+      "curso_id": "C99",
+      "status": "curso_inexistente",
+      "vagas": null
+    },
+    {
+      "id": "S04",
+      "curso_id": "C02",
+      "status": "com_vagas",
+      "vagas": 15
+    },
+    {
+      "id": "S04",
+      "curso_id": "C02",
+      "status": "duplicada",
+      "vagas": 15
+    },
+    {
+      "id": "S05",
+      "curso_id": "C05",
+      "status": "com_vagas",
+      "vagas": 10
+    }
+  ],
+  "aprovadas_automaticamente": 0,
+  "observacao": "Com vagas não significa inscrição concluída; exige política institucional."
+}

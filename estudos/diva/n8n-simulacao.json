@@ -1,0 +1,70 @@
+{
+  "name": "DIVA - simulacao deterministica",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{json:{id:\"T01\",kind:\"expense\",title:\"Gasolina\",cents:25000,category:\"transporte\",confirmed:true}},{json:{id:\"T02\",kind:\"expense\",title:\"Estacionamento\",cents:3200,category:\"transporte\",confirmed:true}}];"
+      },
+      "id": "sample",
+      "name": "Dados ficticios",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const seen=new Set(); let total=0; for(const {json:r} of $input.all()){if(r.confirmed!==true || r.kind!==\"expense\" || !Number.isSafeInteger(r.cents)||r.cents<=0) throw new Error(\"Registro invalido\"); if(!seen.has(r.id)){seen.add(r.id);total+=r.cents;}} return [{json:{total_cents:total,registros:seen.size,modo:\"simulacao sem persistencia\"}}];"
+      },
+      "id": "validate",
+      "name": "Validar e somar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Dados ficticios",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dados ficticios": {
+      "main": [
+        [
+          {
+            "node": "Validar e somar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

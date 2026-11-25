@@ -155,11 +155,6 @@
     "type": "Aprenda a construir"
   },
   {
-    "title": "Meu primeiro agente — passo a passo",
-    "url": "primeiro-agente.html",
-    "type": "Aprenda a construir"
-  },
-  {
     "title": "1. Começar pelo problema, não pela plataforma",
     "url": "capitulos/01.html",
     "type": "Capítulo"
@@ -2458,5 +2453,160 @@
     "title": "n8n — Webhooks, APIs e eventos",
     "url": "formacao-individual-01.html#n8-webhooks",
     "type": "Tutorial guiado"
+  },
+  {
+    "title": "Workflow determinístico — Deterministic workflow",
+    "url": "conceito-workflow-deterministico.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Workflow com IA — AI-augmented workflow",
+    "url": "conceito-workflow-com-ia.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Workflow agêntico — Agentic workflow",
+    "url": "conceito-workflow-agentico.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Workflow híbrido — Hybrid workflow",
+    "url": "conceito-workflow-hibrido.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Encadeamento de prompts — Prompt chaining",
+    "url": "conceito-prompt-chaining.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Paralelização de workflows — Parallelization",
+    "url": "conceito-parallelization.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Orquestrador-executores — Orchestrator-workers",
+    "url": "conceito-orchestrator-workers.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Avaliador-otimizador — Evaluator-optimizer",
+    "url": "conceito-evaluator-optimizer.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Workflow sequencial — Sequential workflow",
+    "url": "conceito-workflow-sequencial.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Workflow iterativo — Iterative workflow",
+    "url": "conceito-workflow-iterativo.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Máquina de estados — State machine",
+    "url": "conceito-state-machine.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Workflow multiagente — Multi-agent workflow",
+    "url": "conceito-workflow-multiagente.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Workflow RAG — Retrieval-augmented generation workflow",
+    "url": "conceito-workflow-rag.html",
+    "type": "Conceito"
+  },
+  {
+    "title": "Workflow — tipos e padrões",
+    "url": "conceito-workflow.html#tipos",
+    "type": "Conceito"
+  },
+  {
+    "title": "Como escolher um workflow",
+    "url": "conceito-workflow.html#escolher-workflow",
+    "type": "Guia"
+  },
+  {
+    "title": "Tutorial 11 — Agno: agentes, equipes e AgentOS",
+    "url": "formacao-individual-11.html#tutorial-guiado",
+    "type": "Tutorial guiado"
+  },
+  {
+    "title": "Agno — Lab 01: Primeiro agente (Agent)",
+    "url": "laboratorios/agno-221/lab01/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 02: Modelos locais e APIs",
+    "url": "laboratorios/agno-221/lab02/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 03: Tools, skills e saída estruturada",
+    "url": "laboratorios/agno-221/lab03/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 04: Análise de arquivos e banco de dados",
+    "url": "laboratorios/agno-221/lab04/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 05: Memória e sessões",
+    "url": "laboratorios/agno-221/lab05/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 06: Knowledge e RAG",
+    "url": "laboratorios/agno-221/lab06/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 07: Teams e delegação",
+    "url": "laboratorios/agno-221/lab07/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 08: Workflows determinísticos, com IA, agênticos e híbridos",
+    "url": "laboratorios/agno-221/lab08/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 09: MCP cliente e servidor",
+    "url": "laboratorios/agno-221/lab09/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 10: AgentOS e interface visual",
+    "url": "laboratorios/agno-221/lab10/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 11: WhatsApp, Telegram e integração n8n",
+    "url": "laboratorios/agno-221/lab11/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 12: Guardrails e aprovação humana",
+    "url": "laboratorios/agno-221/lab12/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agno — Lab 13: FCT.IA e Observar.IA — projeto integrador",
+    "url": "laboratorios/agno-221/lab13/index.html",
+    "type": "Laboratório"
+  },
+  {
+    "title": "Agente.IA Interativo — Meu primeiro agente",
+    "url": "primeiro-agente.html",
+    "type": "Laboratório interativo"
+  },
+  {
+    "title": "Laboratório técnico — Python e Ollama",
+    "url": "primeiro-agente-python-ollama.html",
+    "type": "Laboratório"
   }
 ]

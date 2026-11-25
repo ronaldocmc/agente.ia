@@ -1,0 +1,34 @@
+[
+  {
+    "name": "ref",
+    "type": "string"
+  },
+  {
+    "name": "kind",
+    "type": "string"
+  },
+  {
+    "name": "title",
+    "type": "string"
+  },
+  {
+    "name": "cents",
+    "type": "number"
+  },
+  {
+    "name": "category",
+    "type": "string"
+  },
+  {
+    "name": "day",
+    "type": "string"
+  },
+  {
+    "name": "due",
+    "type": "string"
+  },
+  {
+    "name": "status",
+    "type": "string"
+  }
+]

@@ -1,0 +1,372 @@
+{
+  "name": "DIVA 226 - chat e persistencia",
+  "nodes": [
+    {
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "parameters": {
+        "public": false,
+        "options": {}
+      },
+      "position": [
+        0,
+        0
+      ],
+      "id": "319af29c-b727-4c1d-accb-a2bafc02b17f",
+      "webhookId": "dc9417d5-6c3e-42f9-a71f-24e396be6d64"
+    },
+    {
+      "name": "Interpretar comando",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "function parse(text, today){\n const s=String(text||'').trim(); if(s.length>500) throw Error('Limite de 500 caracteres');\n if(/^total$/i.test(s)) return {op:'total',month:today.slice(0,7)};\n if(/^listar (notas|tarefas)$/i.test(s)) return {op:'list',kind:/notas/i.test(s)?'note':'task'};\n const p=s.split('|').map(x=>x.trim()); const cmd=p[0].toLowerCase();\n if(!['despesa','receita','nota','tarefa'].includes(cmd)) throw Error('Use despesa|ID|valor|categoria|titulo; receita|ID|valor|categoria|titulo; nota|ID|texto; tarefa|ID|texto|AAAA-MM-DD; total; listar notas; listar tarefas.');\n if(!/^[A-Za-z0-9_-]{1,40}$/.test(p[1]||'')) throw Error('ID invalido');\n const fin=['despesa','receita'].includes(cmd); if(p.length!==(fin?5:cmd==='nota'?3:4)) throw Error('Campos incompletos');\n let r={op:'write',ref:p[1],kind:({despesa:'expense',receita:'income',nota:'note',tarefa:'task'})[cmd],title:fin?p[4]:p[2],cents:0,category:fin?p[3]:'',day:today,due:cmd==='tarefa'?p[3]:'',status:'open'};\n if(!r.title|| (fin&&!r.category)) throw Error('Titulo ou categoria ausente');\n if(fin){if(!/^\\d{1,7}([,.]\\d{1,2})?$/.test(p[2])) throw Error('Valor invalido'); const v=p[2].replace(',','.').split('.'); r.cents=Number(v[0])*100+Number((v[1]||'').padEnd(2,'0')); if(r.cents<=0) throw Error('Valor deve ser positivo');}\n if(r.due && (!/^\\d{4}-\\d{2}-\\d{2}$/.test(r.due)||!Number.isFinite(Date.parse(r.due))||new Date(r.due).toISOString().slice(0,10)!==r.due)) throw Error('Data invalida'); return r;\n}\ntry {return [{json:parse($input.first().json.chatInput,$now.setZone('America/Sao_Paulo').toISODate())}];} catch(e){return [{json:{op:'error',output:e.message}}];}"
+      },
+      "position": [
+        240,
+        0
+      ],
+      "id": "2aa6dc7f-8641-4002-9389-5656df1e3f6d"
+    },
+    {
+      "name": "Comando invalido?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "f09f3d68-87d6-41d8-b119-e6be74a9d5d5",
+              "leftValue": "={{ $json.op }}",
+              "rightValue": "error",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "position": [
+        440,
+        0
+      ],
+      "id": "5b3fae86-83ff-4261-ba83-18c60c17d262"
+    },
+    {
+      "name": "Orientar usuario",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "return [{json:{output:$json.output}}];"
+      },
+      "position": [
+        660,
+        -280
+      ],
+      "id": "501d954d-da3d-491f-8b37-26bc0857e72d"
+    },
+    {
+      "name": "Gravacao?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "2ec67447-667f-4159-bfbe-3d58b41e93d0",
+              "leftValue": "={{ $json.op }}",
+              "rightValue": "write",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "position": [
+        550,
+        120
+      ],
+      "id": "3ad9d48e-328b-4b52-8ecd-8ab735fd20a3"
+    },
+    {
+      "name": "Gravar registro",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "parameters": {
+        "resource": "row",
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "DIVA_TABLE_ID_SUBSTITUIR",
+          "mode": "id"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "ref",
+              "condition": "eq",
+              "keyValue": "={{ $json.ref }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ref": "={{ $json.ref }}",
+            "kind": "={{ $json.kind }}",
+            "title": "={{ $json.title }}",
+            "cents": "={{ $json.cents }}",
+            "category": "={{ $json.category }}",
+            "day": "={{ $json.day }}",
+            "due": "={{ $json.due }}",
+            "status": "={{ $json.status }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "ref",
+              "displayName": "ref",
+              "type": "string",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "kind",
+              "displayName": "kind",
+              "type": "string",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "type": "string",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "cents",
+              "displayName": "cents",
+              "type": "number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "category",
+              "displayName": "category",
+              "type": "string",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "day",
+              "displayName": "day",
+              "type": "string",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "due",
+              "displayName": "due",
+              "type": "string",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "type": "string",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        720,
+        -120
+      ],
+      "id": "ca9f2108-a780-49f6-b73c-981272354944"
+    },
+    {
+      "name": "Ler registros",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "parameters": {
+        "resource": "row",
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "DIVA_TABLE_ID_SUBSTITUIR",
+          "mode": "id"
+        },
+        "returnAll": true,
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "ref",
+              "condition": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "position": [
+        720,
+        120
+      ],
+      "id": "b829dcc6-0a62-485c-b055-d17c52469ce2",
+      "alwaysOutputData": true
+    },
+    {
+      "name": "Confirmar registro",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "return [{json:{output:'Registro salvo: '+$('Interpretar comando').first().json.ref}}];"
+      },
+      "position": [
+        960,
+        -120
+      ],
+      "id": "c5f7b900-8cdc-40dc-9008-63efbeca634d"
+    },
+    {
+      "name": "Responder consulta",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "function summarize(q,rows){ const rr=rows.filter(r=>r.ref); if(q.op==='total'){const a=rr.filter(r=>r.day.startsWith(q.month)); let e=0,i=0; for(const r of a){if(!Number.isSafeInteger(r.cents)||r.cents<0) throw Error('Registro monetario invalido');if(r.kind==='expense')e+=r.cents;if(r.kind==='income')i+=r.cents;} return `Mes ${q.month}: despesas R$ ${(e/100).toFixed(2)}, receitas R$ ${(i/100).toFixed(2)}.`;} return rr.filter(r=>r.kind===q.kind).map(r=>`${r.ref}: ${r.title}${r.due?' — '+r.due:''}`).join('\\n')||'Nenhum registro.';}\nreturn [{json:{output:summarize($('Interpretar comando').first().json,$input.all().map(x=>x.json))}}];"
+      },
+      "position": [
+        960,
+        120
+      ],
+      "id": "e6d52c95-df98-4683-970b-59dc35fe9461"
+    }
+  ],
+  "connections": {
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "Interpretar comando",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Interpretar comando": {
+      "main": [
+        [
+          {
+            "node": "Comando invalido?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Comando invalido?": {
+      "main": [
+        [
+          {
+            "node": "Orientar usuario",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gravacao?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gravacao?": {
+      "main": [
+        [
+          {
+            "node": "Gravar registro",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ler registros",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gravar registro": {
+      "main": [
+        [
+          {
+            "node": "Confirmar registro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ler registros": {
+      "main": [
+        [
+          {
+            "node": "Responder consulta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Sao_Paulo"
+  }
+}
